@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kevin Deng's academic homepage: LLM application algorithms, multimodal reliability, RAG, Tool Use, and LLM4Rec."
+    />
+    <title>Kevin Deng | LLM Application Algorithms</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <aside class="sidebar">
+        <div class="avatar">邓</div>
+        <h1>Kevin Deng</h1>
+        <p class="cn-name">邓凯文</p>
+        <p class="role">M.S. student in Electronic Information (AI), Tsinghua University</p>
+        <p class="focus">
+          LLM application algorithms, multimodal reliability, RAG, Tool Use, and LLM4Rec.
+        </p>
+        <nav aria-label="Section navigation">
+          <a href="#about">About</a>
+          <a href="#research-interests">Research Interests</a>
+          <a href="#news">News</a>
+          <a href="#selected-research">Selected Research</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+        </nav>
+        <div class="contact">
+          <a href="./index.html">中文版</a>
+          <a href="mailto:sherkevin@163.com">sherkevin@163.com</a>
+          <a href="https://github.com/sherkevin">github.com/sherkevin</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section id="about" class="section">
+          <h2>About Me</h2>
+          <p>
+            I am a research-oriented LLM application algorithm candidate with a
+            focus on <strong>calibration and reliability</strong>: whether a
+            multimodal model is visually grounded, whether an embedding score
+            reflects substitutability, whether a recommender should keep asking,
+            and whether a domain RAG system can answer with evidence and safety.
+          </p>
+          <p>
+            My work spans multimodal recommendation at MiniMax, Tool Use and
+            Agent infrastructure at ByteDance, and domain LLM/RAG diagnosis for
+            lithography systems at SMEE. I am currently seeking full-time LLM
+            application algorithm roles with both engineering impact and research depth.
+          </p>
+        </section>
+
+        <section id="research-interests" class="section">
+          <h2>Research Interests</h2>
+          <ul class="plain-list">
+            <li><strong>Multimodal reliability:</strong> hallucination calibration, visual grounding, decoding-time verification.</li>
+            <li><strong>RAG and Tool Use:</strong> evidence retrieval, citation support, schema grounding, safe tool invocation.</li>
+            <li><strong>LLM4Rec:</strong> multimodal recall, semantic IDs, conversational recommendation, stopping decisions.</li>
+            <li><strong>Post-training data:</strong> SFT/DPO data construction, refusal behavior, badcase diagnosis, evaluation design.</li>
+          </ul>
+        </section>
+
+        <section id="news" class="section">
+          <h2>News</h2>
+          <ul class="news-list">
+            <li><span>2026</span> Preparing applications for full-time LLM application algorithm roles.</li>
+            <li><span>2025</span> Joined the SMEE breakthrough group on domain LLM + RAG for lithography diagnosis.</li>
+            <li><span>2025</span> Interned at MiniMax on multimodal recall, voice recommendation, and LLM4Rec evaluation.</li>
+            <li><span>2025</span> Interned at ByteDance on Agent Infra, MCP Factory, and Tool Use data infrastructure.</li>
+          </ul>
+        </section>
+
+        <section id="selected-research" class="section">
+          <h2>Selected Research</h2>
+          <article class="publication">
+            <p class="venue">ACM MM, under review · independent first author</p>
+            <h3>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</h3>
+            <p>
+              Object-grounded decoding for hallucination calibration. The work
+              studies how query-relevant visual anchors, late-layer visual
+              attention, and short-horizon rollout can verify whether a generation
+              path remains visually grounded.
+            </p>
+            <p class="note">Manuscript withheld during double-blind review. Public summary only.</p>
+          </article>
+          <article class="publication">
+            <p class="venue">RecSys, under review · independent first author</p>
+            <h3>Does Similarity Imply Substitutability? Typed Score Corrections for Frozen Alignment</h3>
+            <p>
+              Studies relation collapse in frozen text-to-CF alignment. The
+              project asks when semantic similarity fails to mean behavioral
+              substitutability and uses typed post-scoring correction to calibrate
+              recommendation candidates.
+            </p>
+          </article>
+          <article class="publication">
+            <p class="venue">RecSys, under review · independent first author</p>
+            <h3>When to Stop Asking? A Top-K-Aware Stopping Layer for Conversational Recommendation</h3>
+            <p>
+              A calibrated stopping mechanism for conversational recommendation.
+              Instead of relying on top-1 confidence, the method watches Top-K
+              boundary stability to balance recommendation success and user burden.
+            </p>
+          </article>
+        </section>
+
+        <section id="experience" class="section">
+          <h2>Experience</h2>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>SMEE Breakthrough Group · Algorithm R&amp;D</h3>
+              <span>2025.10 - Present</span>
+            </div>
+            <p>
+              Domain LLM + RAG for lithography motion-transfer diagnosis:
+              expert document cleaning, chunk schema, retrieval evaluation,
+              citation-aware answers, SOP safety, and Parser/Retrieval/Diagnosis/SOP/Verification flow design.
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>MiniMax · LLM Algorithm Intern</h3>
+              <span>2025.06 - 2025.09</span>
+            </div>
+            <p>
+              Multimodal NPC recommendation: dynamic retraining for growth prediction,
+              VLM image semantics + text retrieval, Hailuo-01 voice embeddings,
+              TIGER-style generative retrieval analysis, and fixed-budget recall evaluation.
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>ByteDance · Agent Infra R&amp;D Intern</h3>
+              <span>2025.03 - 2025.06</span>
+            </div>
+            <p>
+              Tool access infrastructure for internal API assets: taxonomy,
+              parameter schema, error codes, examples, MCP-style Tool Calls,
+              permission constraints, and documentation refinement for reliable Tool Use.
+            </p>
+          </article>
+        </section>
+
+        <section id="projects" class="section">
+          <h2>Projects</h2>
+          <div class="project">
+            <h3>Mydow · LLM social agents</h3>
+            <p>
+              Structured user profiles and conversational personas for cold-start
+              recommendation, ice-breaking intent routing, dialogue strategy,
+              and feedback loops in a vertical social product.
+            </p>
+          </div>
+          <div class="project">
+            <h3>AgentOS Core</h3>
+            <p>
+              A microkernel-style Agent runtime that decouples intent routing,
+              event-driven IPC, permission boundaries, and plugin-based tool execution
+              for RAG / Tool Use workflows.
+            </p>
+          </div>
+          <div class="project">
+            <h3>Weaver</h3>
+            <p>
+              YAML-declared multi-agent orchestration built with LangGraph/Aider,
+              supporting checkpoint recovery, context isolation, failure handling,
+              and controlled tool-chain execution.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
