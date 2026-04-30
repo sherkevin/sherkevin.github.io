@@ -1,11 +1,11 @@
 :root {
-  --bg: #f6f0e5;
-  --panel: #fbf7ef;
+  --bg: #fbf7ee;
+  --panel: #fffdf8;
   --ink: #302b25;
-  --muted: #6f665c;
-  --line: #ded2bf;
-  --accent: #8a5a2d;
-  --soft: #efe4d1;
+  --muted: #706a62;
+  --line: #eadfcd;
+  --accent: #8b6a45;
+  --soft: #f3eadb;
 }
 
 * {
@@ -39,21 +39,22 @@ a:hover {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 36px;
-  width: min(990px, calc(100% - 56px));
-  margin: 34px auto;
-  padding: 38px;
+  width: min(940px, calc(100% - 64px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 34px 36px 42px;
   background: var(--bg);
   border: 1px solid var(--line);
-  box-shadow: 0 18px 60px rgba(77, 57, 32, 0.09);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.74) inset;
 }
 
 .sidebar {
   position: sticky;
   top: 36px;
   align-self: start;
-  padding: 26px 22px;
-  border: 1px solid var(--line);
-  background: rgba(251, 247, 239, 0.72);
+  padding: 18px 12px 18px 0;
+  border-right: 1px solid var(--line);
+  background: transparent;
 }
 
 .avatar {
@@ -340,7 +341,7 @@ strong {
     grid-template-columns: 1fr;
     gap: 32px;
     width: min(100% - 24px, 760px);
-    margin: 12px auto;
+    margin: 0 auto;
     padding: 22px;
   }
 
