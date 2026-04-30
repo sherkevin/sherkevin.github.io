@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="邓凯文的个人学术主页：大模型应用算法、多模态可靠性、RAG、Tool Use 与 LLM4Rec。"
+      content="邓凯文的个人主页：人工智能、大模型应用算法、多模态、RAG、Tool Use、推荐与智能体系统。"
     />
-    <title>邓凯文 | 大模型应用算法</title>
+    <title>邓凯文 | Kevin Deng</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="site">
+    <div class="page-card">
       <aside class="sidebar">
         <div class="avatar">邓</div>
         <h1>邓凯文</h1>
         <p class="cn-name">Kevin Deng</p>
-        <p class="role">清华大学电子信息（人工智能）硕士</p>
+        <p class="role">清华大学 · 电子信息（人工智能）硕士</p>
         <p class="focus">
-          关注大模型应用算法、多模态可靠性、RAG、Tool Use 与 LLM4Rec。
+          关注大模型应用算法、多模态可靠性、RAG / Tool Use、推荐系统与智能体工作流。
         </p>
         <nav aria-label="页面导航">
-          <a href="#about">关于我</a>
-          <a href="#research-interests">研究方向</a>
-          <a href="#news">动态</a>
-          <a href="#selected-research">代表研究</a>
+          <a href="#about">关于</a>
+          <a href="#timeline">时间线</a>
+          <a href="#research">研究</a>
           <a href="#experience">经历</a>
           <a href="#projects">项目</a>
+          <a href="#principles">方法论</a>
         </nav>
         <div class="contact">
           <a href="./en.html">English Version</a>
@@ -37,66 +37,106 @@
 
       <main class="content">
         <section id="about" class="section">
-          <h2>关于我</h2>
+          <h2>关于</h2>
           <p>
-            我是一个偏研究型的大模型应用算法候选人，主线是
-            <strong>calibration 与 reliability</strong>：多模态模型是否有视觉证据、
-            embedding 分数是否真的代表可替代性、会话推荐何时停止追问、领域 RAG
-            是否能有证据地回答并在高风险场景拒答。
+            我把自己的技术主线概括为：让智能系统在真实任务里更可靠地工作。这里的“可靠”包括
+            多模态模型是否有视觉证据，RAG 回答是否有可追溯引用，推荐系统的多模态增量是否真实，
+            Tool Use 是否有清晰 schema 和错误恢复，复杂 Agent 工作流是否可控。
           </p>
           <p>
-            我的经历覆盖 MiniMax 的多模态推荐与 LLM4Rec、字节跳动的 Tool Use / Agent
-            基础设施，以及 SMEE 的领域 LLM + RAG 工业诊断系统。当前目标是头部公司的
-            大模型应用算法正式岗位，兼顾工程落地与研究问题抽象。
+            简历只能放一页，但我的经历其实由几条线共同组成：竞赛训练带来的算法基本功，本科和清华阶段的
+            AI 学习路径，MiniMax 的多模态推荐与 LLM4Rec，字节的 Agent Infra，SMEE 的领域 LLM/RAG
+            工业诊断，以及甲己无形、AgentOS、Weaver 等应用型智能体项目。
           </p>
         </section>
 
-        <section id="research-interests" class="section">
-          <h2>研究方向</h2>
-          <ul class="plain-list">
-            <li><strong>多模态可靠性：</strong>幻觉校准、视觉 grounding、decoding-time verification。</li>
-            <li><strong>RAG 与 Tool Use：</strong>证据检索、引用支持、schema grounding、安全工具调用。</li>
-            <li><strong>LLM4Rec：</strong>多模态召回、Semantic ID、会话推荐、停止决策。</li>
-            <li><strong>后训练数据：</strong>SFT/DPO 数据构造、拒答行为、badcase 诊断、评测设计。</li>
-          </ul>
+        <section id="timeline" class="section">
+          <h2>成长时间线</h2>
+          <div class="timeline">
+            <article>
+              <span class="dot"></span>
+              <time>2017.09 - 2020.06</time>
+              <div>
+                <h3>河南睢县高级中学</h3>
+                <p>完成高中阶段学习，形成理工科基础和长期自驱学习习惯。</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2020.09 - 2024.07</time>
+              <div>
+                <h3>厦门大学 · 计算机科学与技术</h3>
+                <p>GPA Top 2%，获国家奖学金与优秀毕业生；ICPC 全国邀请赛银牌，系统训练算法、工程和问题拆解能力。</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2024.09 - 2027.06</time>
+              <div>
+                <h3>清华大学 · 电子信息（人工智能）硕士</h3>
+                <p>研究方向转向大模型应用算法、多模态可靠性、RAG/Tool Use 与 LLM4Rec。</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.03 - 2025.06</time>
+              <div>
+                <h3>字节跳动 · Agent Infra 研发实习</h3>
+                <p>参与企业 API 资产纳管、MCP Factory、tool schema、错误码和调用示例建设，理解 Tool Use 的工程底座。</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.06 - 2025.09</time>
+              <div>
+                <h3>MiniMax · 大模型算法实习</h3>
+                <p>推进多模态 NPC 召回、音色推荐、TIGER 范式验证和固定候选预算评测，关注推荐增量是否真实存在。</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.10 - 至今</time>
+              <div>
+                <h3>SMEE 突破小组 · 算法研发</h3>
+                <p>参与领域 LLM + RAG 工业故障诊断，围绕专家文档清洗、检索评测、引用证据、SOP 安全与多智能体流程展开。</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.11 - 至今</time>
+              <div>
+                <h3>甲己无形（Mydow）创业项目</h3>
+                <p>探索 LLM 在用户画像、对话人设、意图路由、冷启动推荐和多 Agent 自动交互中的产品闭环。</p>
+              </div>
+            </article>
+          </div>
         </section>
 
-        <section id="news" class="section">
-          <h2>动态</h2>
-          <ul class="news-list">
-            <li><span>2026</span> 面向大模型应用算法正式岗位求职中。</li>
-            <li><span>2025</span> 加入 SMEE 突破小组，参与领域 LLM + RAG 光刻机故障诊断系统。</li>
-            <li><span>2025</span> 在 MiniMax 实习，参与多模态召回、音色推荐与 LLM4Rec 评测。</li>
-            <li><span>2025</span> 在字节跳动实习，参与 Agent Infra、MCP Factory 与 Tool Use 数据基础设施。</li>
-          </ul>
-        </section>
-
-        <section id="selected-research" class="section">
-          <h2>代表研究</h2>
+        <section id="research" class="section">
+          <h2>研究</h2>
           <article class="publication">
             <p class="venue">ACM MM under review · 独立一作</p>
             <h3>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</h3>
             <p>
-              面向多模态大模型 object hallucination 的 decoding-time 校准方法。
-              核心思想是结合 query-relevant visual anchors、late-layer visual attention
-              与 short-horizon rollout，检查候选生成路径是否保持视觉 grounding。
+              研究多模态大模型生成时的 object hallucination。方法围绕 query-relevant visual anchors、
+              late-layer visual attention 与 short-horizon rollout，判断候选生成路径是否保持视觉 grounding。
             </p>
             <p class="note">双盲审稿期间暂不公开全文，仅提供研究摘要。</p>
           </article>
           <article class="publication">
             <p class="venue">RecSys under review · 独立一作</p>
-            <h3>Does Similarity Imply Substitutability? Typed Score Corrections for Frozen Alignment</h3>
+            <h3>Typed Score Corrections for Frozen Alignment</h3>
             <p>
-              研究 frozen text-to-CF alignment 中的 relation collapse：语义相似不一定等于行为可替代。
-              通过 typed post-scoring correction 校准推荐候选角色。
+              研究 embedding 相似度与业务可替代性之间的偏差，面向 frozen text-to-CF alignment 设计
+              typed post-scoring correction，缓解 recommendation relation collapse。
             </p>
           </article>
           <article class="publication">
             <p class="venue">RecSys under review · 独立一作</p>
-            <h3>When to Stop Asking? A Top-K-Aware Stopping Layer for Conversational Recommendation</h3>
+            <h3>Top-K-Aware Stopping Layer for Conversational Recommendation</h3>
             <p>
-              面向会话推荐的停止决策：不只看 top-1 confidence，而是根据 Top-K boundary stability
-              判断继续追问或直接推荐，平衡成功率与用户交互成本。
+              研究会话推荐中何时停止追问。核心不是 top-1 confidence，而是 Top-K boundary stability
+              与用户交互成本之间的权衡。
             </p>
           </article>
         </section>
@@ -105,13 +145,12 @@
           <h2>经历</h2>
           <article class="entry">
             <div class="entry-head">
-              <h3>SMEE 突破小组 · 算法研发成员</h3>
+              <h3>SMEE 突破小组 · 算法研发</h3>
               <span>2025.10 - 至今</span>
             </div>
             <p>
-              面向光刻机运动传输系统的领域 LLM + RAG 故障诊断：专家文档清洗、chunk schema、
-              检索评测、引用约束、SOP 安全，以及 Parser/Retrieval/Diagnosis/SOP/Verification
-              多智能体流程设计。
+              负责领域 LLM + RAG 数据构造、chunk schema 和检索评测支持，参与 Parser / Retrieval /
+              Diagnosis / SOP / Verification 多智能体诊断流程设计。核心关注点是证据链、拒答、SOP 安全与人工升级。
             </p>
           </article>
           <article class="entry">
@@ -120,8 +159,8 @@
               <span>2025.06 - 2025.09</span>
             </div>
             <p>
-              面向 NPC 推荐的多模态召回与 LLM4Rec：增长预测动态重训、VLM 图像语义 + 文本召回、
-              Hailuo-01 音色 embedding、TIGER 生成式召回分析，以及固定候选预算下的召回增量评测。
+              负责增长预测动态重训和 VLM 图像语义 + 文本相似度双路召回策略验证，参与音色 embedding、
+              TIGER 生成式召回分析和多模态召回融合评测。
             </p>
           </article>
           <article class="entry">
@@ -130,8 +169,8 @@
               <span>2025.03 - 2025.06</span>
             </div>
             <p>
-              面向企业内部 API 资产的 Tool Use 基础设施：taxonomy、参数 schema、错误码、
-              调用示例、MCP-style Tool Call、权限约束与知识库 Refine 数据。
+              推进 MCP Factory 流水线建设，将内部 API 转化为标准化 Tool Call，沉淀 taxonomy、
+              参数 schema、错误码、调用示例和知识库 Refine 数据。
             </p>
           </article>
         </section>
@@ -139,10 +178,10 @@
         <section id="projects" class="section">
           <h2>项目</h2>
           <div class="project">
-            <h3>甲己无形（Mydow）· LLM 社交智能体</h3>
+            <h3>甲己无形（Mydow）</h3>
             <p>
-              基于 LLM 做用户画像/对话人设结构化生成、破冰意图路由与多 Agent 自动交互，
-              将画像特征与垂类先验用于冷启动候选、话术策略和反馈闭环。
+              面向社交破冰与垂直画像推荐，构建用户画像/对话人设结构化生成、破冰意图路由与多 Agent
+              自动交互链路，将画像特征和垂类先验用于冷启动候选、话术策略与反馈闭环。
             </p>
           </div>
           <div class="project">
@@ -155,10 +194,20 @@
           <div class="project">
             <h3>Weaver</h3>
             <p>
-              基于 LangGraph/Aider 的 YAML 声明式多 Agent 编排原型，支持断点续传、
-              上下文隔离、失败恢复与复杂工具链可控执行。
+              基于 LangGraph/Aider 的 YAML 声明式多 Agent 编排原型，支持断点续传、上下文隔离、
+              失败恢复与复杂工具链可控执行。
             </p>
           </div>
+        </section>
+
+        <section id="principles" class="section">
+          <h2>方法论</h2>
+          <ul class="plain-list">
+            <li>先定义 failure mode，再选择模型或系统方案。</li>
+            <li>先设计公平评测，再讨论方法是否有效。</li>
+            <li>复杂方法必须有放弃条件，不能只因 fancy 而上线。</li>
+            <li>大模型应用的核心不只是生成结果，而是证据、约束、反馈和可控性。</li>
+          </ul>
         </section>
       </main>
     </div>
