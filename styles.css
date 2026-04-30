@@ -176,6 +176,12 @@ strong {
   font-weight: 600;
 }
 
+.honor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
 .timeline {
   position: relative;
   display: grid;
@@ -301,7 +307,8 @@ strong {
   }
 
   .entry-head,
-  .timeline article {
+  .timeline article,
+  .honor-grid {
     display: block;
   }
 }
