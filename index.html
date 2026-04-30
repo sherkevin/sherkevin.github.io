@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kevin Deng's academic homepage: LLM application algorithms, multimodal reliability, RAG, Tool Use, and LLM4Rec."
+    />
+    <title>Kevin Deng | LLM Application Algorithms</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Kevin Deng homepage">
+          <span class="mark">邓</span>
+          <span>
+            <strong>Kevin Deng</strong>
+            <em>LLM Application Algorithms</em>
+          </span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#research">Research</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Tsinghua EE / AI · Xiamen CS · ICPC Silver</p>
+            <h1>
+              I study and build reliable LLM applications across multimodal
+              reasoning, RAG, Tool Use, and LLM-powered recommendation.
+            </h1>
+            <p class="lede">
+              My current work sits at the intersection of application algorithms
+              and research: calibrating hallucinations in MLLMs, correcting
+              frozen alignment scores for recommendation, deciding when a
+              conversational recommender should stop asking, and making domain
+              RAG systems more traceable and safe.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="mailto:sherkevin@163.com">Email me</a>
+              <a class="button ghost" href="https://github.com/sherkevin">GitHub</a>
+            </div>
+          </div>
+          <aside class="profile-card" aria-label="Profile summary">
+            <div class="seal">LLM</div>
+            <dl>
+              <div>
+                <dt>Focus</dt>
+                <dd>Post-training, RAG, Tool Use, Multimodal Reliability</dd>
+              </div>
+              <div>
+                <dt>Research Line</dt>
+                <dd>Calibration and reliability in generation, ranking, and stopping decisions</dd>
+              </div>
+              <div>
+                <dt>Current Target</dt>
+                <dd>Full-time LLM application algorithm roles</dd>
+              </div>
+            </dl>
+          </aside>
+        </section>
+
+        <section class="section" id="research">
+          <div class="section-heading">
+            <p class="eyebrow">Selected research</p>
+            <h2>Calibration is the common thread.</h2>
+          </div>
+          <div class="research-list">
+            <article class="paper-card">
+              <span class="tag">MLLM · under review</span>
+              <h3>CHORD: Calibrating Hallucinations via Object-Resonant Decoding</h3>
+              <p>
+                A decoding-time approach for object hallucination calibration:
+                query-relevant visual anchors, late-layer visual attention, and
+                short-horizon rollout are combined to verify whether a candidate
+                generation path remains visually grounded.
+              </p>
+              <p class="note">
+                Manuscript withheld during double-blind review. Public summary only.
+              </p>
+            </article>
+            <article class="paper-card">
+              <span class="tag">RecSys · under review</span>
+              <h3>Does Similarity Imply Substitutability?</h3>
+              <p>
+                Studies relation collapse in frozen text-to-CF alignment. The
+                key idea is that semantic similarity is not the same as behavioral
+                substitutability, so typed post-scoring correction can recover
+                recommendation roles without retraining the backbone.
+              </p>
+              <p class="note">Independent first author; public details limited during review.</p>
+            </article>
+            <article class="paper-card">
+              <span class="tag">LLM4Rec · under review</span>
+              <h3>When to Stop Asking?</h3>
+              <p>
+                A Top-K-aware stopping layer for conversational recommendation.
+                Instead of relying on top-1 confidence, the method watches the
+                stability of the Top-K boundary and balances recommendation
+                success with user burden.
+              </p>
+              <p class="note">Independent first author; public details limited during review.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="experience">
+          <div class="section-heading">
+            <p class="eyebrow">Experience</p>
+            <h2>From research questions to evaluated systems.</h2>
+          </div>
+          <div class="timeline">
+            <article>
+              <span class="date">2025.10 - Present</span>
+              <h3>SMEE Breakthrough Group · Algorithm R&amp;D</h3>
+              <p>
+                Domain LLM + RAG for lithography motion-transfer diagnosis:
+                expert document cleaning, chunk schema design, retrieval
+                evaluation, citation-aware answers, SOP safety, and multi-agent
+                diagnosis flow design.
+              </p>
+            </article>
+            <article>
+              <span class="date">2025.06 - 2025.09</span>
+              <h3>MiniMax · LLM Algorithm Intern</h3>
+              <p>
+                Multimodal NPC recommendation: dynamic retraining for growth
+                prediction, VLM image semantics + text retrieval, Hailuo-01 voice
+                embeddings, TIGER-style generative retrieval analysis, and
+                fixed-budget evaluation for multimodal recall gains.
+              </p>
+            </article>
+            <article>
+              <span class="date">2025.03 - 2025.06</span>
+              <h3>ByteDance · Agent Infra R&amp;D Intern</h3>
+              <p>
+                Built tool-access infrastructure for internal API assets:
+                taxonomy, parameter schema, error codes, examples, MCP-style
+                Tool Calls, and documentation refinement for reliable Tool Use.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section two-column" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Applied LLM systems with measurable control points.</h2>
+          </div>
+          <div class="project-grid">
+            <article>
+              <h3>Mydow · LLM social agents</h3>
+              <p>
+                Structured user profiles and conversational personas are used for
+                cold-start recommendation, ice-breaking intent routing, dialogue
+                strategy, and feedback loops in a vertical social product.
+              </p>
+            </article>
+            <article>
+              <h3>AgentOS Core</h3>
+              <p>
+                A microkernel-style Agent runtime that decouples intent routing,
+                event-driven IPC, permission boundaries, and plugin-based tool
+                execution for RAG / Tool Use workflows.
+              </p>
+            </article>
+            <article>
+              <h3>Weaver</h3>
+              <p>
+                A YAML-declared multi-agent orchestration prototype built with
+                LangGraph/Aider, supporting checkpoint recovery, context
+                isolation, failure handling, and controlled tool-chain execution.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section compact" id="contact">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Open to full-time LLM application algorithm roles.</h2>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:sherkevin@163.com">sherkevin@163.com</a>
+            <a href="https://github.com/sherkevin">github.com/sherkevin</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
