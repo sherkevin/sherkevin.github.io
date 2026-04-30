@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Kevin Deng's academic homepage: LLM application algorithms, multimodal reliability, RAG, Tool Use, and LLM4Rec."
+      content="Kevin Deng's personal homepage: AI, LLM applications, multimodal reliability, RAG, Tool Use, recommendation, and agent systems."
     />
-    <title>Kevin Deng | LLM Application Algorithms</title>
+    <title>Kevin Deng | 邓凯文</title>
     <link rel="stylesheet" href="./styles.css?v=20260430f" />
   </head>
   <body>
@@ -18,15 +18,17 @@
         <p class="cn-name">邓凯文</p>
         <p class="role">M.S. student in Electronic Information (AI), Tsinghua University</p>
         <p class="focus">
-          LLM application algorithms, multimodal reliability, RAG, Tool Use, and LLM4Rec.
+          LLM applications, multimodal reliability, RAG / Tool Use, recommendation, and agent workflows.
         </p>
         <nav aria-label="Section navigation">
-          <a href="#about">About</a>
-          <a href="#research-interests">Research Interests</a>
-          <a href="#news">News</a>
-          <a href="#selected-research">Selected Research</a>
+          <a href="#about">About Me</a>
+          <a href="#worldview">Worldview</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#honors">Honors</a>
+          <a href="#research">Research</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
+          <a href="#principles">Principles</a>
         </nav>
         <div class="contact">
           <a href="./index.html">中文版</a>
@@ -38,73 +40,156 @@
       <main class="content">
         <section id="about" class="section">
           <h2>About Me</h2>
-          <p>
-            I am interested in how intelligent systems can work reliably in the
-            real world. My focus on <strong>calibration and reliability</strong>
-            covers whether a multimodal model is visually grounded, whether an
-            embedding score reflects substitutability, whether a recommender
-            should keep asking, and whether a domain RAG system can answer with
-            evidence and safety.
-          </p>
-          <p>
-            My work spans multimodal recommendation at MiniMax, Tool Use and
-            Agent infrastructure at ByteDance, and domain LLM/RAG diagnosis for
-            lithography systems at SMEE. These experiences connect research
-            questions with evaluated systems and real application constraints.
-          </p>
-        </section>
-
-        <section id="research-interests" class="section">
-          <h2>Research Interests</h2>
           <ul class="plain-list">
-            <li><strong>Multimodal reliability:</strong> hallucination calibration, visual grounding, decoding-time verification.</li>
-            <li><strong>RAG and Tool Use:</strong> evidence retrieval, citation support, schema grounding, safe tool invocation.</li>
-            <li><strong>LLM4Rec:</strong> multimodal recall, semantic IDs, conversational recommendation, stopping decisions.</li>
-            <li><strong>Post-training data:</strong> SFT/DPO data construction, refusal behavior, badcase diagnosis, evaluation design.</li>
+            <li><strong>Reliability:</strong> multimodal models need visual evidence, RAG answers need traceable citations, and agent workflows need controllable boundaries.</li>
+            <li><strong>Objects of modeling:</strong> multimodal gains in recommendation, evidence retrieval for domain knowledge, and schema/error recovery for tool invocation.</li>
+            <li><strong>Experience threads:</strong> algorithm training through competitions, AI study at Xiamen University and Tsinghua, multimodal recommendation at MiniMax, Agent Infra at ByteDance, domain LLM/RAG at SMEE, and applied agent projects such as Mydow, AgentOS, and Weaver.</li>
           </ul>
         </section>
 
-        <section id="news" class="section">
-          <h2>News</h2>
-          <ul class="news-list">
-            <li><span>2026</span> Continuing research and engineering work on reliable LLM applications.</li>
-            <li><span>2025</span> Joined the SMEE breakthrough group on domain LLM + RAG for lithography diagnosis.</li>
-            <li><span>2025</span> Interned at MiniMax on multimodal recall, voice recommendation, and LLM4Rec evaluation.</li>
-            <li><span>2025</span> Interned at ByteDance on Agent Infra, MCP Factory, and Tool Use data infrastructure.</li>
+        <section id="worldview" class="section">
+          <h2>Worldview</h2>
+          <div class="principles">
+            <article>
+              <h3>Intelligence is compression; higher intelligence is reconstruction.</h3>
+              <p>
+                Compression makes the world representable. Decompression unfolds
+                a representation. Reconstruction asks a system to recover structure
+                from fragments, which reflects a deeper understanding of the world.
+              </p>
+            </article>
+            <article>
+              <h3>Memory, tools, and environment are different things.</h3>
+              <p>
+                LLM + memory resembles a brain; tools resemble a body; environment is the world.
+                Memory stores reflection and compressed experience. Environment stores code,
+                data, documents, collaboration context, and concrete artifacts.
+              </p>
+            </article>
+            <article>
+              <h3>Attention is the core of human-AI collaboration.</h3>
+              <p>
+                When building context, humans decide what matters and what can be ignored.
+                This act of attention separates effective collaboration from blind automation.
+              </p>
+            </article>
+            <article>
+              <h3>Frequency shapes memory; value drives reflection.</h3>
+              <p>
+                Models learn general frequency patterns, while personal memory is shaped by
+                the specific frequency of an individual's world. Valuable events trigger
+                reflection, which is an iterative compression of high-value samples.
+              </p>
+            </article>
+            <article>
+              <h3>AI coding is entropy control and minimal change.</h3>
+              <p>
+                Code is an artifact deposited into the environment. Good AI coding is not
+                large-scale generation; it is the smallest necessary change after understanding
+                the project structure, keeping the system readable, maintainable, and reversible.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="timeline" class="section">
+          <h2>Timeline</h2>
+          <div class="timeline">
+            <article>
+              <span class="dot"></span>
+              <time>2025.11 - Present</time>
+              <div>
+                <h3>Mydow entrepreneurial project</h3>
+                <p>Exploring LLM-based user profiles, conversational personas, intent routing, cold-start recommendation, and multi-agent social interaction loops.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.10 - Present</time>
+              <div>
+                <h3>SMEE Breakthrough Group · Algorithm R&amp;D</h3>
+                <p>Domain LLM + RAG diagnosis for lithography systems, focusing on evidence retrieval, citation support, SOP safety, and multi-agent diagnosis flow.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.06 - 2025.09</time>
+              <div>
+                <h3>MiniMax · LLM Algorithm Intern</h3>
+                <p>Multimodal NPC recall, voice recommendation, TIGER-style generative retrieval analysis, and fixed-budget evaluation for true recall gains.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2025.03 - 2025.06</time>
+              <div>
+                <h3>ByteDance · Agent Infra R&amp;D Intern</h3>
+                <p>Internal API asset management, MCP Factory, tool schema, error codes, examples, and Tool Use infrastructure.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2024.09 - 2027.06</time>
+              <div>
+                <h3>Tsinghua University · M.S. in Electronic Information (AI)</h3>
+                <p>Study and research on LLM applications, multimodal reliability, RAG / Tool Use, and LLM4Rec.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2024.02 - 2024.07</time>
+              <div>
+                <h3>Ping An Technology · Data Mining</h3>
+                <p>User profiling, real-time behavior features, feature fusion, and rule-enhanced repayment-rate prediction.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2020.09 - 2024.07</time>
+              <div>
+                <h3>Xiamen University · B.S. in Computer Science</h3>
+                <p>GPA Top 2%, National Scholarship, Outstanding Graduate, thesis award, ICPC, math contests, Lanqiao Cup, and OS kernel competition.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot"></span>
+              <time>2017.09 - 2020.06</time>
+              <div>
+                <h3>Henan Suixian Senior High School</h3>
+                <p>High-school study with a provincial second prize in physics competition.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="honors" class="section">
+          <h2>Honors</h2>
+          <ul class="dated-list">
+            <li><span>2024</span>Outstanding undergraduate thesis; Outstanding Graduate, School of Informatics, Xiamen University.</li>
+            <li><span>2023</span>Huawei Developer Competition, Algorithm Track, Hangzhou-Xiamen region, second prize; Wande Scholarship.</li>
+            <li><span>2022</span>National Scholarship; Qimiao Scholarship; Lanqiao Cup provincial first prize and national second prize; OS Kernel competition second prize; MCM Honorable Mention.</li>
+            <li><span>2021</span>National Scholarship; first-class academic scholarship; Furong innovation scholarship; ICPC Invitational silver medal; mathematics competition first prize; GPLT team first prize.</li>
+            <li><span>High school</span>Provincial second prize in physics competition.</li>
           </ul>
         </section>
 
-        <section id="selected-research" class="section">
-          <h2>Selected Research</h2>
+        <section id="research" class="section">
+          <h2>Research</h2>
           <article class="publication">
-            <p class="venue">ACM MM, under review · independent first author</p>
+            <p class="venue">ACM MM under review · independent first author</p>
             <h3>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</h3>
-            <p>
-              Object-grounded decoding for hallucination calibration. The work
-              studies how query-relevant visual anchors, late-layer visual
-              attention, and short-horizon rollout can verify whether a generation
-              path remains visually grounded.
-            </p>
+            <p>Object-grounded decoding for hallucination calibration with visual anchors, late-layer attention, and short-horizon rollout.</p>
             <p class="note">Manuscript withheld during double-blind review. Public summary only.</p>
           </article>
           <article class="publication">
-            <p class="venue">RecSys, under review · independent first author</p>
-            <h3>Does Similarity Imply Substitutability? Typed Score Corrections for Frozen Alignment</h3>
-            <p>
-              Studies relation collapse in frozen text-to-CF alignment. The
-              project asks when semantic similarity fails to mean behavioral
-              substitutability and uses typed post-scoring correction to calibrate
-              recommendation candidates.
-            </p>
+            <p class="venue">RecSys under review · independent first author</p>
+            <h3>Typed Score Corrections for Frozen Alignment</h3>
+            <p>Typed post-scoring correction for relation collapse in frozen text-to-CF alignment, where semantic similarity does not always imply behavioral substitutability.</p>
           </article>
           <article class="publication">
-            <p class="venue">RecSys, under review · independent first author</p>
-            <h3>When to Stop Asking? A Top-K-Aware Stopping Layer for Conversational Recommendation</h3>
-            <p>
-              A calibrated stopping mechanism for conversational recommendation.
-              Instead of relying on top-1 confidence, the method watches Top-K
-              boundary stability to balance recommendation success and user burden.
-            </p>
+            <p class="venue">RecSys under review · independent first author</p>
+            <h3>Top-K-Aware Stopping Layer for Conversational Recommendation</h3>
+            <p>Stopping decision based on Top-K boundary stability rather than top-1 confidence, balancing recommendation success and user burden.</p>
           </article>
         </section>
 
@@ -115,62 +200,63 @@
               <h3>SMEE Breakthrough Group · Algorithm R&amp;D</h3>
               <span>2025.10 - Present</span>
             </div>
-            <p>
-              Domain LLM + RAG for lithography motion-transfer diagnosis:
-              expert document cleaning, chunk schema, retrieval evaluation,
-              citation-aware answers, SOP safety, and Parser/Retrieval/Diagnosis/SOP/Verification flow design.
-            </p>
+            <p>Domain LLM + RAG data construction, chunk schema, retrieval evaluation, citation-aware diagnosis, SOP safety, and multi-agent diagnosis flow.</p>
           </article>
           <article class="entry">
             <div class="entry-head">
               <h3>MiniMax · LLM Algorithm Intern</h3>
               <span>2025.06 - 2025.09</span>
             </div>
-            <p>
-              Multimodal NPC recommendation: dynamic retraining for growth prediction,
-              VLM image semantics + text retrieval, Hailuo-01 voice embeddings,
-              TIGER-style generative retrieval analysis, and fixed-budget recall evaluation.
-            </p>
+            <p>Dynamic retraining for growth prediction, VLM image + text recall, voice embedding, TIGER-style retrieval analysis, and multimodal recall evaluation.</p>
           </article>
           <article class="entry">
             <div class="entry-head">
               <h3>ByteDance · Agent Infra R&amp;D Intern</h3>
               <span>2025.03 - 2025.06</span>
             </div>
-            <p>
-              Tool access infrastructure for internal API assets: taxonomy,
-              parameter schema, error codes, examples, MCP-style Tool Calls,
-              permission constraints, and documentation refinement for reliable Tool Use.
-            </p>
+            <p>MCP Factory, standardized Tool Calls, taxonomy, parameter schema, error codes, examples, and knowledge-base refinement.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Ping An Technology · Data Mining</h3>
+              <span>2024.02 - 2024.07</span>
+            </div>
+            <p>User profiling optimization, real-time behavioral feature mining, collaborative filtering / LR / clustering, and rule-enhanced prediction.</p>
           </article>
         </section>
 
         <section id="projects" class="section">
           <h2>Projects</h2>
           <div class="project">
-            <h3>Mydow · LLM social agents</h3>
-            <p>
-              Structured user profiles and conversational personas for cold-start
-              recommendation, ice-breaking intent routing, dialogue strategy,
-              and feedback loops in a vertical social product.
-            </p>
+            <h3>Mydow</h3>
+            <p>Structured user profiles, conversational personas, intent routing, multi-agent interaction, cold-start recommendation, and feedback loops.</p>
           </div>
           <div class="project">
             <h3>AgentOS Core</h3>
-            <p>
-              A microkernel-style Agent runtime that decouples intent routing,
-              event-driven IPC, permission boundaries, and plugin-based tool execution
-              for RAG / Tool Use workflows.
-            </p>
+            <p>A microkernel-style Agent runtime for intent routing, event-driven IPC, permission boundaries, and plugin-based tool execution.</p>
           </div>
           <div class="project">
             <h3>Weaver</h3>
-            <p>
-              YAML-declared multi-agent orchestration built with LangGraph/Aider,
-              supporting checkpoint recovery, context isolation, failure handling,
-              and controlled tool-chain execution.
-            </p>
+            <p>YAML-declared multi-agent orchestration with checkpoint recovery, context isolation, failure handling, and controlled tool-chain execution.</p>
           </div>
+          <div class="project">
+            <h3>SmartIcon</h3>
+            <p>Paper-icon generation with ComfyUI workflows, style transfer, prompt tuning, and OpenCLIP-enhanced multimodal retrieval.</p>
+          </div>
+          <div class="project">
+            <h3>CSAsk</h3>
+            <p>Knowledge-graph-enhanced RAG system for computer-science terminology explanation, translation, and paper reading.</p>
+          </div>
+        </section>
+
+        <section id="principles" class="section">
+          <h2>Principles</h2>
+          <ul class="plain-list">
+            <li>Define the failure mode before choosing a model or system design.</li>
+            <li>Design fair evaluation before claiming a method works.</li>
+            <li>Complex methods need stopping conditions and rollback paths.</li>
+            <li>LLM applications depend on evidence, constraints, feedback, and controllability.</li>
+          </ul>
         </section>
       </main>
     </div>
