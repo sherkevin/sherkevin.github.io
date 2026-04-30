@@ -159,19 +159,37 @@ strong {
 }
 
 .plain-list,
-.news-list {
+.news-list,
+.dated-list {
   padding-left: 22px;
   margin: 0;
 }
 
 .plain-list li,
-.news-list li {
+.news-list li,
+.dated-list li {
   margin-bottom: 8px;
 }
 
 .news-list span {
   display: inline-block;
   min-width: 72px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dated-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dated-list li {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.dated-list span {
   color: var(--accent);
   font-weight: 600;
 }
