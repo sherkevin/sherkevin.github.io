@@ -325,14 +325,14 @@ strong {
 }
 
 .paper-detail summary::after {
-  content: "details open";
+  content: "hide details";
   color: var(--muted);
   font-size: 13px;
   font-style: italic;
 }
 
 .paper-detail:not([open]) summary::after {
-  content: "details closed";
+  content: "show details";
 }
 
 .paper-abstract {
