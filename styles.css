@@ -36,26 +36,32 @@ a:hover {
 }
 
 .page-card {
-  width: min(780px, calc(100% - 36px));
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 44px;
+  width: min(960px, calc(100% - 56px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 46px 0 58px;
+  padding: 42px 36px 58px;
   background: var(--bg);
-  border: 0;
-  box-shadow: none;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.72) inset;
 }
 
 .sidebar {
-  position: static;
-  padding: 0 0 22px;
-  margin-bottom: 34px;
-  border-right: 0;
-  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 28px;
+  align-self: start;
+  padding: 0 22px 0 0;
+  margin-bottom: 0;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
   background: transparent;
 }
 
 .avatar {
-  display: none;
+  display: grid;
 }
 
 h1,
@@ -438,9 +444,20 @@ strong {
 
 @media (max-width: 700px) {
   .page-card {
+    display: block;
     width: min(100% - 24px, 760px);
     margin: 0 auto;
     padding: 28px 0 42px;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .sidebar {
+    position: static;
+    padding: 0 0 22px;
+    margin-bottom: 34px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .entry-head,
