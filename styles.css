@@ -1,11 +1,11 @@
 :root {
-  --bg: #fbf7ee;
-  --panel: #fffdf8;
-  --ink: #302b25;
-  --muted: #706a62;
-  --line: #eadfcd;
-  --accent: #8b6a45;
-  --soft: #f3eadb;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --ink: #1f2933;
+  --muted: #59636e;
+  --line: #d8dee4;
+  --accent: #1f4e79;
+  --soft: #eef4fa;
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   background: #ffffff;
   font-family: "Times New Roman", Times, "SimSun", "Songti SC", "宋体", serif;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.68;
 }
 
 a {
@@ -37,37 +37,28 @@ a:hover {
 
 .page-card {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 36px;
-  width: min(940px, calc(100% - 64px));
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 42px;
+  width: min(1040px, calc(100% - 64px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 34px 36px 42px;
+  padding: 44px 34px 56px;
   background: var(--bg);
-  border: 1px solid var(--line);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.74) inset;
+  border: 0;
+  box-shadow: none;
 }
 
 .sidebar {
   position: sticky;
-  top: 36px;
+  top: 42px;
   align-self: start;
-  padding: 18px 12px 18px 0;
+  padding: 4px 18px 18px 0;
   border-right: 1px solid var(--line);
   background: transparent;
 }
 
 .avatar {
-  display: grid;
-  width: 82px;
-  height: 82px;
-  margin-bottom: 22px;
-  place-items: center;
-  color: var(--panel);
-  background: var(--ink);
-  border-radius: 50%;
-  font-family: "SimSun", "Songti SC", "宋体", serif;
-  font-size: 34px;
+  display: none;
 }
 
 h1,
@@ -79,13 +70,13 @@ p {
 
 h1 {
   margin-bottom: 2px;
-  font-size: 28px;
+  font-size: 27px;
   font-weight: 600;
   line-height: 1.1;
 }
 
 .cn-name {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: var(--muted);
   font-size: 15px;
 }
@@ -100,28 +91,28 @@ h1 {
 }
 
 .focus {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   font-size: 15px;
 }
 
 nav {
   display: grid;
-  gap: 6px;
-  margin: 24px 0;
-  padding: 18px 0;
+  gap: 5px;
+  margin: 24px 0 22px;
+  padding: 15px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 nav a {
-  color: var(--ink);
+  color: var(--accent);
   font-size: 15px;
 }
 
 .contact {
   display: grid;
   gap: 6px;
-  font-size: 14px;
+  font-size: 13.5px;
   word-break: break-word;
 }
 
@@ -130,8 +121,8 @@ nav a {
 }
 
 .section {
-  padding: 0 0 30px;
-  margin-bottom: 30px;
+  padding: 0 0 34px;
+  margin-bottom: 34px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -141,16 +132,16 @@ nav a {
 }
 
 h2 {
-  margin-bottom: 16px;
-  padding-bottom: 8px;
+  margin-bottom: 17px;
+  padding-bottom: 7px;
   border-bottom: 1px solid var(--line);
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 h3 {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -169,7 +160,7 @@ strong {
 .plain-list li,
 .news-list li,
 .dated-list li {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .news-list span {
@@ -186,7 +177,7 @@ strong {
 
 .dated-list li {
   display: grid;
-  grid-template-columns: 86px minmax(0, 1fr);
+  grid-template-columns: 92px minmax(0, 1fr);
   gap: 14px;
 }
 
@@ -203,12 +194,12 @@ strong {
 
 .principles {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .principles article {
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(222, 210, 191, 0.78);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .principles article:first-child {
@@ -228,8 +219,8 @@ strong {
 .timeline {
   position: relative;
   display: grid;
-  gap: 18px;
-  padding-left: 22px;
+  gap: 22px;
+  padding-left: 20px;
 }
 
 .timeline::before {
@@ -239,14 +230,14 @@ strong {
   left: 5px;
   width: 1px;
   content: "";
-  background: var(--line);
+  background: #cfd6dd;
 }
 
 .timeline article {
   position: relative;
   display: grid;
-  grid-template-columns: 124px minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 20px;
 }
 
 .timeline .dot {
@@ -256,7 +247,7 @@ strong {
   width: 11px;
   height: 11px;
   border: 2px solid var(--accent);
-  background: var(--bg);
+  background: #ffffff;
   border-radius: 50%;
 }
 
@@ -267,8 +258,12 @@ strong {
 }
 
 .timeline p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   color: var(--muted);
+}
+
+.timeline p:last-child {
+  margin-bottom: 0;
 }
 
 .timeline h3 {
@@ -279,7 +274,7 @@ strong {
 .entry,
 .project {
   padding: 18px 0;
-  border-bottom: 1px solid rgba(222, 210, 191, 0.78);
+  border-bottom: 1px solid var(--line);
 }
 
 .publication:first-of-type,
@@ -327,8 +322,14 @@ strong {
 .entry p,
 .publication p,
 .project p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   color: var(--muted);
+}
+
+.entry p:last-child,
+.publication p:last-child,
+.project p:last-child {
+  margin-bottom: 0;
 }
 
 ::selection {
