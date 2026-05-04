@@ -308,11 +308,13 @@ strong {
   font-style: italic;
 }
 
-.paper-detail {
+.paper-detail,
+.event-detail {
   display: block;
 }
 
-.paper-detail summary {
+.paper-detail summary,
+.event-detail summary {
   display: grid;
   gap: 4px;
   margin-bottom: 12px;
@@ -320,19 +322,29 @@ strong {
   list-style: none;
 }
 
-.paper-detail summary::-webkit-details-marker {
+.paper-detail summary::-webkit-details-marker,
+.event-detail summary::-webkit-details-marker {
   display: none;
 }
 
-.paper-detail summary::after {
+.paper-detail summary::after,
+.event-detail summary::after {
   content: "hide details";
   color: var(--muted);
   font-size: 13px;
   font-style: italic;
 }
 
-.paper-detail:not([open]) summary::after {
+.paper-detail:not([open]) summary::after,
+.event-detail:not([open]) summary::after {
   content: "show details";
+}
+
+.event-detail summary.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .paper-abstract {
