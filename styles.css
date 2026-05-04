@@ -1,11 +1,11 @@
 :root {
-  --bg: #ffffff;
-  --panel: #ffffff;
-  --ink: #1f2933;
-  --muted: #59636e;
-  --line: #d8dee4;
-  --accent: #1f4e79;
-  --soft: #eef4fa;
+  --bg: #fbf6ea;
+  --panel: #fffdf8;
+  --ink: #2f2a23;
+  --muted: #6e665c;
+  --line: #e6dccb;
+  --accent: #76512d;
+  --soft: #f2e8d8;
 }
 
 * {
@@ -39,10 +39,10 @@ a:hover {
   width: min(780px, calc(100% - 36px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 46px 0 58px;
+  padding: 42px 42px 58px;
   background: var(--bg);
   border: 0;
-  box-shadow: none;
+  box-shadow: 0 0 0 1px rgba(118, 81, 45, 0.08);
 }
 
 .sidebar {
