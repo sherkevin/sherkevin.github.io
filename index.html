@@ -167,32 +167,58 @@
               <span class="dot"></span>
               <time>2024.09 - 2027.06</time>
               <div>
-                <h3>清华大学 · 电子信息（人工智能）硕士</h3>
-                <p>研究方向转向大模型应用算法、多模态可靠性、RAG/Tool Use 与 LLM4Rec。</p>
+                <details class="event-detail" open>
+                  <summary><h3>清华大学 · 电子信息（人工智能）硕士</h3></summary>
+                  <p>研究方向转向大模型应用算法、多模态可靠性、RAG/Tool Use 与 LLM4Rec。</p>
+                  <p>
+                    进入研究生阶段后，我逐渐把兴趣从“模型能做什么”转向“模型为什么会失败、怎样让失败可诊断”。
+                    这也是后续三篇论文和多段实习共同收束的方向：生成要有视觉证据，推荐要有真实增量，
+                    RAG 要有引用和拒答，Agent 要有工具边界。
+                  </p>
+                </details>
               </div>
             </article>
             <article>
               <span class="dot"></span>
               <time>2024.02 - 2024.07</time>
               <div>
-                <h3>平安科技 · 数据挖掘</h3>
-                <p>参与用户画像模型优化与实时行为特征融合，将过滤规则嵌入还款率预测模型，支撑灰度 A/B 策略优化。</p>
+                <details class="event-detail" open>
+                  <summary><h3>平安科技 · 数据挖掘</h3></summary>
+                  <p>参与用户画像模型优化与实时行为特征融合，将过滤规则嵌入还款率预测模型，支撑灰度 A/B 策略优化。</p>
+                  <p>
+                    这是我较早接触真实业务数据的一段经历。相比课堂里的静态数据集，业务里的特征会随时间、策略和用户行为变化；
+                    因此模型优化不能只看离线分数，也要看规则如何进入策略、灰度如何验证、实时特征和离线特征如何互相补充。
+                  </p>
+                </details>
               </div>
             </article>
             <article>
               <span class="dot"></span>
               <time>2020.09 - 2024.07</time>
               <div>
-                <h3>厦门大学 · 计算机科学与技术</h3>
-                <p>GPA Top 2%，获国家奖学金、优秀毕业生与优秀毕业论文；通过 ICPC、数学竞赛、蓝桥杯、OS 内核赛等系统训练算法、工程和问题拆解能力。</p>
+                <details class="event-detail" open>
+                  <summary><h3>厦门大学 · 计算机科学与技术</h3></summary>
+                  <p>GPA Top 2%，获国家奖学金、优秀毕业生与优秀毕业论文；通过 ICPC、数学竞赛、蓝桥杯、OS 内核赛等系统训练算法、工程和问题拆解能力。</p>
+                  <p>
+                    本科阶段对我影响最大的不是某一个奖项，而是训练方式：竞赛让我习惯把复杂问题拆成可验证的子问题，
+                    系统课程和 OS 内核赛让我意识到工程边界、状态管理和可恢复性的重要性。后来做 Agent runtime、RAG
+                    和模型评测时，这种“先拆结构，再谈方法”的习惯一直在延续。
+                  </p>
+                </details>
               </div>
             </article>
             <article>
               <span class="dot"></span>
               <time>2017.09 - 2020.06</time>
               <div>
-                <h3>河南睢县高级中学</h3>
-                <p>完成高中阶段学习，参加物理竞赛并获省级二等奖，形成理工科基础和长期自驱学习习惯。</p>
+                <details class="event-detail" open>
+                  <summary><h3>河南睢县高级中学</h3></summary>
+                  <p>完成高中阶段学习，参加物理竞赛并获省级二等奖，形成理工科基础和长期自驱学习习惯。</p>
+                  <p>
+                    物理竞赛给我的早期训练，是把自然语言里的现象重新表述成可计算模型。
+                    后来无论是推荐、RAG 还是 decoding，我都在反复做类似的事：先找到问题的结构，再选择工具。
+                  </p>
+                </details>
               </div>
             </article>
           </div>
@@ -443,25 +469,43 @@
             </details>
           </div>
           <div class="project">
-            <h3>SmartIcon</h3>
-            <p>
-              面向科研论文图标生成，结合论文数据爬取、ComfyUI 工作流、风格迁移与 Prompt 微调，
-              并引入 OpenCLIP 多模态检索增强不同期刊风格图标生成。
-            </p>
+            <details class="event-detail" open>
+              <summary><h3>SmartIcon</h3></summary>
+              <p>
+                面向科研论文图标生成，结合论文数据爬取、ComfyUI 工作流、风格迁移与 Prompt 微调，
+                并引入 OpenCLIP 多模态检索增强不同期刊风格图标生成。
+              </p>
+              <p>
+                这个项目关注的是“生成”之外的控制问题：科研图标不只是好看，还要符合领域、期刊和论文语义。
+                因此我更关注检索到相似风格、约束生成空间、再用多模态相似度做反馈，而不是只靠 prompt 一次生成。
+              </p>
+            </details>
           </div>
           <div class="project">
-            <h3>CSAsk</h3>
-            <p>
-              构建计算机领域术语知识图谱，结合 LLaMA 基座与 RAG 增强，实现计算机论文术语解释、
-              翻译和领域知识问答。
-            </p>
+            <details class="event-detail" open>
+              <summary><h3>CSAsk</h3></summary>
+              <p>
+                构建计算机领域术语知识图谱，结合 LLaMA 基座与 RAG 增强，实现计算机论文术语解释、
+                翻译和领域知识问答。
+              </p>
+              <p>
+                这个项目是我较早把 LLM、知识图谱和 RAG 放到一起的尝试。它让我意识到，
+                领域问答的难点不是“让模型多说”，而是让它知道术语之间的关系、引用来源和上下文边界。
+              </p>
+            </details>
           </div>
           <div class="project">
-            <h3>早期科研探索</h3>
-            <p>
-              曾探索基于光流建模的小目标识别、深度学习自适应缓存调度与 KV cache 改进，
-              为后续多模态、系统优化和大模型推理理解打下基础。
-            </p>
+            <details class="event-detail" open>
+              <summary><h3>早期科研探索</h3></summary>
+              <p>
+                曾探索基于光流建模的小目标识别、深度学习自适应缓存调度与 KV cache 改进，
+                为后续多模态、系统优化和大模型推理理解打下基础。
+              </p>
+              <p>
+                这些探索方向后来并没有都发展成主线，但它们提供了不同的观察角度：视觉任务让我关注信息如何被表示，
+                缓存和 KV cache 让我关注推理成本，系统优化让我意识到算法最终要落在资源约束里。
+              </p>
+            </details>
           </div>
         </section>
 
