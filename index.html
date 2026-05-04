@@ -8,7 +8,7 @@
       content="邓凯文的个人主页：人工智能、大模型应用算法、多模态、RAG、Tool Use、推荐与智能体系统。"
     />
     <title>邓凯文 | Kevin Deng</title>
-    <link rel="stylesheet" href="./styles.css?v=20260504a" />
+    <link rel="stylesheet" href="./styles.css?v=20260504c" />
   </head>
   <body>
     <div class="page-card">
@@ -198,29 +198,125 @@
         <section id="research" class="section">
           <h2>研究</h2>
           <article class="publication">
-            <p class="venue">ACM MM under review · 独立一作</p>
-            <h3>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</h3>
-            <p>
-              研究多模态大模型生成时的 object hallucination。方法围绕 query-relevant visual anchors、
-              late-layer visual attention 与 short-horizon rollout，判断候选生成路径是否保持视觉 grounding。
-            </p>
-            <p class="note">双盲审稿期间暂不公开全文，仅提供研究摘要。</p>
+            <details class="paper-detail" open>
+              <summary>
+                <span class="venue">ACM MM under review · 独立一作</span>
+                <strong>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</strong>
+              </summary>
+              <p class="paper-abstract">
+                Multimodal Large Language Models remain text-native autoregressive systems: visual evidence conditions the hidden state, but token admission is still decided one step at a time.
+                Hallucination can therefore emerge as a short-horizon decoding failure, where a locally plausible token enters the prefix before robust visual grounding is established.
+                CHORD evaluates candidate tokens with three coordinated signals: a past signal for rollback-based protection, a current signal measuring query-conditioned visual support, and a future signal probing short-horizon continuation through bounded rollout.
+                Experiments on POPE, CHAIR, and MMBench with LLaVA-1.5 and InstructBLIP show two regimes: Past+Current gives latency-efficient POPE gains, while Full CHORD gives stronger overall quality metrics and CHAIR reduction.
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> Hallucination Mitigation; Decode-Time Verification; Visual Grounding.</p>
+              <figure class="paper-figure">
+                <img src="./assets/papers/chord-method.png" alt="CHORD method overview" />
+                <figcaption>Method overview: CHORD screens token admission through past rollback protection, current object resonance, and future rollout arbitration.</figcaption>
+              </figure>
+              <div class="table-wrap">
+                <table class="result-table">
+                  <caption>Main comparison on hallucination and retention metrics</caption>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Method</th>
+                      <th>Avg. F1 ↑</th>
+                      <th>Adv. F1 ↑</th>
+                      <th>CHAIR<sub>S</sub> ↓</th>
+                      <th>MMBench ↑</th>
+                      <th>ITL ↓</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>LLaVA-1.5</td><td>Greedy</td><td>0.8488</td><td>0.8036</td><td>0.2291</td><td>68.63</td><td>19.73</td></tr>
+                    <tr><td>LLaVA-1.5</td><td>CHORD</td><td>0.8752</td><td>0.8453</td><td>0.1548</td><td>69.78</td><td>37.31</td></tr>
+                    <tr><td>InstructBLIP</td><td>Greedy</td><td>0.8659</td><td>0.8327</td><td>0.2140</td><td>69.34</td><td>16.47</td></tr>
+                    <tr><td>InstructBLIP</td><td>CHORD</td><td>0.8924</td><td>0.8651</td><td>0.1347</td><td>70.82</td><td>35.86</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="note">边界：CHORD 是 inference-time control，不是训练时对齐；它更适合 object-related hallucination，且依赖 visual anchors 与额外 decoding compute。</p>
+            </details>
           </article>
+
           <article class="publication">
-            <p class="venue">RecSys under review · 独立一作</p>
-            <h3>Typed Score Corrections for Frozen Alignment</h3>
-            <p>
-              研究 embedding 相似度与业务可替代性之间的偏差，面向 frozen text-to-CF alignment 设计
-              typed post-scoring correction，缓解 recommendation relation collapse。
-            </p>
+            <details class="paper-detail" open>
+              <summary>
+                <span class="venue">RecSys under review · 独立一作</span>
+                <strong>Does Similarity Imply Substitutability? Typed Score Corrections for Frozen Alignment</strong>
+              </summary>
+              <p class="paper-abstract">
+                Frozen text-to-CF alignment often preserves semantic proximity while collapsing recommendation roles: substitutes, same-routine companions, and off-target items may appear in one neighborhood.
+                This work asks whether typed structure is already recoverable at scoring time, before paying for another training-time specialization pipeline.
+                TypedSmoke subtracts a family-mismatch penalty from frozen BaseAlign scores, and is evaluated against higher-capacity typed variants and as a plug-in on five published backbones.
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> relation collapse; item cold-start; frozen text embeddings; post-scoring correction.</p>
+              <figure class="paper-figure">
+                <img src="./assets/papers/typed-method.png" alt="TypedSmoke inference-time scoring pipeline" />
+                <figcaption>Inference-time scoring pipeline: TypedSmoke repairs frozen alignment with a zero-training family-mismatch penalty.</figcaption>
+              </figure>
+              <div class="table-wrap">
+                <table class="result-table">
+                  <caption>Beauty 2k Ridge-backbone ladder</caption>
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Recall@20 ↑</th>
+                      <th>NDCG@20 ↑</th>
+                      <th>FMR-self@20 ↓</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>BaseAlign</td><td>0.0385</td><td>0.0138</td><td>0.4690</td></tr>
+                    <tr><td>RandomNeg</td><td>0.0225</td><td>0.0077</td><td>0.8239</td></tr>
+                    <tr><td>TypedSmoke</td><td>0.0430</td><td>0.0158</td><td>0.0226</td></tr>
+                    <tr><td>FamilyAlign</td><td>0.0375</td><td>0.0154</td><td>0.1522</td></tr>
+                    <tr><td>FamilyRoleAlign</td><td>0.0370</td><td>0.0157</td><td>0.0810</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="note">边界：FMR-self 是 typed proxy，不是完整 substitutability gold label；论文用 FMR-leaf audit 与跨 backbone 检查减轻 self-consistency 风险。</p>
+            </details>
           </article>
+
           <article class="publication">
-            <p class="venue">RecSys under review · 独立一作</p>
-            <h3>Top-K-Aware Stopping Layer for Conversational Recommendation</h3>
-            <p>
-              研究会话推荐中何时停止追问。核心不是 top-1 confidence，而是 Top-K boundary stability
-              与用户交互成本之间的权衡。
-            </p>
+            <details class="paper-detail" open>
+              <summary>
+                <span class="venue">RecSys under review · 独立一作</span>
+                <strong>When to Stop Asking? A Top-K-Aware Stopping Layer for Conversational Recommendation</strong>
+              </summary>
+              <p class="paper-abstract">
+                Conversational recommenders often stop through fixed budgets or scalar confidence thresholds, which cannot distinguish a truly resolved slate from one that only looks confident.
+                SSE-Stop tracks a calibrated slate-support envelope around the Top-K boundary and fires when that envelope contracts to capacity.
+                The result is a lightweight stop layer with an explicit failure mode, saturation collapse, and a falsifiable scope condition on score-distribution shape.
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> conversational recommender systems; stopping criteria; conformal prediction; early stopping.</p>
+              <figure class="paper-figure">
+                <img src="./assets/papers/stop-method.png" alt="SSE-Stop inference-time pipeline" />
+                <figcaption>SSE-Stop turns stopping into a Top-K boundary question: scores in, calibrated envelope, then fire or continue.</figcaption>
+              </figure>
+              <div class="table-wrap">
+                <table class="result-table">
+                  <caption>Selected variable-budget behavior on LastFM</caption>
+                  <thead>
+                    <tr>
+                      <th>Partition</th>
+                      <th>Policy</th>
+                      <th>SR ↑</th>
+                      <th>Trigger</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Easy</td><td>SSE-Stop</td><td>0.404 ± 0.055</td><td>0.816 ± 0.108</td></tr>
+                    <tr><td>Easy</td><td>top1-softmax</td><td>0.428 ± 0.037</td><td>0.834 ± 0.028</td></tr>
+                    <tr><td>Hard</td><td>SSE-Stop</td><td>0.115 ± 0.015</td><td>0.795 ± 0.118</td></tr>
+                    <tr><td>Hard</td><td>top1-softmax-std</td><td>0.071 ± 0.009</td><td>0.984</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="note">边界：SSE-Stop wraps a score-based frontend; generative LLM-ranker swaps break the monotone-affine score premise, so the claim is scoped rather than universal.</p>
+            </details>
           </article>
         </section>
 

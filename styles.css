@@ -308,6 +308,93 @@ strong {
   font-style: italic;
 }
 
+.paper-detail {
+  display: block;
+}
+
+.paper-detail summary {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.paper-detail summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-detail summary::after {
+  content: "details open";
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.paper-detail:not([open]) summary::after {
+  content: "details closed";
+}
+
+.paper-abstract {
+  color: var(--ink) !important;
+}
+
+.keywords {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.paper-figure {
+  margin: 16px 0;
+}
+
+.paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.paper-figure figcaption {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.table-wrap {
+  width: 100%;
+  margin: 16px 0;
+  overflow-x: auto;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.result-table caption {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-style: italic;
+  text-align: left;
+}
+
+.result-table th,
+.result-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.result-table th {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .entry-head {
   display: flex;
   align-items: baseline;
