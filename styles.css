@@ -36,32 +36,26 @@ a:hover {
 }
 
 .page-card {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 44px;
-  width: min(960px, calc(100% - 56px));
+  width: min(780px, calc(100% - 36px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 42px 36px 58px;
+  padding: 46px 0 58px;
   background: var(--bg);
-  border-left: 1px solid var(--line);
-  border-right: 1px solid var(--line);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.72) inset;
+  border: 0;
+  box-shadow: none;
 }
 
 .sidebar {
-  position: sticky;
-  top: 28px;
-  align-self: start;
-  padding: 0 22px 0 0;
-  margin-bottom: 0;
-  border-right: 1px solid var(--line);
-  border-bottom: 0;
+  position: static;
+  padding: 0 0 22px;
+  margin-bottom: 34px;
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
   background: transparent;
 }
 
 .avatar {
-  display: grid;
+  display: none;
 }
 
 h1,
