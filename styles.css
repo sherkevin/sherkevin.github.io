@@ -230,7 +230,7 @@ strong {
   left: 5px;
   width: 1px;
   content: "";
-  background: #cfd6dd;
+  background: var(--line);
 }
 
 .timeline article {
