@@ -390,7 +390,7 @@
           <h2>AI 教育</h2>
           <p>
             围绕高中信息技术、人工智能校本课与科创社团，整理 Python 入门、RAG 问答助手、
-            AI 可信度判断和多模态检索等课程原型。材料侧重可运行任务、证据核验、分层拓展与过程性评价。
+            AI 可信度判断和多模态检索等课程作品。材料侧重可运行任务、证据核验、分层拓展与过程性评价。
           </p>
           <ul class="plain-list">
             <li><strong>AI Evidence Quest：</strong>校园资料问答助手课程项目，覆盖资料检索、引用核验、低证据拒答与 AI 可信度判断。<a href="https://sherkevin.github.io/ai-evidence-quest/">Demo</a> · <a href="https://github.com/sherkevin/ai-evidence-quest">GitHub</a></li>
@@ -398,7 +398,7 @@
             <li><strong>AI 素养：</strong>将 RAG 拆解为“问题提出—证据检索—答案生成—来源核验”，用于讨论生成式 AI 的能力边界、信息来源与可信度判断。</li>
             <li><strong>评价设计：</strong>课程作业量规包含问题定义、代码规范、逻辑完整性、异常处理、展示表达与拓展尝试。</li>
           </ul>
-          <p class="note">边界：上述内容为课程原型、试讲材料和项目样例，不作为正式班级授课经历陈述。</p>
+          <p class="note">课程材料以学生可阅读、可运行、可展示为组织目标，在线教材持续补充章节讲解、实验页面与教师资源。</p>
         </section>
 
         <section id="projects" class="section">
@@ -467,11 +467,12 @@
             <details class="event-detail" open>
               <summary><h3>LLM Reliability Lab</h3></summary>
               <p>
-                公开的 RAG 与 Agentic Tool Use 可靠性评测项目，拆分检索命中、引用支持、工具选择、
-                参数准确率、trajectory 顺序、拒答行为和高风险 guardrail。
+                围绕“证据、动作、风险”的个人可靠性评测切入点，把工业 RAG、MCP-style Tool Use
+                和 Agent trajectory 拆成可诊断的指标与 badcase。
               </p>
               <p>
-                项目包含可运行脚本、样例数据、QLoRA 配置、badcase taxonomy 和测试，用于展示大模型应用评测与诊断能力。
+                项目包含可运行脚本、样例数据、QLoRA 评测门槛、badcase taxonomy 与 reliability playbook，
+                重点展示我如何先定位失败模式，再决定检索、生成、schema 或 guardrail 的改法。
                 <a href="https://github.com/sherkevin/llm-reliability-lab">GitHub</a>
               </p>
             </details>
