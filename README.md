@@ -6,7 +6,7 @@ This site is intentionally static and dependency-free. It is designed for GitHub
 
 ## Public life graph
 
-`life-graph.html` is the public, non-private version of the long-horizon life and work graph. It keeps stable direction, values, route structure, and decision gates on the homepage, while private decision logs, interview notes, and unpublished opportunities remain outside the public site.
+`life-graph.html` is the public, non-private version of the long-horizon life and work graph. It uses an interactive draggable SVG node graph for stable direction, values, route structure, and decision gates, while private decision logs, interview notes, and unpublished opportunities remain outside the public site.
 
 ## Double-blind review note
 

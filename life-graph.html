@@ -8,7 +8,7 @@
       content="邓凯文的长期方向图谱：AI 技术底座、解释权、可迁移能力、可验证系统和教育影响。"
     />
     <title>人生图谱 | 邓凯文</title>
-    <link rel="stylesheet" href="./styles.css?v=20260525a" />
+    <link rel="stylesheet" href="./styles.css?v=20260525b" />
   </head>
   <body>
     <div class="page-card">
@@ -43,43 +43,26 @@
             具体决策账本、未公开机会和私人复盘保留在本地知识库。
           </p>
 
-          <div class="life-map" aria-label="人生方向总图">
-            <div class="map-column">
-              <article class="map-node compact">
-                <span>稳定画像</span>
-                <strong>强自证驱动</strong>
-                <p>高自主需求、深度表达需求、教育影响欲望、身体边界。</p>
-              </article>
-              <article class="map-node compact">
-                <span>技术主线</span>
-                <strong>Agent 的不同落地可能</strong>
-                <p>RAG、Tool Use、评测、推荐、专业任务工作流。</p>
-              </article>
+          <div class="graph-shell" data-life-graph>
+            <div class="graph-toolbar" aria-label="图谱控制">
+              <span>拖拽节点</span>
+              <span>滚轮缩放</span>
+              <span>点击查看</span>
+              <button type="button" data-reset-graph>重置</button>
             </div>
-
-            <div class="map-center">
-              <article class="map-node north-star">
-                <span>北极星</span>
-                <strong>AI 技术底座 + 问题定义 + 系统落地 + 解释权</strong>
-                <p>
-                  长期目标不是单一职业标签，而是能定义问题、设计方案、推动落地，
-                  并解释系统边界的人。
-                </p>
-              </article>
+            <div class="graph-canvas">
+              <svg
+                class="force-graph"
+                data-graph-svg
+                role="img"
+                aria-label="可拖拽的人生方向节点图"
+              ></svg>
             </div>
-
-            <div class="map-column">
-              <article class="map-node compact">
-                <span>价值门槛</span>
-                <strong>解释权 / 迁移能力 / 可展示产出</strong>
-                <p>同时考虑高质量人群、身体可持续和短期收益。</p>
-              </article>
-              <article class="map-node compact">
-                <span>路径策略</span>
-                <strong>不急着锁死身份</strong>
-                <p>优先选择能强化多条路径的经历和作品。</p>
-              </article>
-            </div>
+            <article class="graph-detail" data-node-detail>
+              <span>当前节点</span>
+              <h3>北极星</h3>
+              <p>AI 技术底座 + 问题定义 + 系统落地 + 解释权。</p>
+            </article>
           </div>
         </section>
 
@@ -206,5 +189,6 @@
         </section>
       </main>
     </div>
+    <script src="./life-graph.js?v=20260525b"></script>
   </body>
 </html>

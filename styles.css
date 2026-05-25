@@ -442,55 +442,118 @@ strong {
   margin-bottom: 0;
 }
 
-.life-map {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 1.25fr) minmax(0, 1fr);
-  gap: 14px;
+.graph-shell {
   margin: 22px 0 8px;
 }
 
-.map-column,
-.map-center {
-  display: grid;
-  gap: 14px;
-  align-content: center;
+.graph-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 13.5px;
 }
 
-.map-node {
-  padding: 16px 17px;
+.graph-toolbar button {
+  padding: 3px 0;
+  border: 0;
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13.5px;
+}
+
+.graph-toolbar button:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.graph-canvas {
+  height: 540px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  overflow: hidden;
+  touch-action: none;
+}
+
+.force-graph {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  cursor: grab;
+}
+
+.force-graph:active {
+  cursor: grabbing;
+}
+
+.graph-link {
+  stroke: #aeb8c2;
+  stroke-width: 1.2;
+  opacity: 0.7;
+}
+
+.graph-link.is-active {
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  opacity: 1;
+}
+
+.graph-node {
+  cursor: grab;
+  transition: opacity 0.18s ease;
+}
+
+.graph-node circle {
+  stroke: #ffffff;
+  stroke-width: 2;
+  filter: drop-shadow(0 1px 2px rgba(31, 41, 51, 0.16));
+}
+
+.graph-node text {
+  fill: #ffffff;
+  font-family: "Times New Roman", Times, "SimSun", "Songti SC", "宋体", serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.graph-node.is-selected circle {
+  stroke: #1f2933;
+  stroke-width: 3;
+}
+
+.graph-node.is-dimmed {
+  opacity: 0.38;
+}
+
+.graph-detail {
+  margin-top: 12px;
+  padding: 14px 16px;
   border: 1px solid var(--line);
   background: #ffffff;
 }
 
-.map-node span {
+.graph-detail span {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   color: var(--accent);
   font-size: 13px;
   font-weight: 600;
 }
 
-.map-node strong {
-  display: block;
-  margin-bottom: 7px;
-  font-size: 17px;
-  line-height: 1.35;
+.graph-detail h3 {
+  margin-bottom: 5px;
 }
 
-.map-node p {
+.graph-detail p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 14.5px;
-  line-height: 1.55;
-}
-
-.north-star {
-  border-color: var(--accent);
-  background: var(--soft);
-}
-
-.north-star strong {
-  font-size: 19px;
 }
 
 .value-rank,
@@ -597,17 +660,19 @@ strong {
   .entry-head,
   .timeline article,
   .honor-grid,
-  .life-map,
   .value-rank,
   .route-grid,
   .maintenance-flow {
     display: block;
   }
 
-  .map-node,
   .value-rank article,
   .route-grid article,
   .maintenance-flow article {
     margin-bottom: 12px;
+  }
+
+  .graph-canvas {
+    height: 480px;
   }
 }
