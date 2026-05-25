@@ -472,8 +472,67 @@ strong {
   border-bottom-color: var(--ink);
 }
 
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 13px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.graph-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend-north {
+  background: #1f4e79;
+}
+
+.legend-self {
+  background: #6b7280;
+}
+
+.legend-core {
+  background: #2f6f5e;
+}
+
+.legend-value {
+  background: #7a5b2e;
+}
+
+.legend-asset {
+  background: #4b6584;
+}
+
+.legend-route {
+  background: #735c8f;
+}
+
+.legend-risk {
+  background: #8a3f3f;
+}
+
+.legend-decision {
+  background: #0f766e;
+}
+
+.legend-maintain {
+  background: #5b6f2f;
+}
+
 .graph-canvas {
-  height: 540px;
+  height: 720px;
   border: 1px solid var(--line);
   background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
   overflow: hidden;
@@ -673,6 +732,6 @@ strong {
   }
 
   .graph-canvas {
-    height: 480px;
+    height: 620px;
   }
 }

@@ -129,6 +129,327 @@
     },
   ];
 
+  nodes.push(
+    {
+      id: "self-proof",
+      label: "自证驱动",
+      type: "self",
+      detail: "从资源有限环境一路进入更高平台，长期动力来自自我塑造和证明自己。",
+    },
+    {
+      id: "autonomy",
+      label: "高自主需求",
+      type: "self",
+      detail: "不适合长期只执行、被切碎、无解释权的位置。",
+    },
+    {
+      id: "deep-expression",
+      label: "深度表达",
+      type: "self",
+      detail: "适合有内容、有准备、有专业身份的表达，不适合浅层社交消耗。",
+    },
+    {
+      id: "education-impact",
+      label: "教育影响",
+      type: "self",
+      detail: "长期存在影响他人、组织知识和教育启蒙的动机。",
+    },
+    {
+      id: "body-boundary",
+      label: "身体边界",
+      type: "self",
+      detail: "睡眠和恢复不是软约束，不能把持续硬扛当作职业策略。",
+    },
+    {
+      id: "identity-open",
+      label: "身份开放",
+      type: "self",
+      detail: "互联网、科研、教育和稳定路线都保留可能，但不急于锁死标签。",
+    },
+    {
+      id: "county-origin",
+      label: "县城突围",
+      type: "self",
+      detail: "早期信息和资源约束强化了对解释权、上升通道和教育公平的敏感度。",
+    },
+    {
+      id: "competition-drive",
+      label: "竞赛训练",
+      type: "self",
+      detail: "竞赛和算法训练带来结构化拆题、快速反馈和强目标感。",
+    },
+    {
+      id: "definition-right",
+      label: "定义问题",
+      type: "value",
+      detail: "能否参与定义任务、目标、输入输出和约束，是解释权的第一层。",
+    },
+    {
+      id: "metric-right",
+      label: "定义评测",
+      type: "value",
+      detail: "能否参与指标、benchmark、验收标准和失败边界的制定。",
+    },
+    {
+      id: "transfer-scope",
+      label: "跨域复用",
+      type: "value",
+      detail: "一段经历能否迁移到 Agent、推荐、科研、教育和产品多个方向。",
+    },
+    {
+      id: "artifact-power",
+      label: "作品沉淀",
+      type: "value",
+      detail: "能否沉淀外部可理解、可验证、可复盘的成果。",
+    },
+    {
+      id: "people-quality",
+      label: "人群质量",
+      type: "value",
+      detail: "是否能进入高密度讨论环境，接触专业、好奇、长期主义的人。",
+    },
+    {
+      id: "recovery-space",
+      label: "恢复空间",
+      type: "value",
+      detail: "是否保留睡眠、恢复、学习、准备下一步的空间。",
+    },
+    {
+      id: "option-value",
+      label: "选择权",
+      type: "value",
+      detail: "主线不完全确定时，优先选择能保留高质量分叉的经历。",
+    },
+    {
+      id: "api-contracts",
+      label: "API契约",
+      type: "asset",
+      detail: "企业 API 工具化、tool schema、错误码、调用示例和工具可发现性。",
+    },
+    {
+      id: "schema-permission",
+      label: "权限边界",
+      type: "asset",
+      detail: "Agent 工具调用中的 role、permission、risk gate 和失败恢复边界。",
+    },
+    {
+      id: "rag-citation",
+      label: "RAG证据链",
+      type: "asset",
+      detail: "检索、引用、拒答、证据强度和人工升级机制。",
+    },
+    {
+      id: "diagnosis-agent",
+      label: "诊断Agent",
+      type: "asset",
+      detail: "面向专业任务的 parser、retrieval、diagnosis、SOP、verification 工作流。",
+    },
+    {
+      id: "multimodal-recall",
+      label: "多模态召回",
+      type: "asset",
+      detail: "图像语义、文本相似度、音色 embedding 和多路召回融合。",
+    },
+    {
+      id: "recsys-eval",
+      label: "推荐评测",
+      type: "asset",
+      detail: "固定候选预算、Recall@K、HitRate@K、长尾覆盖和离线消融。",
+    },
+    {
+      id: "recsys-papers",
+      label: "RecSys论文",
+      type: "asset",
+      detail: "推荐关系纠偏、Top-K 停止策略和面向排序/停止决策的研究表达。",
+    },
+    {
+      id: "research-writing",
+      label: "研究写作",
+      type: "asset",
+      detail: "问题定义、实验边界、反证、消融和论文叙事能力。",
+    },
+    {
+      id: "ai-education-labs",
+      label: "AI课程实验",
+      type: "asset",
+      detail: "证据问答、图像检索、可运行实验室和过程性评价。",
+    },
+    {
+      id: "teaching-narrative",
+      label: "教师叙事",
+      type: "asset",
+      detail: "县城突围、竞赛经历、AI 素养课程和科创教育的组合叙事。",
+    },
+    {
+      id: "llm-app-algo",
+      label: "LLM应用算法",
+      type: "route",
+      detail: "面向真实任务的 RAG、Tool Use、Agent workflow 和评测闭环。",
+    },
+    {
+      id: "llm4rec-route",
+      label: "LLM4Rec",
+      type: "route",
+      detail: "大模型推荐、生成式召回、多模态内容理解和业务指标闭环。",
+    },
+    {
+      id: "agent-platform",
+      label: "Agent平台",
+      type: "route",
+      detail: "工具注册、权限边界、执行轨迹、失败恢复和观测性。",
+    },
+    {
+      id: "scientific-agent",
+      label: "科学Agent",
+      type: "route",
+      detail: "专业工具链、结构化数据、评测标准和专家反馈之间的接口。",
+    },
+    {
+      id: "education-product",
+      label: "教育科技",
+      type: "route",
+      detail: "把 AI 系统、课程内容、学习反馈和可运行实验连接起来。",
+    },
+    {
+      id: "high-school-cs",
+      label: "高中计算机",
+      type: "route",
+      detail: "计算机教师、信息技术课程、科创社团和竞赛启蒙。",
+    },
+    {
+      id: "state-owned",
+      label: "稳定机构",
+      type: "route",
+      detail: "稳定路线可保留，但要验证自主度、技术密度、城市和制度边界。",
+    },
+    {
+      id: "low-autonomy",
+      label: "低自主",
+      type: "risk",
+      detail: "只执行、无定义权、无反馈权，会持续消耗主线能量。",
+    },
+    {
+      id: "no-feedback",
+      label: "低反馈",
+      type: "risk",
+      detail: "任务没有清晰评价和反馈，容易变成长期低效消耗。",
+    },
+    {
+      id: "no-artifact",
+      label: "无产出",
+      type: "risk",
+      detail: "没有论文、报告、系统模块、指标或公开作品，经历难以迁移。",
+    },
+    {
+      id: "body-overdraft",
+      label: "身体透支",
+      type: "risk",
+      detail: "高强度如果长期不可恢复，会破坏后续选择权。",
+    },
+    {
+      id: "premature-lockin",
+      label: "过早锁死",
+      type: "risk",
+      detail: "在主线尚未完全确定时，不宜过早关闭科研、教育或产品分叉。",
+    },
+    {
+      id: "stable-stifled",
+      label: "稳定但压抑",
+      type: "risk",
+      detail: "稳定路线如果技术密度低、层级重、表达权弱，会带来长期压抑。",
+    },
+    {
+      id: "demo-only",
+      label: "Demo陷阱",
+      type: "risk",
+      detail: "名义 AI 但没有真实任务、评测、数据和反馈，价值会快速下降。",
+    },
+    {
+      id: "mentor-gate",
+      label: "导师机制",
+      type: "decision",
+      detail: "是否有直接指导人、反馈频率和可对齐的技术边界。",
+    },
+    {
+      id: "owner-gate",
+      label: "Owner模块",
+      type: "decision",
+      detail: "是否有明确负责模块，而不是长期边缘支持。",
+    },
+    {
+      id: "feedback-gate",
+      label: "反馈闭环",
+      type: "decision",
+      detail: "是否有评测、指标、专家反馈、用户反馈或实验验证。",
+    },
+    {
+      id: "artifact-gate",
+      label: "产出门槛",
+      type: "decision",
+      detail: "是否能沉淀非敏感的报告、benchmark、系统设计、论文或开源。",
+    },
+    {
+      id: "public-safe-gate",
+      label: "可公开边界",
+      type: "decision",
+      detail: "公开表达必须只呈现稳定结构，不暴露未公开机会和私人复盘。",
+    },
+    {
+      id: "cadence-gate",
+      label: "节奏边界",
+      type: "decision",
+      detail: "能接受阶段性冲刺，但需要目标和节奏清晰，避免长期失控。",
+    },
+    {
+      id: "two-week-review",
+      label: "两周复盘",
+      type: "decision",
+      detail: "进入新环境两周后检查 mentor、任务、节奏和反馈是否清晰。",
+    },
+    {
+      id: "one-month-review",
+      label: "一月复盘",
+      type: "decision",
+      detail: "一个月后检查是否已有可展示模块、评测或产出方向。",
+    },
+    {
+      id: "autumn-story",
+      label: "秋招叙事",
+      type: "decision",
+      detail: "秋招前检查经历能否讲成可验证、可复盘、可迁移的 Agent 系统。",
+    },
+    {
+      id: "local-knowledge",
+      label: "本地图谱",
+      type: "maintain",
+      detail: "完整人生知识图谱、决策账本和私人复盘保留在本地仓库。",
+    },
+    {
+      id: "public-graph",
+      label: "公开主页",
+      type: "maintain",
+      detail: "GitHub 主页只展示稳定、可公开、长期有效的结构。",
+    },
+    {
+      id: "decision-ledger",
+      label: "决策账本",
+      type: "maintain",
+      detail: "重大选择记录背景、证据、反证、结论、边界和复盘点。",
+    },
+    {
+      id: "qa-log",
+      label: "问答日志",
+      type: "maintain",
+      detail: "每次职业、价值、路径、面试相关问答都沉淀摘要和稳定洞察。",
+    },
+    {
+      id: "update-loop",
+      label: "更新闭环",
+      type: "maintain",
+      detail: "新洞察先进入本地，再判断是否同步到公开图谱。",
+    },
+  );
+
   const links = [
     ["self", "north-star", "约束"],
     ["agent", "north-star", "主线"],
@@ -163,6 +484,91 @@
     ["maintain", "north-star", "校准"],
   ].map(([source, target, label]) => ({ source, target, label }));
 
+  links.push(
+    ...[
+      ["self-proof", "self", "细分"],
+      ["autonomy", "self", "细分"],
+      ["deep-expression", "self", "细分"],
+      ["education-impact", "self", "细分"],
+      ["body-boundary", "self", "细分"],
+      ["identity-open", "self", "细分"],
+      ["county-origin", "self", "来源"],
+      ["competition-drive", "self", "来源"],
+      ["self-proof", "north-star", "驱动"],
+      ["autonomy", "explain", "需求"],
+      ["deep-expression", "tech-product", "适配"],
+      ["education-impact", "teacher", "适配"],
+      ["body-boundary", "health", "约束"],
+      ["identity-open", "option-value", "保留"],
+      ["county-origin", "education-impact", "影响"],
+      ["competition-drive", "research-writing", "支撑"],
+      ["definition-right", "explain", "细分"],
+      ["metric-right", "explain", "细分"],
+      ["transfer-scope", "transfer", "细分"],
+      ["artifact-power", "output", "细分"],
+      ["people-quality", "people", "细分"],
+      ["recovery-space", "health", "细分"],
+      ["option-value", "transfer", "细分"],
+      ["definition-right", "gate", "筛选"],
+      ["metric-right", "gate", "筛选"],
+      ["artifact-power", "artifact-gate", "筛选"],
+      ["recovery-space", "cadence-gate", "筛选"],
+      ["api-contracts", "agent-assets", "细分"],
+      ["schema-permission", "agent-assets", "细分"],
+      ["rag-citation", "agent-assets", "细分"],
+      ["diagnosis-agent", "agent-assets", "细分"],
+      ["multimodal-recall", "rec-assets", "细分"],
+      ["recsys-eval", "rec-assets", "细分"],
+      ["recsys-papers", "research-assets", "细分"],
+      ["research-writing", "research-assets", "细分"],
+      ["ai-education-labs", "education-assets", "细分"],
+      ["teaching-narrative", "education-assets", "细分"],
+      ["api-contracts", "agent-platform", "支撑"],
+      ["schema-permission", "agent-platform", "支撑"],
+      ["rag-citation", "llm-app-algo", "支撑"],
+      ["diagnosis-agent", "scientific-agent", "支撑"],
+      ["multimodal-recall", "llm4rec-route", "支撑"],
+      ["recsys-eval", "llm4rec-route", "支撑"],
+      ["recsys-papers", "internet", "信号"],
+      ["research-writing", "research-agent", "支撑"],
+      ["ai-education-labs", "education-product", "支撑"],
+      ["teaching-narrative", "high-school-cs", "支撑"],
+      ["llm-app-algo", "agent", "路径"],
+      ["llm4rec-route", "internet", "路径"],
+      ["agent-platform", "tech-product", "路径"],
+      ["scientific-agent", "research-agent", "路径"],
+      ["education-product", "tech-product", "路径"],
+      ["high-school-cs", "teacher", "路径"],
+      ["state-owned", "stable", "路径"],
+      ["low-autonomy", "gate", "规避"],
+      ["no-feedback", "feedback-gate", "规避"],
+      ["no-artifact", "artifact-gate", "规避"],
+      ["body-overdraft", "cadence-gate", "规避"],
+      ["premature-lockin", "option-value", "规避"],
+      ["stable-stifled", "stable", "警惕"],
+      ["demo-only", "owner-gate", "规避"],
+      ["demo-only", "feedback-gate", "规避"],
+      ["mentor-gate", "gate", "门槛"],
+      ["owner-gate", "gate", "门槛"],
+      ["feedback-gate", "gate", "门槛"],
+      ["artifact-gate", "gate", "门槛"],
+      ["public-safe-gate", "gate", "门槛"],
+      ["cadence-gate", "gate", "门槛"],
+      ["two-week-review", "maintain", "复盘"],
+      ["one-month-review", "maintain", "复盘"],
+      ["autumn-story", "maintain", "复盘"],
+      ["local-knowledge", "maintain", "管理"],
+      ["public-graph", "maintain", "管理"],
+      ["decision-ledger", "maintain", "管理"],
+      ["qa-log", "maintain", "管理"],
+      ["update-loop", "maintain", "管理"],
+      ["decision-ledger", "gate", "记录"],
+      ["qa-log", "self", "沉淀"],
+      ["local-knowledge", "public-graph", "筛选"],
+      ["update-loop", "public-graph", "同步"],
+    ].map(([source, target, label]) => ({ source, target, label }))
+  );
+
   const nodeById = new Map(nodes.map((node) => [node.id, node]));
   for (const link of links) {
     link.sourceNode = nodeById.get(link.source);
@@ -171,13 +577,15 @@
 
   const typeMeta = {
     north: { radius: 34, color: "#1f4e79" },
-    self: { radius: 25, color: "#6b7280" },
-    core: { radius: 29, color: "#2f6f5e" },
-    value: { radius: 22, color: "#7a5b2e" },
-    asset: { radius: 22, color: "#4b6584" },
-    route: { radius: 24, color: "#735c8f" },
-    gate: { radius: 26, color: "#8a3f3f" },
-    maintain: { radius: 24, color: "#5b6f2f" },
+    self: { radius: 20, color: "#6b7280" },
+    core: { radius: 26, color: "#2f6f5e" },
+    value: { radius: 18, color: "#7a5b2e" },
+    asset: { radius: 18, color: "#4b6584" },
+    route: { radius: 19, color: "#735c8f" },
+    risk: { radius: 18, color: "#8a3f3f" },
+    decision: { radius: 18, color: "#0f766e" },
+    gate: { radius: 26, color: "#0f766e" },
+    maintain: { radius: 19, color: "#5b6f2f" },
   };
 
   const state = {
@@ -286,8 +694,47 @@
       teacher: [0.84, 0.3],
       stable: [0.92, 0.72],
     };
+    const centers = {
+      north: [0.5, 0.46],
+      self: [0.16, 0.22],
+      core: [0.22, 0.5],
+      value: [0.48, 0.16],
+      asset: [0.18, 0.72],
+      route: [0.82, 0.54],
+      risk: [0.82, 0.22],
+      decision: [0.52, 0.82],
+      gate: [0.5, 0.74],
+      maintain: [0.78, 0.84],
+    };
+    const clusterRadius = {
+      self: [0.11, 0.14],
+      value: [0.18, 0.09],
+      asset: [0.14, 0.16],
+      route: [0.13, 0.17],
+      risk: [0.11, 0.13],
+      decision: [0.18, 0.08],
+      maintain: [0.12, 0.08],
+    };
+    const grouped = nodes.reduce((groups, node) => {
+      if (!groups.has(node.type)) groups.set(node.type, []);
+      groups.get(node.type).push(node);
+      return groups;
+    }, new Map());
     for (const node of nodes) {
-      const [px, py] = positions[node.id] || [0.5, 0.5];
+      let px;
+      let py;
+      if (positions[node.id]) {
+        [px, py] = positions[node.id];
+      } else {
+        const group = grouped.get(node.type) || [node];
+        const index = group.indexOf(node);
+        const count = Math.max(group.length, 1);
+        const [cx, cy] = centers[node.type] || [0.5, 0.5];
+        const [rx, ry] = clusterRadius[node.type] || [0.08, 0.08];
+        const angle = -Math.PI / 2 + (Math.PI * 2 * index) / count;
+        px = clamp(cx + Math.cos(angle) * rx, 0.06, 0.94);
+        py = clamp(cy + Math.sin(angle) * ry, 0.08, 0.92);
+      }
       node.x = state.width * px;
       node.y = state.height * py;
       node.vx = 0;
@@ -523,6 +970,8 @@
       value: "价值节点",
       asset: "资产节点",
       route: "路径节点",
+      risk: "风险节点",
+      decision: "决策节点",
       gate: "决策节点",
       maintain: "维护节点",
     }[type] || "节点";
