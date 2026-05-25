@@ -5,6 +5,7 @@
   const svg = root.querySelector("[data-graph-svg]");
   const detail = root.querySelector("[data-node-detail]");
   const resetButton = root.querySelector("[data-reset-graph]");
+  const legendButtons = [...root.querySelectorAll("[data-focus-type]")];
 
   const nodes = [
     {
@@ -595,6 +596,7 @@
     offsetX: 0,
     offsetY: 0,
     selected: "north-star",
+    focusType: "all",
     alpha: 1,
     draggingNode: null,
     panning: null,
@@ -749,9 +751,27 @@
     render();
   }
 
+  function setFocusType(type) {
+    state.focusType = type || "all";
+    for (const item of legendButtons) {
+      const isActive = item.dataset.focusType === state.focusType;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", isActive ? "true" : "false");
+    }
+    render();
+  }
+
   function attachEvents() {
     window.addEventListener("resize", resize);
-    resetButton.addEventListener("click", resetLayout);
+    resetButton.addEventListener("click", () => {
+      resetLayout();
+      setFocusType("all");
+    });
+    for (const button of legendButtons) {
+      button.addEventListener("click", () => {
+        setFocusType(button.dataset.focusType);
+      });
+    }
 
     svg.addEventListener("wheel", (event) => {
       event.preventDefault();
@@ -943,12 +963,22 @@
       link.element.setAttribute("x2", target.x);
       link.element.setAttribute("y2", target.y);
       link.element.classList.toggle("is-active", link.source === state.selected || link.target === state.selected);
+      const focusType = state.focusType;
+      const linkInFocus =
+        focusType === "all" ||
+        source.type === focusType ||
+        target.type === focusType ||
+        link.source === state.selected ||
+        link.target === state.selected;
+      link.element.classList.toggle("is-filtered", !linkInFocus);
     }
 
     for (const node of nodes) {
       node.group.setAttribute("transform", `translate(${node.x},${node.y})`);
       node.group.classList.toggle("is-selected", node.id === state.selected);
       node.group.classList.toggle("is-dimmed", selected && !neighbors.has(node.id));
+      const nodeInFocus = state.focusType === "all" || node.type === state.focusType || node.id === state.selected;
+      node.group.classList.toggle("is-filtered", !nodeInFocus);
     }
   }
 

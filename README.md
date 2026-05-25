@@ -6,7 +6,7 @@ This site is intentionally static and dependency-free. It is designed for GitHub
 
 ## Public life graph
 
-`life-graph.html` is the public, non-private version of the long-horizon life and work graph. It uses an interactive draggable SVG node graph with categorized node colors for stable self-model, values, assets, routes, risks, decision gates, and maintenance loops, while private decision logs, interview notes, and unpublished opportunities remain outside the public site.
+`life-graph.html` is the public, non-private version of the long-horizon life and work graph. It uses an interactive draggable SVG node graph with categorized node colors and clickable category focus controls for stable self-model, values, assets, routes, risks, decision gates, and maintenance loops, while private decision logs, interview notes, and unpublished opportunities remain outside the public site.
 
 ## Double-blind review note
 

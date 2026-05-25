@@ -8,7 +8,7 @@
       content="邓凯文的长期方向图谱：AI 技术底座、解释权、可迁移能力、可验证系统和教育影响。"
     />
     <title>人生图谱 | 邓凯文</title>
-    <link rel="stylesheet" href="./styles.css?v=20260525c" />
+    <link rel="stylesheet" href="./styles.css?v=20260525d" />
   </head>
   <body>
     <div class="page-card">
@@ -51,15 +51,16 @@
               <button type="button" data-reset-graph>重置</button>
             </div>
             <div class="graph-legend" aria-label="节点分类图例">
-              <span><i class="legend-dot legend-north"></i>北极星</span>
-              <span><i class="legend-dot legend-self"></i>自我画像</span>
-              <span><i class="legend-dot legend-core"></i>技术主线</span>
-              <span><i class="legend-dot legend-value"></i>价值</span>
-              <span><i class="legend-dot legend-asset"></i>资产</span>
-              <span><i class="legend-dot legend-route"></i>路径</span>
-              <span><i class="legend-dot legend-risk"></i>风险</span>
-              <span><i class="legend-dot legend-decision"></i>决策</span>
-              <span><i class="legend-dot legend-maintain"></i>维护</span>
+              <button type="button" class="legend-item is-active" data-focus-type="all" aria-pressed="true">全部</button>
+              <button type="button" class="legend-item" data-focus-type="north" aria-pressed="false"><i class="legend-dot legend-north"></i>北极星 1</button>
+              <button type="button" class="legend-item" data-focus-type="self" aria-pressed="false"><i class="legend-dot legend-self"></i>自我画像 9</button>
+              <button type="button" class="legend-item" data-focus-type="core" aria-pressed="false"><i class="legend-dot legend-core"></i>技术主线 1</button>
+              <button type="button" class="legend-item" data-focus-type="value" aria-pressed="false"><i class="legend-dot legend-value"></i>价值 13</button>
+              <button type="button" class="legend-item" data-focus-type="asset" aria-pressed="false"><i class="legend-dot legend-asset"></i>资产 14</button>
+              <button type="button" class="legend-item" data-focus-type="route" aria-pressed="false"><i class="legend-dot legend-route"></i>路径 12</button>
+              <button type="button" class="legend-item" data-focus-type="risk" aria-pressed="false"><i class="legend-dot legend-risk"></i>风险 7</button>
+              <button type="button" class="legend-item" data-focus-type="decision" aria-pressed="false"><i class="legend-dot legend-decision"></i>决策 9</button>
+              <button type="button" class="legend-item" data-focus-type="maintain" aria-pressed="false"><i class="legend-dot legend-maintain"></i>维护 6</button>
             </div>
             <div class="graph-canvas">
               <svg
@@ -200,6 +201,6 @@
         </section>
       </main>
     </div>
-    <script src="./life-graph.js?v=20260525c"></script>
+    <script src="./life-graph.js?v=20260525d"></script>
   </body>
 </html>

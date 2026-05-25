@@ -481,11 +481,25 @@ strong {
   font-size: 13px;
 }
 
-.graph-legend span {
+.legend-item {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  padding: 2px 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
   white-space: nowrap;
+}
+
+.legend-item:hover,
+.legend-item.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .legend-dot {
@@ -589,6 +603,18 @@ strong {
 
 .graph-node.is-dimmed {
   opacity: 0.38;
+}
+
+.graph-node.is-filtered {
+  opacity: 0.14;
+}
+
+.graph-node.is-selected {
+  opacity: 1;
+}
+
+.graph-link.is-filtered {
+  opacity: 0.12;
 }
 
 .graph-detail {
