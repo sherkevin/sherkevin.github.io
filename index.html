@@ -293,42 +293,20 @@
           <article class="publication">
             <details class="paper-detail" open>
               <summary>
-                <span class="venue">ACM MM under review · 独立一作</span>
+                <span class="venue">AAAI under review · 独立一作</span>
                 <strong>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</strong>
               </summary>
               <p class="paper-abstract">
                 Multimodal Large Language Models remain text-native autoregressive systems: visual evidence conditions the hidden state, but token admission is still decided one step at a time.
                 Hallucination can therefore emerge as a short-horizon decoding failure, where a locally plausible token enters the prefix before robust visual grounding is established.
                 CHORD evaluates candidate tokens with three coordinated signals: a past signal for rollback-based protection, a current signal measuring query-conditioned visual support, and a future signal probing short-horizon continuation through bounded rollout.
-                Experiments on POPE, CHAIR, and MMBench with LLaVA-1.5 and InstructBLIP show two regimes: Past+Current gives latency-efficient POPE gains, while Full CHORD gives stronger overall quality metrics and CHAIR reduction.
+                It is evaluated on POPE, CHAIR, and MMBench with LLaVA-1.5 and InstructBLIP, contrasting a latency-efficient Past+Current variant against Full CHORD; final results are being consolidated.
               </p>
               <p class="keywords"><strong>Keywords:</strong> Hallucination Mitigation; Decode-Time Verification; Visual Grounding.</p>
               <figure class="paper-figure">
                 <img src="./assets/papers/chord-method.png" alt="CHORD method overview" />
                 <figcaption>Method overview: CHORD screens token admission through past rollback protection, current object resonance, and future rollout arbitration.</figcaption>
               </figure>
-              <div class="table-wrap">
-                <table class="result-table">
-                  <caption>Main comparison on hallucination and retention metrics</caption>
-                  <thead>
-                    <tr>
-                      <th>Model</th>
-                      <th>Method</th>
-                      <th>Avg. F1 ↑</th>
-                      <th>Adv. F1 ↑</th>
-                      <th>CHAIR<sub>S</sub> ↓</th>
-                      <th>MMBench ↑</th>
-                      <th>ITL ↓</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>LLaVA-1.5</td><td>Greedy</td><td>0.8488</td><td>0.8036</td><td>0.2291</td><td>68.63</td><td>19.73</td></tr>
-                    <tr><td>LLaVA-1.5</td><td>CHORD</td><td>0.8752</td><td>0.8453</td><td>0.1548</td><td>69.78</td><td>37.31</td></tr>
-                    <tr><td>InstructBLIP</td><td>Greedy</td><td>0.8659</td><td>0.8327</td><td>0.2140</td><td>69.34</td><td>16.47</td></tr>
-                    <tr><td>InstructBLIP</td><td>CHORD</td><td>0.8924</td><td>0.8651</td><td>0.1347</td><td>70.82</td><td>35.86</td></tr>
-                  </tbody>
-                </table>
-              </div>
               <p class="note">边界：CHORD 是 inference-time control，不是训练时对齐；它更适合 object-related hallucination，且依赖 visual anchors 与额外 decoding compute。</p>
             </details>
           </article>
