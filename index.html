@@ -257,6 +257,10 @@
                 新结构必须先通过 Legal / Mature / Guard / Gain-over-NoOp 四道门，并在请求边界原子提交，线上回归时追加 rollback。
               </p>
               <p class="keywords"><strong>Keywords:</strong> single-agent self-evolution; compatibility governance; organ state tree.</p>
+              <figure class="paper-figure">
+                <img src="./assets/papers/holon-method.png" alt="Holon Organ State Tree overview" />
+                <figcaption>Method overview: a persistent agent grows a single-parent Organ State Tree, reading along a fast path and committing typed deltas through an auditable slow path.</figcaption>
+              </figure>
               <p class="note">边界：当前方法契约为 design-locked，端到端实验结果尚未产生；旧版本 906-task 数值来自不同对象与旧协议，不作为当前结果。</p>
             </details>
           </article>
@@ -274,6 +278,10 @@
                 证明不了就阻断或降级，超时用 idempotency key 查证以避免重复 effect。
               </p>
               <p class="keywords"><strong>Keywords:</strong> multi-agent coordination; belief coherence; trace monoid; auditable effects.</p>
+              <figure class="paper-figure">
+                <img src="./assets/papers/belief-method.png" alt="Belief Coherence Protocol architecture" />
+                <figcaption>Protocol architecture: reads issue receipts, superseded sources trigger a mutation closure, and commits verify the joint evidence-version set before any external effect.</figcaption>
+              </figure>
               <p class="note">边界：method contract 为 accepted / locked、预注册已冻结，真实证据阶段待完成；没有当前协议的结果数字，旧 lane / pointer 或 SWE 类实验不移植。</p>
             </details>
           </article>
@@ -290,6 +298,10 @@
                 后续委派只在一跳邻居、预算与权限范围内使用这些证据。persona 影响路由但不替代工具权限，未经审计的自我评价权重为零。
               </p>
               <p class="keywords"><strong>Keywords:</strong> multi-agent reasoning; emergent roles; credit assignment; auditable contribution.</p>
+              <figure class="paper-figure">
+                <img src="./assets/papers/edo-method.png" alt="EDO-Frame pipeline sketch" />
+                <figcaption>Method overview: a local EDO society with governed memory/tools and a recursive audit cycle, where roles are earned from accepted, audited contributions.</figcaption>
+              </figure>
               <p class="note">边界：方法与表中数字属 paper-reported；本机没有与论文版本对应的完整框架源码，可按论文复现，不声称已开源或已在本机跑通。</p>
             </details>
           </article>
