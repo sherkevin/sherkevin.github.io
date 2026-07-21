@@ -197,6 +197,30 @@
         <section id="research" class="section">
           <h2>Research</h2>
           <article class="publication">
+            <p class="venue">RecSys 2026 accepted · independent first author</p>
+            <h3>Beyond Passive Preference Inference: User-Governed Preference Memory</h3>
+            <p>A position paper that makes preference governance a first-class problem: each preference record carries provenance, scope, lifecycle, confidence, and disclosure policy, and the system chooses among ask / recommend / wait / abstain while users can inspect, pause, correct, and revoke.</p>
+            <p class="note">Position paper; verifiable artifacts are the PreferenceMemoryRecord v0 schema, its validator, and an executable agenda &mdash; no user study or online A/B.</p>
+          </article>
+          <article class="publication">
+            <p class="venue">AAAI under review · independent first author</p>
+            <h3>Holon: Organ-Tree Self-Evolution for Single LLM Agents</h3>
+            <p>A persistent single agent grows reusable organ states without breaking served queries: capabilities form a single-parent Organ State Tree of (scope, executable delta, statistics); reads use a fast path, while persistent edits take an auditable, rollbackable slow path gated by Legal / Mature / Guard / Gain-over-NoOp and committed atomically at request boundaries.</p>
+            <p class="note">Method contract is design-locked; end-stage results are pending, and older 906-task numbers from a different setup are not used as current results.</p>
+          </article>
+          <article class="publication">
+            <p class="venue">AAAI under review · independent first author</p>
+            <h3>Belief Coherence via Trace Monoid Algebra</h3>
+            <p>Instead of textual consensus, this work protects the auditable chain evidence-version &rarr; belief &rarr; external effect: reads get receipts, superseded sources trigger a mutation closure with per-object revalidation, and commits verify the full evidence-version set, scope epoch, and content fingerprint before any external effect, using idempotency keys to avoid duplicates.</p>
+            <p class="note">Contract locked and preregistration frozen; the real-evidence stage is pending, so no current-protocol result numbers are reported.</p>
+          </article>
+          <article class="publication">
+            <p class="venue">EMNLP under review · independent first author</p>
+            <h3>Earning Roles from Evidence in Multi-Agent Reasoning</h3>
+            <p>Roles emerge from audited contributions rather than fixed personas: agents submit artifact-backed claims, a 7-dimensional persona is updated from accepted work, rework, and timeliness, and later delegation uses this evidence within one-hop, budget, and permission limits.</p>
+            <p class="note">Method and reported numbers are paper-reported; the full framework source is not reproduced locally, so no open-source or local-run claim is made.</p>
+          </article>
+          <article class="publication">
             <p class="venue">ACM MM under review · independent first author</p>
             <h3>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</h3>
             <p>Object-grounded decoding for hallucination calibration with visual anchors, late-layer attention, and short-horizon rollout.</p>

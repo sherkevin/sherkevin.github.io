@@ -228,6 +228,71 @@
           <article class="publication">
             <details class="paper-detail" open>
               <summary>
+                <span class="venue">RecSys 2026 accepted · 独立一作</span>
+                <strong>Beyond Passive Preference Inference: User-Governed Preference Memory</strong>
+              </summary>
+              <p class="paper-abstract">
+                传统推荐把点击压进长期兴趣向量，默认偏好稳定、越多利用越好；但自然语言场景中同时存在临时任务、硬约束、误触与撤回。
+                这篇 position paper 把“偏好状态由谁治理”设为推荐系统的一等问题：每条偏好显式携带 provenance、scope、lifecycle、confidence 与 disclosure policy，
+                系统在 ask / recommend / wait / abstain 间选择主动程度，用户可检查、暂停、纠正与撤回。
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> user-governed preference memory; calibrated initiative; recommender systems.</p>
+              <p class="note">边界：这是 position paper，可核验产物是 PreferenceMemoryRecord v0 JSON Schema、validator 与 benchmark / 架构 / 报告议程；没有用户研究、长期满意度或线上 A/B。</p>
+            </details>
+          </article>
+
+          <article class="publication">
+            <details class="paper-detail" open>
+              <summary>
+                <span class="venue">AAAI under review · 独立一作</span>
+                <strong>Holon: Organ-Tree Self-Evolution for Single LLM Agents</strong>
+              </summary>
+              <p class="paper-abstract">
+                研究一个长期运行的 persistent agent 如何在不断接收局部规则、工具与记忆时长出可复用的“器官状态”，而不破坏已服务过的查询。
+                能力被组织为单父的 Organ State Tree，每个节点是“作用域 + 可执行状态增量 + 统计量”；回答请求走只读 fast path，修改持久状态走可审计、可回滚的 slow path。
+                新结构必须先通过 Legal / Mature / Guard / Gain-over-NoOp 四道门，并在请求边界原子提交，线上回归时追加 rollback。
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> single-agent self-evolution; compatibility governance; organ state tree.</p>
+              <p class="note">边界：当前方法契约为 design-locked，端到端实验结果尚未产生；旧版本 906-task 数值来自不同对象与旧协议，不作为当前结果。</p>
+            </details>
+          </article>
+
+          <article class="publication">
+            <details class="paper-detail" open>
+              <summary>
+                <span class="venue">AAAI under review · 独立一作</span>
+                <strong>Belief Coherence via Trace Monoid Algebra</strong>
+              </summary>
+              <p class="paper-abstract">
+                多 Agent 在共享证据被更新后，容易产出混合了互不相容证据版本的外部动作（发邮件、下单、提交代码或写库）。
+                本工作不追求文本层面的“意见一致”，而是保护“证据版本 → belief → 外部 effect”的可审计因果链：每次证据消费开具 receipt，
+                源对象被 supersede 时沿真实依赖边做 mutation closure 并逐个 revalidate；真正提交前由后端一次性核对完整证据版本集合、scope epoch 与内容指纹，
+                证明不了就阻断或降级，超时用 idempotency key 查证以避免重复 effect。
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> multi-agent coordination; belief coherence; trace monoid; auditable effects.</p>
+              <p class="note">边界：method contract 为 accepted / locked、预注册已冻结，真实证据阶段待完成；没有当前协议的结果数字，旧 lane / pointer 或 SWE 类实验不移植。</p>
+            </details>
+          </article>
+
+          <article class="publication">
+            <details class="paper-detail" open>
+              <summary>
+                <span class="venue">EMNLP under review · 独立一作</span>
+                <strong>Earning Roles from Evidence in Multi-Agent Reasoning</strong>
+              </summary>
+              <p class="paper-abstract">
+                多 Agent 推理常在开局手工指定“研究员 / 批评家 / 总结者”，或由中央调度器永久决定分工，在任务分布变化时失配。
+                EDO 让角色从可审计贡献中形成：Agent 先做工作并提交带 artifact 的 claim，系统据被接受的贡献、返工、及时性、分解与整合帮助更新其 7 维 persona；
+                后续委派只在一跳邻居、预算与权限范围内使用这些证据。persona 影响路由但不替代工具权限，未经审计的自我评价权重为零。
+              </p>
+              <p class="keywords"><strong>Keywords:</strong> multi-agent reasoning; emergent roles; credit assignment; auditable contribution.</p>
+              <p class="note">边界：方法与表中数字属 paper-reported；本机没有与论文版本对应的完整框架源码，可按论文复现，不声称已开源或已在本机跑通。</p>
+            </details>
+          </article>
+
+          <article class="publication">
+            <details class="paper-detail" open>
+              <summary>
                 <span class="venue">ACM MM under review · 独立一作</span>
                 <strong>CHORD: Calibrating Hallucinations via Object-Resonant Decoding in MLLMs</strong>
               </summary>
