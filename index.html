@@ -45,7 +45,7 @@
           <ul class="plain-list">
             <li><strong>可靠性：</strong>多模态模型需要视觉证据，RAG 回答需要可追溯引用，Agent 工作流需要可控边界。</li>
             <li><strong>建模对象：</strong>推荐系统的多模态增量、领域知识的检索证据、工具调用的 schema 与错误恢复。</li>
-            <li><strong>经历线索：</strong>竞赛算法训练、清华 AI 学习路径、MiniMax 多模态推荐、字节 Agent Infra、SMEE 领域 LLM/RAG、甲己无形与 AgentOS/Weaver。</li>
+            <li><strong>经历线索：</strong>竞赛算法训练、清华 AI 学习路径、字节 Agent Infra、MiniMax 多模态推荐、SMEE 领域 LLM/RAG、达摩院 Agent 过程评测与后训练、甲己无形与 AgentOS/Weaver。</li>
           </ul>
           <p>
             研究和工程工作围绕同一组问题展开：系统输出是否可验证，模型行为是否可约束，
@@ -109,6 +109,17 @@
         <section id="timeline" class="section">
           <h2>时间线</h2>
           <div class="timeline">
+            <article>
+              <span class="dot"></span>
+              <time>2026.05 - 至今</time>
+              <div>
+                <details class="event-detail" open>
+                  <summary><h3>阿里巴巴达摩院 · Agent 算法实习</h3></summary>
+                  <p>面向药物 / 材料等长程科学 Agent，做过程级评测 benchmark：以领域数据库为 GT 反向构建任务与 checkpoint 依赖图，用确定性 verifier 区分“结果对”与“过程链对”，checkpoint 信号同时用作过程评测指标与 RL 训练的 dense process reward。</p>
+                  <p>基于 Qwen3.5-35B-A3B MoE 构建 CoT Planner，用强模型蒸馏 SFT 冷启动、judge 偏好驱动 DPO 迭代，推理时采样多条候选计划链经 judge 选优后执行；参与 NobelClaw / Lingshu AgentOS 调度治理，覆盖子图递归展开、失败回退、跨 CLI 接力、权限隔离与事件溯源。</p>
+                </details>
+              </div>
+            </article>
             <article>
               <span class="dot"></span>
               <time>2025.11 - 至今</time>
@@ -339,6 +350,22 @@
 
         <section id="experience" class="section">
           <h2>经历</h2>
+          <article class="entry">
+            <details class="event-detail" open>
+              <summary class="entry-head">
+                <h3>阿里巴巴达摩院 · Agent 算法实习</h3>
+                <span>2026.05 - 至今</span>
+              </summary>
+              <p>
+                围绕 Agent 的过程评测、后训练与调度治理三条线：为长程科学任务设计 GT-first 反向建题法、
+                checkpoint 依赖图与确定性 verifier，区分结果正确与过程链正确，并把 checkpoint 信号用作 RL 的 dense process reward。
+              </p>
+              <p>
+                后训练侧基于 MoE 构建 CoT Planner，用强模型蒸馏 SFT 与 judge-guided DPO 两轮迭代，推理时采样候选计划链经 judge 选优后执行；
+                执行侧参与 AgentOS 调度治理框架的工具渐进披露、失败回退、权限隔离与事件溯源。
+              </p>
+            </details>
+          </article>
           <article class="entry">
             <details class="event-detail" open>
               <summary class="entry-head">
