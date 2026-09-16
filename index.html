@@ -414,14 +414,32 @@
                     <ul class="entry-points">
                     <li>参与用户画像模型优化，挖掘实时行为特征并与离线特征融合</li>
                     <li>使用协同过滤、LR、聚类等方法评估特征相关度</li>
-                    <li>将过滤规则嵌入还款率预测模型，支撑灰度 A/B 中的策略优化</li>
+                   <li>将过滤规则嵌入还款率预测模型，支撑灰度 A/B 中的策略优化</li>
+                   </ul>
+                 </div>
+               </details>
+             </div>
+              <div class="timeline-item tl-l2" style="--m0:72;--m1:77">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2023.09 - 2024.02</time>
+                    <h3>ASTL 实验室</h3>
+                  <span class="timeline-role">厦门大学 · 科研实习</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>毕业论文《基于深度学习的自适应缓存系统》：用缓存价值估计替代 LRU/LFU 的启发式淘汰规则</li>
+                    <li>以请求序列、对象大小、重访间隔与历史命中情况为特征，训练序列模型预测对象的下一次访问概率</li>
+                    <li>定义单位空间收益 = 命中收益 / 占用成本，按该价值排序决定保留集合，处理大小不一致对象的公平性</li>
+                    <li>在公开访问 trace 上做离线 replay，对比 LRU/LFU/ARC，命中率与字节命中率均有提升</li>
+                    <li>以 shadow mode 旁路接在对象存储前验证策略稳定性，观察误淘汰带来的回源压力后再放开写入</li>
                     </ul>
                   </div>
                 </details>
               </div>
-              <div class="timeline-item tl-l1 tl-school" style="--m0:36;--m1:82">
-                <time>2020.09 - 2024.07</time>
-                <h3>厦门大学</h3>
+             <div class="timeline-item tl-l1 tl-school" style="--m0:36;--m1:82">
+               <time>2020.09 - 2024.07</time>
+               <h3>厦门大学</h3>
                   <span class="timeline-role">计算机科学与技术 学士</span>
               </div>
               <div class="timeline-item tl-l1 tl-school" style="--m0:0;--m1:33">
@@ -861,10 +879,12 @@
             <details class="event-detail">
               <summary class="project-head">
                 <h3>深度学习自适应缓存调度</h3>
-                <p class="project-org">本科科研 · 厦门大学</p>
+                <p class="project-org">本科科研 · 厦门大学 ASTL 实验室 · 2023.09 - 2024.02</p>
               </summary>
               <ul class="entry-points">
-              <li>以缓存价值估计做资源调度，平衡表示质量与计算成本</li>
+              <li>毕业论文：以缓存价值估计替代 LRU/LFU 启发式淘汰，平衡表示质量与计算成本</li>
+              <li>请求序列与对象元信息作为特征，预测下一次访问概率与单位空间收益</li>
+              <li>公开 trace 离线 replay 对比 LRU/LFU/ARC，命中率与字节命中率均有提升</li>
             </ul>
             </details>
           </div>
