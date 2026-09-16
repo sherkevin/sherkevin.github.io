@@ -577,16 +577,16 @@
   }
 
   const typeMeta = {
-    north: { radius: 34, color: "#1f4e79" },
-    self: { radius: 20, color: "#6b7280" },
-    core: { radius: 26, color: "#2f6f5e" },
-    value: { radius: 18, color: "#7a5b2e" },
-    asset: { radius: 18, color: "#4b6584" },
-    route: { radius: 19, color: "#735c8f" },
-    risk: { radius: 18, color: "#8a3f3f" },
-    decision: { radius: 18, color: "#0f766e" },
-    gate: { radius: 26, color: "#0f766e" },
-    maintain: { radius: 19, color: "#5b6f2f" },
+    north: { radius: 34, color: "#b4573a" },
+    self: { radius: 20, color: "#6f6e66" },
+    core: { radius: 26, color: "#476b52" },
+    value: { radius: 18, color: "#8a6a34" },
+    asset: { radius: 18, color: "#4d6070" },
+    route: { radius: 19, color: "#6f5675" },
+    risk: { radius: 18, color: "#93403a" },
+    decision: { radius: 18, color: "#2f6b62" },
+    gate: { radius: 26, color: "#2f6b62" },
+    maintain: { radius: 19, color: "#5f6f33" },
   };
 
   const state = {

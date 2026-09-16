@@ -8,7 +8,7 @@
       content="邓凯文的个人主页：人工智能、大模型应用算法、多模态、RAG、Tool Use、推荐与智能体系统。"
     />
     <title>邓凯文 | Kevin Deng</title>
-    <link rel="stylesheet" href="./styles.css?v=20260525a" />
+    <link rel="stylesheet" href="./styles.css?v=20260916f" />
   </head>
   <body>
     <div class="page-card">
@@ -22,13 +22,13 @@
         </p>
         <nav aria-label="页面导航">
           <a href="#about">关于我</a>
-          <a href="#worldview">技术观</a>
+          <a href="#thoughts">所思</a>
+          <a href="#notes">笔记</a>
           <a href="#life-graph">人生图谱</a>
           <a href="#timeline">时间线</a>
           <a href="#honors">荣誉</a>
           <a href="#research">研究</a>
           <a href="#experience">经历</a>
-          <a href="#ai-education">AI 教育</a>
           <a href="#projects">项目</a>
           <a href="#principles">方法论</a>
         </nav>
@@ -45,12 +45,23 @@
           <ul class="plain-list">
             <li><strong>可靠性：</strong>多模态模型需要视觉证据，RAG 回答需要可追溯引用，Agent 工作流需要可控边界。</li>
             <li><strong>建模对象：</strong>推荐系统的多模态增量、领域知识的检索证据、工具调用的 schema 与错误恢复。</li>
-            <li><strong>经历线索：</strong>竞赛算法训练、清华 AI 学习路径、MiniMax 多模态推荐、字节 Agent Infra、SMEE 领域 LLM/RAG、甲己无形与 AgentOS/Weaver。</li>
+            <li><strong>经历线索：</strong>竞赛算法训练、清华 AI 学习路径、字节 Agent Search、MiniMax 多模态推荐、SMEE 搜索与 RAG、达摩院 Agent 算法，以及甲己无形（Mydow）与万物智灵（One Ling）两段创业。</li>
           </ul>
           <p>
             研究和工程工作围绕同一组问题展开：系统输出是否可验证，模型行为是否可约束，
             失败是否可发现，反馈是否能进入下一轮迭代。推荐系统中的用户行为可视为需求、语境与长期偏好的压缩；
             RAG 和 Agent 系统中的对应问题则是证据可靠性、工具可控性与错误恢复。
+          </p>
+        </section>
+
+        <section id="notes" class="section">
+          <h2>笔记</h2>
+          <p>
+            论文阅读报告与学习记录单独成页：逐篇记录问题设定、方法设计、关键结果与适用边界，
+            覆盖智能体、训练与对齐、多模态、安全评测、推荐与工程实践。
+          </p>
+          <p>
+            <a class="text-button" href="./notes.html">查看笔记</a>
           </p>
         </section>
 
@@ -65,10 +76,10 @@
           </p>
         </section>
 
-        <section id="worldview" class="section">
-          <h2>技术观</h2>
+        <section id="thoughts" class="section">
+          <h2>所思</h2>
           <div class="principles">
-            <article>
+<article>
               <h3>反馈范式会从流式走向非欧图结构</h3>
               <p>
                 流式反馈是以往技术的核心范式，最自然、也最易采集；但下一步革新更可能发生在非欧的图结构反馈上。
@@ -104,126 +115,259 @@
                 这也是全自动流程和人机协同的本质区别：上下文不是越多越好，而是要被正确选择。
               </p>
             </article>
-            <article>
+          </div>
+          <details class="thoughts-more">
+            <summary>
+              <span class="when-closed">展开其余 21 条</span>
+              <span class="when-open">收起</span>
+            </summary>
+            <div class="principles">
+              <article>
               <h3>频率塑造记忆，价值驱动反思</h3>
               <p>
                 模型学习的是世界的普遍频率，个人记忆则来自每个人经历过的特异频率。
                 价值高的事件会触发反思，反思相当于对高价值样本进行迭代压缩和再训练。
               </p>
             </article>
-            <article>
+              <article>
               <h3>AI Coding 的关键是熵控与最小改动</h3>
               <p>
                 代码是智能体沉淀到 environment 中的产出。好的 AI coding 不是大面积生成，
                 而是在理解项目结构后做最小必要修改，控制代码熵，让系统继续保持可读、可维护、可回滚。
               </p>
             </article>
-          </div>
+              <article>
+              <h3>频率即链接，链接即知识</h3>
+              <p>
+                万物皆是频率；人类语言和各种语言是频率，记忆也是频率。频率使物体共现，共现建立链接，
+                链接产生知识，知识产生智慧；频率同时承担区分作用，划分 0 与 1，也划分相关与不相关。
+              </p>
+            </article>
+              <article>
+              <h3>重要的是状态之间的差异</h3>
+              <p>
+                世界是动态变化的，重要的永远是当前状态与上一个状态的差异。memory 永远是 world 的快照，
+                所以永远是过时的；perception 永远是过时的。
+              </p>
+            </article>
+              <article>
+              <h3>记忆模块的本质是激活 base model 的一部分</h3>
+              <p>
+                记忆是 item 复现的结果，记忆即模型，模型即记忆。LLM 学习的是世界频率，所以是 base model；
+                所谓遗忘，是 session 的频率世界与 LLM 的频率世界之间存在 bias。信息在产生的那一刻就已经过时，
+                所以记忆是对信息的重构；记忆产生的那一刻，它也就已经过时。
+              </p>
+            </article>
+              <article>
+              <h3>球体模型：频率相似度叠加在 base 世界之上</h3>
+              <p>
+                重新审视向量相似度与频率的关系，为每个 session 构建一个频率相似模型，叠加在 base 频率世界之上，
+                属于非侵入的记忆模块；关键量是惊讶值（山峰）、移动速度与唤醒程度。
+              </p>
+            </article>
+              <article>
+              <h3>Dream：摄取当天信息并重构记忆</h3>
+              <p>
+                做梦是在对当天信息做摄取，并重构当前记忆：删除非必要部分，连接新记忆与现有记忆。
+                感性占主导时游走范围更大，能发现隐藏关系与深层关系，即非共现频率关系；
+                理性（频率、语义）与感性（我感相似度、深层相似）两种游走方法远近结合。
+              </p>
+            </article>
+              <article>
+              <h3>LLM 实时记忆的三条路线</h3>
+              <p>
+                拉链 KV Cache（hologram）；因果图谱；仿生分层：主动遗忘、被动归纳、dream。
+              </p>
+            </article>
+              <article>
+              <h3>快思考与慢思考是神经与符号的结合</h3>
+              <p>
+                神经符号结合的智能中，神经指深度学习，指直觉；符号指推理，是因果。
+                前者属于快思考：直观而快速，但缺乏逻辑；后者属于慢思考：复杂但有逻辑，有推理性，可推导。
+              </p>
+            </article>
+              <article>
+              <h3>反应事实规律的三个层次</h3>
+              <p>
+                第一是关联，第二是干预，第三是反事实。现在几乎所有模型都处于关联层次；
+                强化学习处于干预层次，有主动改变世界的动作；反事实是更高层次：如果之前修改了某个动作或决策，
+                现在的情况会发生什么改变。能回答这个问题，才算真正理解因果关系。
+              </p>
+            </article>
+              <article>
+              <h3>自进化 agent：价值由他人评价产生</h3>
+              <p>
+                不同 agent 组成一个网络，类似蚁群但有分工：每个 agent 在接触任务的过程中更熟悉某类任务。
+                每个 agent 有一个向量标签代表它擅长的任务，标签由别人给它的评价产生：我的价值不由我自己决定，
+                而由其他人对我的看法决定。网络动起来之后不需要分配者：每个 agent 自行决定任务是否适合自己，
+                适合就做，不适合就抛给适合的 agent。
+              </p>
+            </article>
+              <article>
+              <h3>GAN 式训练给模型注入专家属性</h3>
+              <p>
+                用 GAN 做大模型训练可以赋予其专业属性：评判器可以设计得富有专业性，成为专家领域的评委；
+                只训练专业的评判器，就可以即插即用地为任何 pre-trained model 赋予专家知识。
+                这其实是在模拟人和 LLM 的交互，把人的角色替换成了 LLM；因为这个 LLM 领域更精，所以小 LLM 也能有深度。
+                智能体的联合训练也能考虑 GAN 模式：任务板、交流板、共识板。
+              </p>
+            </article>
+              <article>
+              <h3>分工的代价与协作的必要</h3>
+              <p>
+                开发与算法之间的 gap 比产品和开发之间的 gap 都大。正是二者信息不对等，才导致 AI 落地如此艰难：
+                这是分工的不好之处，也是协作的必要之处，与多 agent 协同是同一件事。它启发的是：
+                agent 要知道自己能做什么，更要知道自己不能做什么，以及谁能帮助自己完成不能做的事。
+              </p>
+            </article>
+              <article>
+              <h3>统一度量衡：对齐空间与时间感知</h3>
+              <p>给各个 agent 设置一个标准度量衡的中间件，对齐空间和时间感知。</p>
+            </article>
+              <article>
+              <h3>让 LLM 自己说出不足</h3>
+              <p>让 LLM 自己说自己的不足，自己说自己想要什么。</p>
+            </article>
+              <article>
+              <h3>One Own Rec：把推荐的权利拿回用户手里</h3>
+              <p>
+                告诉 app 我想看什么、怎么看、在什么时候看，而不是让 recsys 来猜。这与 search 本质不同：
+                search 虽然也个性化，但总归要拿到你的 search word；推荐要发现你从未搜索过的、你感兴趣的事。
+                这里告诉 recsys 的并非关键词，而是一种粗略意图。当前 app 推荐有两个问题：记忆过重，
+                学习到用户兴趣后往往锁在这里，而用户兴趣漂移较大；沟通过轻，从用户收到的信息只是简单二元操作，
+                纠正需要大量二元操作。
+              </p>
+            </article>
+              <article>
+              <h3>后训练范式正在变化</h3>
+              <p>
+                从「训一个大模型」转向「先训多个专家，再蒸馏合并」：数学、代码、Agent 各自做专家化 RL，
+                再通过 OPD / MOPD 把能力压回统一模型。在线蒸馏开始成为 RL 之外的重要高效路线，
+                教师可以逐 token 给密集反馈。Test-time compute 成为新的能力扩展方向。
+                RLVR 从「堆 rollout」转向「会训练」。SFT 不再只是 RL 的 warm start。好数据，算法暂时替代不了。
+              </p>
+            </article>
+              <article>
+              <h3>Post-train 或许不该是 QA 形式</h3>
+              <p>
+                为什么现在的 fine-tune 都是 QA 形式，不应该是 pair 形式才对吗。LLM 到达上界的一个重要原因是
+                它用完了全世界的数据；后续要提升，只能优化利用数据的方法，更深度地利用数据。
+              </p>
+            </article>
+              <article>
+              <h3>生成与判断存在能力差，可以螺旋上升</h3>
+              <p>生成与判断是两个复杂度完全不同的任务，可以打一个能力差，螺旋上升。</p>
+            </article>
+              <article>
+              <h3>RL 的四个组件及其相互转化</h3>
+              <p>
+                policy、perception、world knowledge、value function。perception 在一定程度后转化为 value function：
+                前者可看作短期记忆，后者是长期记忆；value function 可看作对 final target 的拆解，
+                能对下一步 action 做 value 评估就代表能做任务拆解。policy 根据 value function 做判断：
+                可以完全做 value 高的，但也要有 exploration，policy 就是做这个平衡的。
+              </p>
+            </article>
+              <article>
+              <h3>benchmark 本质上是新时代的 loss 函数</h3>
+              <p>
+                好的 benchmark 一定是可解释的，是世界的一个切面：在这个 benchmark 上做世界的投影，
+                然后提升 agent 在具体任务上的能力。agent 的能力维度包括推理、记忆和工具调用；领域 topic 是题眼；
+                需要细粒度判分规范作为能力指标；题目得分不应该太好，给自进化留出空间。
+                打分要求可重复与可比较，首先排除 llm-judge；信号要稠密且连续，要求 agent 的结果是结构化的。
+                作弊指调用本身可以直接获得答案的工具来绕过多轮推理；凭记忆直接写答案不算作弊，
+                因为记忆本质上也是 agent 能力的一部分。
+              </p>
+            </article>
+            </div>
+          </details>
         </section>
 
         <section id="timeline" class="section">
           <h2>时间线</h2>
           <div class="timeline">
-            <article>
-              <span class="dot"></span>
-              <time>2025.11 - 至今</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>甲己无形（Mydow）创业项目</h3></summary>
-                  <p>围绕社交破冰与垂直画像推荐，构建用户画像/对话人设结构化生成、破冰意图路由、多 Agent 自动交互与反馈更新链路。</p>
-                  <p>项目入围奇绩创坛路演并获得天使轮融资；技术侧围绕冷启动候选、话术策略、画像一致性与交互反馈展开。</p>
-                </details>
+            <!-- Rows run newest-first. Work and startup entries that overlap share
+                 one row: each concurrent entry becomes a lane to the right, all
+                 starting at the same height, left-aligned, capped at three lanes.
+                 School entries stay single-lane background rows, since a degree
+                 spans years and would otherwise merge with every job inside it. -->
+            <div class="timeline-row lanes-3">
+              <div class="timeline-item">
+                <time>2026.06 - 至今</time>
+                <h3>阿里巴巴达摩院</h3>
+                <span class="timeline-role">Agent 算法实习</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2025.10 - 至今</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>SMEE 突破小组 · 算法研发</h3></summary>
-                  <p>面向光刻机运动传输系统，参与领域 LLM + RAG 故障诊断系统，覆盖专家问答、故障定位、SOP 运维与自动诊断闭环。</p>
-                  <p>负责领域数据构造、专家文档清洗、chunk schema、检索评测与诊断回答质量评估；参与 Parser/Retrieval/Diagnosis/SOP/Verification 多智能体流程设计。</p>
-                </details>
+              <div class="timeline-item">
+                <time>2025.12 - 至今</time>
+                <h3>万物智灵（One Ling）</h3>
+                <span class="timeline-role">AI 教育创业项目</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2025.06 - 2025.09</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>MiniMax · 大模型算法实习</h3></summary>
-                  <p>面向星野、Talkie 等 NPC 互动场景，推进用户增长预测、多模态召回、音色推荐、TIGER 范式验证和召回融合评测。</p>
-                  <p>将固定滑动窗口预测改为在线动态重训；设计 VLM 图像语义 + 文本相似度双路召回验证；组织 Hailuo-01 音色 embedding 与正向互动 NPC 样本；围绕 Recall@K、HitRate@K、长尾覆盖和固定候选预算做离线消融。</p>
-                </details>
+              <div class="timeline-item">
+                <time>2025.11 - 至今</time>
+                <h3>甲己无形（Mydow）</h3>
+                <span class="timeline-role">创业项目</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2025.03 - 2025.06</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>字节跳动 · Agent Infra 研发实习</h3></summary>
-                  <p>参与企业内部 API 资产纳管与业务流自动化建设，围绕 MCP 协议构建 Agentic Workflow 的工具接入、权限约束与文档结构化基础设施。</p>
-                  <p>推进 MCP Factory 流水线，将内部 API 转化为标准化 Tool Call，沉淀 taxonomy、参数 schema、错误码、调用示例与知识库 Refine 数据。</p>
-                </details>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2025.10 - 2026.05</time>
+                <h3>SMEE 突破小组</h3>
+                <span class="timeline-role">大模型搜索应用算法实习</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2024.09 - 2027.06</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>清华大学 · 电子信息（人工智能）硕士</h3></summary>
-                  <p>推免进入清华大学电子信息（人工智能）硕士阶段，研究方向覆盖大模型应用算法、多模态可靠性、RAG / Agentic Tool Use 与 LLM4Rec。</p>
-                  <p>独立一作投稿多模态幻觉校准、冻结对齐修正与会话推荐停止策略，研究对象覆盖 generation、ranking 与 stopping decision 的 calibration 问题。</p>
-                </details>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2025.06 - 2025.09</time>
+                <h3>MiniMax</h3>
+                <span class="timeline-role">大模型推荐算法实习</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2024.02 - 2024.07</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>平安科技 · 数据挖掘</h3></summary>
-                  <p>参与用户画像模型优化，挖掘实时行为特征并与离线特征融合；使用协同过滤、LR、聚类等方法评估特征相关度。</p>
-                  <p>根据先验信息构建过滤规则，并嵌入还款率预测模型，支撑灰度 A/B 策略优化。</p>
-                </details>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2025.01 - 2025.06</time>
+                <h3>字节跳动</h3>
+                <span class="timeline-role">Agent Search 研发实习</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2020.09 - 2024.07</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>厦门大学 · 计算机科学与技术</h3></summary>
-                  <p>GPA Top 2%；获国家奖学金、优秀毕业生与优秀毕业论文；参加 ICPC、数学竞赛、蓝桥杯、OS 内核赛等竞赛。</p>
-                  <p>本科阶段完成 SmartIcon、CSAsk、基于光流网络的小目标识别、自适应缓存调度等项目。</p>
-                </details>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2024.09 - 2027.06</time>
+                <h3>清华大学</h3>
+                <span class="timeline-role">电子信息（人工智能）硕士</span>
               </div>
-            </article>
-            <article>
-              <span class="dot"></span>
-              <time>2017.09 - 2020.06</time>
-              <div>
-                <details class="event-detail" open>
-                  <summary><h3>河南睢县高级中学</h3></summary>
-                  <p>就读于河南睢县高级中学；参加高中物理竞赛，获省级二等奖。</p>
-                </details>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2024.02 - 2024.07</time>
+                <h3>平安科技</h3>
+                <span class="timeline-role">数据挖掘</span>
               </div>
-            </article>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2020.09 - 2024.07</time>
+                <h3>厦门大学</h3>
+                <span class="timeline-role">计算机科学与技术 学士</span>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-item">
+                <time>2017.09 - 2020.06</time>
+                <h3>河南睢县高级中学</h3>
+              </div>
+            </div>
           </div>
         </section>
 
         <section id="honors" class="section">
           <h2>荣誉</h2>
           <ul class="dated-list">
-            <li><span>2024</span>厦门大学本科生优秀毕业论文；厦门大学信息学院优秀毕业生</li>
-            <li><span>2023</span>华为开发者大赛算法组杭厦赛区二等奖；厦门大学万德奖学金</li>
-            <li><span>2022</span>厦门大学国家奖学金；奇妙奖学金</li>
-            <li><span>2022</span>蓝桥杯省赛一等奖；全国决赛二等奖；全国大学生计算机系统能力大赛 OS 内核二等奖；美国大学生数学建模竞赛 Honorable Mention</li>
-            <li><span>2021</span>厦门大学国家奖学金；本科一等学业优秀奖学金；芙蓉科创竞赛奖学金</li>
-            <li><span>2021</span>ICPC 全国邀请赛（陕西）银牌；全国大学生数学竞赛福建赛区一等奖；中国高校团体程序设计天梯赛省团队一等奖</li>
-            <li><span>高中阶段</span>物理竞赛省级二等奖</li>
+            <li>厦门大学本科生优秀毕业论文；厦门大学信息学院优秀毕业生<span>2024</span></li>
+            <li>华为开发者大赛算法组杭厦赛区二等奖；厦门大学万德奖学金<span>2023</span></li>
+            <li>奇妙奖学金<span>2022</span></li>
+            <li>蓝桥杯省赛一等奖；全国决赛二等奖；全国大学生计算机系统能力大赛 OS 内核二等奖；美国大学生数学建模竞赛 Honorable Mention<span>2022</span></li>
+            <li>本科一等学业优秀奖学金；芙蓉科创竞赛奖学金<span>2021</span></li>
+            <li>ICPC 全国邀请赛（陕西）银牌；全国大学生数学竞赛福建赛区一等奖；中国高校团体程序设计天梯赛省团队一等奖<span>2021</span></li>
+            <li>物理竞赛省级二等奖<span>2019</span></li>
           </ul>
         </section>
 
@@ -410,50 +554,63 @@
         <section id="experience" class="section">
           <h2>经历</h2>
           <article class="entry">
-            <details class="event-detail" open>
+            <details class="event-detail">
               <summary class="entry-head">
-                <h3>SMEE 突破小组 · 算法研发</h3>
-                <span>2025.10 - 至今</span>
+                <h3>阿里巴巴达摩院 · Agent 算法实习</h3>
+                <span>2026.06 - 至今</span>
               </summary>
-              <p>
-                负责领域 LLM + RAG 数据构造、chunk schema 和检索评测支持，参与 Parser / Retrieval /
-                Diagnosis / SOP / Verification 多智能体诊断流程设计。
-              </p>
-              <p>
-                工作内容覆盖专家文档切分、标准证据组织、低证据拒答规则、高风险 SOP 人工升级条件、诊断答案引用检查和反馈样本沉淀。
-              </p>
+              <ul class="entry-points">
+                <li>CoT Planner：基于 Qwen 系列构建计划生成模型，强模型蒸馏 SFT 冷启动、judge 偏好对驱动 DPO 迭代两轮</li>
+                <li>推理时采样 8 条候选计划链再由 judge 选优执行，对应「召回出候选、精排定顺序」的两段式范式</li>
+                <li>AI4S Benchmark：面向药物/材料长程任务构建任务集与 checkpoint 过程验证器，以领域数据库为 GT</li>
+                <li>checkpoint 级信号支撑 autonomy@0 等过程评测，区分「结果对」与「过程链对」</li>
+                <li>Agent OS：参与 NobelClaw 调度治理框架，负责 Subgraph 递归展开与失败回退等模块</li>
+              </ul>
             </details>
           </article>
           <article class="entry">
-            <details class="event-detail" open>
+            <details class="event-detail">
               <summary class="entry-head">
-                <h3>MiniMax · 大模型算法实习</h3>
+                <h3>SMEE 突破小组 · 大模型搜索应用算法实习</h3>
+                <span>2025.10 - 2026.05</span>
+              </summary>
+              <ul class="entry-points">
+                <li>负责领域 LLM + RAG 数据构造、chunk schema 和检索评测支持</li>
+                <li>参与 Parser / Retrieval / Diagnosis / SOP / Verification 多智能体诊断流程设计</li>
+                <li>覆盖专家文档切分与标准证据组织</li>
+                <li>制定低证据拒答规则与高风险 SOP 人工升级条件</li>
+                <li>负责诊断答案引用检查与反馈样本沉淀</li>
+              </ul>
+            </details>
+          </article>
+          <article class="entry">
+            <details class="event-detail">
+              <summary class="entry-head">
+                <h3>MiniMax · 大模型推荐算法实习</h3>
                 <span>2025.06 - 2025.09</span>
               </summary>
-              <p>
-                团队面向星野、Talkie 这类情感陪伴产品做 NPC 推荐。这里的 NPC 既是内容，也是可持续对话的对象；
-                用户在对话中留下的不是普通点击，而是情绪、经历、陪伴偏好和角色偏好的混合信号。
-                我的工作围绕多模态召回和生成式推荐展开：增长预测动态重训、VLM 图像语义 + 文本相似度双路召回、
-                音色 embedding 样本构造、TIGER 生成式召回范式验证，以及多模态召回融合评测。
-              </p>
-              <p>
-                评测围绕固定候选预算、曝光偏差、长尾覆盖、重复曝光与负反馈展开，用于区分真实兴趣增量和候选池扩张带来的表面提升。
-              </p>
+              <ul class="entry-points">
+                <li>面向星野、Talkie 等情感陪伴产品做 NPC 推荐；NPC 既是内容，也是可持续对话的对象</li>
+                <li>用户在对话中留下情绪、经历、陪伴偏好与角色偏好的混合信号，而非普通点击</li>
+                <li>增长预测动态重训；VLM 图像语义 + 文本相似度双路召回</li>
+                <li>音色 embedding 样本构造；TIGER 生成式召回范式验证；多模态召回融合评测</li>
+                <li>评测围绕固定候选预算、曝光偏差、长尾覆盖、重复曝光与负反馈展开</li>
+                <li>区分真实兴趣增量与候选池扩张带来的表面提升</li>
+              </ul>
             </details>
           </article>
           <article class="entry">
-            <details class="event-detail" open>
+            <details class="event-detail">
               <summary class="entry-head">
-                <h3>字节跳动 · Agent Infra 研发实习</h3>
-                <span>2025.03 - 2025.06</span>
+                <h3>字节跳动 · Agent Search 研发实习</h3>
+                <span>2025.01 - 2025.06</span>
               </summary>
-              <p>
-                参与 MCP Factory 流水线建设，将企业内部 API 转化为标准化 Tool Call，
-                沉淀 taxonomy、参数 schema、错误码、调用示例和知识库 Refine 数据。
-              </p>
-              <p>
-                工作重点包括工具可发现性、schema 约束、调用失败恢复、权限边界和文档结构化，服务 Agentic Workflow 的稳定执行。
-              </p>
+              <ul class="entry-points">
+                <li>参与 MCP Factory 流水线建设，将企业内部 API 转化为标准化 Tool Call</li>
+                <li>沉淀 taxonomy、参数 schema、错误码、调用示例和知识库 Refine 数据</li>
+                <li>工作重点包括工具可发现性、schema 约束、调用失败恢复、权限边界和文档结构化</li>
+                <li>服务 Agentic Workflow 的稳定执行</li>
+              </ul>
             </details>
           </article>
           <article class="entry">
@@ -461,115 +618,186 @@
               <h3>平安科技 · 数据挖掘</h3>
               <span>2024.02 - 2024.07</span>
             </div>
-            <p>
-              参与用户画像模型优化，挖掘实时行为特征并与离线特征融合；使用协同过滤、LR、聚类等方法评估特征相关度，
-              将过滤规则嵌入还款率预测模型，支撑灰度 A/B 中的策略优化。
-            </p>
+            <ul class="entry-points">
+              <li>参与用户画像模型优化，挖掘实时行为特征并与离线特征融合</li>
+              <li>使用协同过滤、LR、聚类等方法评估特征相关度</li>
+              <li>将过滤规则嵌入还款率预测模型，支撑灰度 A/B 中的策略优化</li>
+            </ul>
           </article>
-        </section>
-
-        <section id="ai-education" class="section">
-          <h2>AI 教育</h2>
-          <p>
-            围绕高中信息技术、人工智能校本课与科创社团，整理 Python 入门、RAG 问答助手、
-            AI 可信度判断和多模态检索等课程作品。材料侧重可运行任务、证据核验、分层拓展与过程性评价。
-          </p>
-          <ul class="plain-list">
-            <li><strong>AI Evidence Quest：</strong>校园资料问答助手课程项目，覆盖资料检索、引用核验、低证据拒答与 AI 可信度判断。<a href="https://sherkevin.github.io/ai-evidence-quest/">Demo</a> · <a href="https://github.com/sherkevin/ai-evidence-quest">GitHub</a></li>
-            <li><strong>AI Image Detective：</strong>图像特征向量与相似检索课程项目，通过权重调节解释颜色、形状、纹理如何影响检索排序。<a href="https://sherkevin.github.io/ai-image-detective/">Demo</a> · <a href="https://github.com/sherkevin/ai-image-detective">GitHub</a></li>
-            <li><strong>AI 素养：</strong>将 RAG 拆解为“问题提出—证据检索—答案生成—来源核验”，用于讨论生成式 AI 的能力边界、信息来源与可信度判断。</li>
-            <li><strong>评价设计：</strong>课程作业量规包含问题定义、代码规范、逻辑完整性、异常处理、展示表达与拓展尝试。</li>
-          </ul>
-          <p class="note">课程材料以学生可阅读、可运行、可展示为组织目标，在线教材持续补充章节讲解、实验页面与教师资源。</p>
         </section>
 
         <section id="projects" class="section">
           <h2>项目</h2>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>甲己无形（Mydow）</h3></summary>
-              <p>
-                面向社交破冰与垂直画像推荐，构建用户画像/对话人设结构化生成、破冰意图路由与多 Agent
-                自动交互链路，将画像特征和垂类先验用于冷启动候选、话术策略与反馈闭环。
-              </p>
-              <p>
-                系统围绕画像字段、候选生成、破冰话术、反馈更新与持续交互展开，使冷启动推荐和对话策略共享同一套结构化表示。
-              </p>
-            </details>
+            <h3>AI4S Benchmark</h3>
+            <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
+            <ul class="entry-points">
+              <li>面向药物/材料长程任务构建任务集与 checkpoint 过程验证器，以领域数据库为 GT</li>
+              <li>「先选答案再反向出题」：从冻结科学数据库反向构造原子问题，再拼接为长问题</li>
+              <li>basic / some / enough 同题三层分类，生成式与判别式同题二分类</li>
+              <li>checkpoint 级信号支撑 autonomy@0 等过程评测，区分「结果对」与「过程链对」</li>
+            </ul>
           </div>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>AgentOS Core</h3></summary>
-              <p>
-                微内核式 Agent runtime，将意图路由、事件驱动 IPC、权限边界与插件化工具执行解耦，
-                用于 RAG / Tool Use 工作流调度。
-              </p>
-              <p>
-                原型将可变的智能决策和稳定的执行边界分开，分别处理意图、工具、状态、权限与插件生命周期。
-              </p>
-            </details>
+            <h3>CoT Planner</h3>
+            <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
+            <ul class="entry-points">
+              <li>基于 Qwen 系列构建计划生成模型：强模型蒸馏 SFT 冷启动、judge 偏好对驱动 DPO，迭代两轮</li>
+              <li>推理时采样 8 条候选计划链再由 judge 选优执行，对应「召回出候选、精排定顺序」的两段式范式</li>
+            </ul>
           </div>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>Weaver</h3></summary>
-              <p>
-                基于 LangGraph/Aider 的 YAML 声明式多 Agent 编排原型，支持断点续传、上下文隔离、
-                失败恢复与复杂工具链可控执行。
-              </p>
-              <p>
-                系统面向长任务链执行，显式维护可恢复状态、上下文边界和失败回退位置，减少多工具链执行中的状态漂移。
-              </p>
-            </details>
+            <h3>Lingshu AgentOS</h3>
+            <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
+            <ul class="entry-points">
+              <li>把操作系统的进程、权限、回滚方法搬到 Agent 上</li>
+              <li>参与 NobelClaw 调度治理框架，负责 Subgraph 递归展开与失败回退等模块</li>
+            </ul>
           </div>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>SmartIcon</h3></summary>
-              <p>
-                面向科研论文图标生成，结合论文数据爬取、ComfyUI 工作流、风格迁移与 Prompt 微调，
-                并引入 OpenCLIP 多模态检索增强不同期刊风格图标生成。
-              </p>
-              <p>
-                系统以期刊风格和论文语义为约束，通过相似风格检索、生成空间约束和多模态相似度反馈控制图标生成结果。
-              </p>
-            </details>
+            <h3>CausalMAD</h3>
+            <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
+            <ul class="entry-points">
+              <li>以伺服系统物理因果 DAG 划分专业 Agent，用 CausalGNN 生成 attention bias</li>
+              <li>结合 per-agent LoRA 与可学习融合门控完成因果诊断</li>
+            </ul>
           </div>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>CSAsk</h3></summary>
-              <p>
-                构建计算机领域术语知识图谱，结合 LLaMA 基座与 RAG 增强，实现计算机论文术语解释、
-                翻译和领域知识问答。
-              </p>
-              <p>
-                系统通过知识图谱提供术语关系，通过 RAG 提供引用来源，通过上下文边界控制论文解释和翻译任务。
-              </p>
-            </details>
+            <h3>工业故障 RAG</h3>
+            <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
+            <ul class="entry-points">
+              <li>多粒度 chunking；BM25/dense 混合召回经类型自适应加权 RRF 融合</li>
+              <li>叠加图谱扩散与来源感知 cross-encoder 精排，由专家拖拽反馈闭环迭代</li>
+              <li>以复杂度路由与缺口自检驱动多轮补搜；按专家标注评测 Recall@5、引用支持与根因覆盖</li>
+              <li>证据追溯与低证据拒答</li>
+            </ul>
           </div>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>LLM Reliability Lab</h3></summary>
-              <p>
-                围绕“证据、动作、风险”的个人可靠性评测切入点，把工业 RAG、MCP-style Tool Use
-                和 Agent trajectory 拆成可诊断的指标与 badcase。
-              </p>
-              <p>
-                项目包含可运行脚本、样例数据、QLoRA 评测门槛、badcase taxonomy 与 reliability playbook，
-                重点展示我如何先定位失败模式，再决定检索、生成、schema 或 guardrail 的改法。
-                <a href="https://github.com/sherkevin/llm-reliability-lab">GitHub</a>
-              </p>
-            </details>
+            <h3>Qwen3-VL 多模态文档处理</h3>
+            <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
+            <ul class="entry-points">
+              <li>沉淀工程排查日志与树状故障图，构建结构化文档、拓扑扩充和因果分析流水线</li>
+              <li>用 Qwen3-VL-8B 图文 QA + 精排处理多模态文档</li>
+            </ul>
           </div>
           <div class="project">
-            <details class="event-detail" open>
-              <summary><h3>科研探索与系统优化</h3></summary>
-              <p>
-                围绕基于光流建模的小目标识别、深度学习自适应缓存调度与 KV cache 改进展开研究，
-                分别对应视觉表示、资源调度和推理效率三个问题。
-              </p>
-              <p>
-                相关工作分别处理视觉表示、缓存价值估计、推理成本与资源约束，对应“表示质量”和“计算成本”在不同任务中的约束关系。
-              </p>
-            </details>
+            <h3>TIGER 生成式召回</h3>
+            <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
+            <ul class="entry-points">
+              <li>用 RQ-Kmeans 把 NPC 文本与形象量化为分层 Semantic ID，约 25M encoder-decoder 自回归生成候选</li>
+              <li>宽度 128 beam + trie 约束解码保证 ID 合法</li>
+              <li>固定候选预算消融验证相对双塔检索的增量与长尾覆盖</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>细粒度多模态对齐</h3>
+            <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
+            <ul class="entry-points">
+              <li>以 LoRA 微调 GME 视觉塔（ViT），配短语级软分配区域对齐把描述词对到图像局部</li>
+              <li>构造属性交换负例（词表相同、搭配互换）与两级 curriculum hard negative 强化属性绑定</li>
+              <li>支撑团队灰度 A/B 留存 +2.4pp</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>NPC 人设语义搜索</h3>
+            <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
+            <ul class="entry-points">
+              <li>个人负责 dense 语义召回一路，以精排 cross-encoder 为 teacher 用 InfoNCE + KL 蒸馏约 100M 双塔</li>
+              <li>模型在环重挖 hard negative 并全库建 HNSW 索引</li>
+              <li>replay 评测 Recall@500 / NDCG@20，按 badcase 分桶归因</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>分层 Tool Routing</h3>
+            <p class="project-org">字节跳动 · Agent Search 研发实习 · 2025.01 - 2025.06</p>
+            <ul class="entry-points">
+              <li>按能力域、操作类型和权限等级为 5,000+ API 建立分层索引</li>
+              <li>以「分层召回 + 动态重排」两段式渐进筛到 top-8 工具，tool calling Recall@5 达 92%</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>Cache-aware Tool Context</h3>
+            <p class="project-org">字节跳动 · Agent Search 研发实习 · 2025.01 - 2025.06</p>
+            <ul class="entry-points">
+              <li>对召回后的 top-k schema 做确定性排序与版本化，形成稳定 prefix</li>
+              <li>基于 vLLM 的分层 worker 调度与 prefix cache 复用多轮公共前缀</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>AI 教育课程与在线教材</h3>
+            <p class="project-org">万物智灵（One Ling） · AI 教育创业 · 2025.12 - 至今</p>
+            <ul class="entry-points">
+              <li>面向高中信息技术、人工智能校本课与科创社团，整理 Python 入门、RAG 问答助手、AI 可信度判断与多模态检索课程</li>
+              <li>AI Evidence Quest：校园资料问答助手课程项目，覆盖资料检索、引用核验、低证据拒答与 AI 可信度判断。<a href="https://sherkevin.github.io/ai-evidence-quest/">Demo</a> · <a href="https://github.com/sherkevin/ai-evidence-quest">GitHub</a></li>
+              <li>AI Image Detective：图像特征向量与相似检索课程项目，用权重调节解释颜色、形状、纹理如何影响检索排序。<a href="https://sherkevin.github.io/ai-image-detective/">Demo</a> · <a href="https://github.com/sherkevin/ai-image-detective">GitHub</a></li>
+              <li>AI 素养：把 RAG 拆成「问题提出—证据检索—答案生成—来源核验」，讨论生成式 AI 的能力边界、信息来源与可信度判断</li>
+              <li>评价设计：作业量规覆盖问题定义、代码规范、逻辑完整性、异常处理、展示表达与拓展尝试</li>
+              <li>课程材料按可阅读、可运行、可展示组织，在线教材持续补充章节讲解、实验页面与教师资源</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>甲己无形（Mydow）</h3>
+            <p class="project-org">创业项目 · 2025.11 - 至今</p>
+            <ul class="entry-points">
+              <li>LLM 用户画像与破冰匹配推荐产品，入围奇绩创坛并获天使轮融资</li>
+              <li>把画像证据、匹配权限、对外披露三件事分开；推荐与发消息是两个受控阶段</li>
+              <li>破冰只用双方允许披露的信息，Safety/Critic 独立检查，发送需确认</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>Weaver</h3>
+            <p class="project-org">个人项目 · 2025.12</p>
+            <ul class="entry-points">
+              <li>YAML 声明式多 Agent 编排：definition、run attempt、artifact 与 effect receipt 分开建模</li>
+              <li>恢复三分法：有可靠 receipt 认定完成；明确没执行才重试；证明不了成败进 IN_DOUBT，禁止盲目重发</li>
+              <li>当前为 Historical-only 原型（Python + LangGraph）</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>LLM Reliability Lab</h3>
+            <p class="project-org">个人项目 · 2026.05</p>
+            <ul class="entry-points">
+              <li>围绕「证据、动作、风险」把工业 RAG、MCP-style Tool Use 和 Agent trajectory 拆成可诊断的指标与 badcase</li>
+              <li>包含可运行脚本、样例数据、QLoRA 评测门槛、badcase taxonomy 与 reliability playbook</li>
+              <li><a href="https://github.com/sherkevin/llm-reliability-lab">GitHub</a></li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>SmartIcon</h3>
+            <p class="project-org">本科项目 · 厦门大学</p>
+            <ul class="entry-points">
+              <li>科研论文图标生成：论文数据爬取、ComfyUI 工作流、风格迁移与 Prompt 微调</li>
+              <li>引入 OpenCLIP 多模态检索增强不同期刊风格图标生成</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>CSAsk</h3>
+            <p class="project-org">本科项目 · 厦门大学</p>
+            <ul class="entry-points">
+              <li>构建计算机领域术语知识图谱，结合 LLaMA 基座与 RAG 增强</li>
+              <li>实现计算机论文术语解释、翻译和领域知识问答</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>基于光流建模的小目标识别</h3>
+            <p class="project-org">本科科研 · 厦门大学</p>
+            <ul class="entry-points">
+              <li>以光流建模改进小目标的视觉表示</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>深度学习自适应缓存调度</h3>
+            <p class="project-org">本科科研 · 厦门大学</p>
+            <ul class="entry-points">
+              <li>以缓存价值估计做资源调度，平衡表示质量与计算成本</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>KV cache 改进</h3>
+            <p class="project-org">本科科研 · 厦门大学</p>
+            <ul class="entry-points">
+              <li>面向推理效率的 KV cache 结构改进</li>
+            </ul>
           </div>
         </section>
 
@@ -584,6 +812,6 @@
         </section>
       </main>
     </div>
-    <script src="./script.js?v=20260504e"></script>
+    <script src="./script.js?v=20260916d"></script>
   </body>
 </html>

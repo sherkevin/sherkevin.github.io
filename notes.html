@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="邓凯文的论文阅读与学习笔记：智能体、训练与对齐、多模态、安全评测、推荐与工程实践。"
+    />
+    <title>笔记 | 邓凯文</title>
+    <link rel="stylesheet" href="./styles.css?v=20260916f" />
+  </head>
+  <body>
+    <div class="page-card is-wide">
+      <aside class="sidebar">
+        <div class="avatar">邓</div>
+        <h1>笔记</h1>
+        <p class="cn-name">Notes</p>
+        <p class="role">论文阅读报告与学习记录</p>
+        <p class="focus">
+          逐篇记录读过的论文与技术报告：问题、方法、结果与边界。抽象的想法与推演归入主页的「所思」。
+        </p>
+        <nav aria-label="页面导航">
+          <a href="./index.html">主页</a>
+          <a href="./index.html#thoughts">所思</a>
+          <a href="./notes.html" class="is-current">笔记</a>
+          <a href="./life-graph.html">人生图谱</a>
+          <a href="./index.html#research">研究</a>
+        </nav>
+        <div class="contact">
+          <a href="./index.html">中文主页</a>
+          <a href="./en.html">English Version</a>
+          <a href="mailto:sherkevin@163.com">sherkevin@163.com</a>
+          <a href="https://github.com/sherkevin">github.com/sherkevin</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section id="notes" class="section">
+          <h2>笔记</h2>
+          <p class="notes-intro">
+            每篇笔记记录一次具体的阅读：论文或技术报告的问题设定、方法设计、关键结果与适用边界。
+            卡片为摘要视图，点击任意卡片展开完整记录。
+          </p>
+
+          <div class="notes-toolbar">
+            <div class="notes-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <input
+                id="notes-search"
+                type="search"
+                placeholder="搜索论文与笔记内容"
+                aria-label="搜索论文与笔记内容"
+                autocomplete="off"
+              />
+            </div>
+            <span class="notes-count" id="notes-count" aria-live="polite"></span>
+          </div>
+
+          <div class="notes-filters" id="notes-filters" role="group" aria-label="按主题筛选"></div>
+
+          <div class="notes-grid" id="notes-grid"></div>
+
+          <p class="notes-footnote">
+            日期为论文或报告的公开时间；阅读记录整理自本地知识库，观点与判断以原笔记为准。
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="note-dialog" class="note-dialog" aria-label="笔记详情">
+      <div class="dialog-inner" id="note-dialog-inner"></div>
+    </dialog>
+
+    <script src="./notes.js?v=20260916a"></script>
+    <script src="./script.js?v=20260916d"></script>
+  </body>
+</html>
