@@ -420,4 +420,10 @@ searchInput.addEventListener("input", () => {
   }, 120);
 });
 
+// cover band stats come from the real note corpus
+const coverCount = document.querySelector("[data-cover-count]");
+if (coverCount) coverCount.textContent = NOTES.length;
+const coverTopics = document.querySelector("[data-cover-topics]");
+if (coverTopics) coverTopics.textContent = new Set(NOTES.map((n) => n.topic)).size;
+
 render();

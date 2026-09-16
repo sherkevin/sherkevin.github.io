@@ -138,6 +138,28 @@ h1 {
   font-style: italic;
 }
 
+/* Name row carries the motto at its lower right corner. */
+/* the motto sits at the far right of the line under the name */
+.name-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.name-line .cn-name {
+  margin-bottom: 0;
+}
+
+.motto {
+  padding-bottom: 3px;
+  color: var(--accent);
+  font-family: "Kaiti SC", "STKaiti", KaiTi, "楷体", "Songti SC", serif;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
 .role,
 .focus {
   color: var(--muted);
@@ -199,6 +221,193 @@ nav a.is-current {
 .content {
   padding-top: 0;
 }
+/* Portal cards: the two companion pages (notes, life graph) are not part of
+   the personal profile flow, so they get their own pair of tinted cards at
+   the top instead of regular sections. */
+.portals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding-bottom: 38px;
+  margin-bottom: 38px;
+  border-bottom: 1px solid var(--line);
+}
+
+.portal-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 208px;
+  padding: 24px 24px 22px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--ink);
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(25, 25, 25, 0.1);
+  text-decoration: none;
+}
+
+.portal-notes {
+  background: linear-gradient(150deg, #2e2a26 0%, #4a3a30 100%);
+  color: #f3efe7;
+}
+
+.portal-graph {
+  background: linear-gradient(150deg, #23302a 0%, #37473c 100%);
+  color: #eef2ec;
+}
+
+.portal-art {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 92px;
+  height: 92px;
+  opacity: 0.34;
+  color: #f3efe7;
+}
+
+.portal-kicker {
+  margin-bottom: 10px;
+  color: rgba(243, 239, 231, 0.62);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portal-title {
+  margin-bottom: 8px;
+  color: inherit;
+  font-size: 26px;
+}
+
+.portal-desc {
+  max-width: 34ch;
+  margin-bottom: 16px;
+  color: rgba(243, 239, 231, 0.78);
+  font-size: 13.5px;
+  line-height: 1.62;
+}
+
+.portal-cta {
+  margin-top: auto;
+  padding: 7px 16px;
+  border: 1px solid rgba(243, 239, 231, 0.4);
+  border-radius: 100px;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.portal-card:hover .portal-cta {
+  border-color: rgba(243, 239, 231, 0.85);
+  background: rgba(243, 239, 231, 0.12);
+}
+
+@media (max-width: 700px) {
+  .portals {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Cover band for the companion pages: a tinted masthead with live stats,
+   visually distinct from the plain sections below it. */
+.page-cover {
+  position: relative;
+  padding: 30px 30px 26px;
+  margin-bottom: 34px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.cover-notes {
+  background: linear-gradient(150deg, #2e2a26 0%, #4a3a30 100%);
+  color: #f3efe7;
+}
+
+.cover-graph {
+  background: linear-gradient(150deg, #23302a 0%, #37473c 100%);
+  color: #eef2ec;
+}
+
+.page-cover::after {
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(243, 239, 231, 0.16);
+  border-radius: 50%;
+  content: "";
+}
+
+.page-cover::before {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(243, 239, 231, 0.12);
+  border-radius: 50%;
+  content: "";
+}
+
+.cover-kicker {
+  margin-bottom: 8px;
+  color: rgba(243, 239, 231, 0.62);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cover-title {
+  margin-bottom: 10px;
+  color: inherit;
+  font-size: 30px;
+}
+
+.cover-desc {
+  max-width: 56ch;
+  margin-bottom: 20px;
+  color: rgba(243, 239, 231, 0.78);
+  font-size: 14px;
+  line-height: 1.66;
+}
+
+.cover-stats {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 34px;
+}
+
+.cover-num {
+  display: block;
+  color: inherit;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.cover-label {
+  color: rgba(243, 239, 231, 0.62);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .page-cover {
+    padding: 24px 20px 22px;
+  }
+}
+
 
 /* Fixed right-rail table of contents; hidden when the viewport cannot give it
    its own gutter beside the centered column. */
@@ -397,6 +606,9 @@ p {
 /* Collapsed remainder of the Thoughts list: first five entries stay visible,
    the rest open behind a pill toggle. */
 .thoughts-more {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 6px;
 }
 
@@ -447,88 +659,227 @@ p {
   display: none;
 }
 
-.thoughts-more .principles {
+/* once open, the collapse control moves to the very end of the list */
+.thoughts-more[open] summary {
+  order: 2;
   margin-top: 18px;
 }
 
-/* Timeline: one row per period. Entries running in parallel share a row and
-   occupy separate left-aligned lanes, so concurrency reads across, not down. */
+.thoughts-more[open] .principles {
+  order: 1;
+  margin-top: 0;
+}
+
+.thoughts-more[open] .principles article:first-child {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+/* Timeline as a proportional vertical Gantt, newest first: --m0/--m1 are
+   months since 2017.09, one month is --tl-s px, and the axis runs from
+   --tl-max at the top down to 0, so recent periods sit at the top and equal
+   height always means equal time. Each entry draws a duration bar with its
+   label anchored at the start month; entries that overlap in time occupy
+   lanes 1-4 side by side. Year ticks and a dashed "now" line make the scale
+   readable. */
 .timeline {
+  --tl-s: 15px;
+  --tl-max: 117;
   position: relative;
-  display: grid;
-  gap: 26px;
-  padding-left: 26px;
+  height: calc(var(--tl-max) * var(--tl-s) + 70px);
+  margin-left: 70px;
 }
 
 .timeline::before {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 5px;
+  top: 0;
+  bottom: 30px;
+  left: -14px;
   width: 1px;
   content: "";
   background: var(--line-strong);
 }
 
-.timeline-row {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  align-items: start;
-}
-
-/* lanes-2 / lanes-3 mark periods that ran concurrently: each lane starts at the
-   same height, new lanes are appended to the right. */
-.timeline-row.lanes-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.timeline-row.lanes-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.timeline-row::before {
+.tl-year {
   position: absolute;
-  top: 5px;
-  left: -26px;
-  width: 11px;
-  height: 11px;
-  border: 2px solid var(--accent-bright);
-  border-radius: 50%;
+  top: calc((var(--tl-max) - var(--m0)) * var(--tl-s));
+  left: -70px;
+  width: 46px;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
+  transform: translateY(-50%);
+}
+
+.tl-year::after {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  width: 8px;
+  height: 1px;
   content: "";
-  background: var(--bg);
+  background: var(--line-strong);
+}
+
+.tl-now {
+  position: absolute;
+  top: calc((var(--tl-max) - var(--m0)) * var(--tl-s));
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px dashed var(--line-strong);
+}
+
+.tl-now::before {
+  position: absolute;
+  top: -0.7em;
+  left: -70px;
+  width: 46px;
+  color: var(--accent);
+  content: attr(data-label);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.timeline-lanes {
+  position: absolute;
+  inset: 0;
 }
 
 .timeline-item {
+  position: absolute;
+  top: calc((var(--tl-max) - var(--m1)) * var(--tl-s));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 25%;
+  height: calc((var(--m1) - var(--m0)) * var(--tl-s));
   min-width: 0;
-  padding-right: 22px;
+  padding-left: 16px;
+  padding-right: 18px;
 }
 
-.timeline-item + .timeline-item {
-  padding-left: 22px;
-  border-left: 1px solid var(--line);
+.tl-l1 { left: 0; }
+.tl-l2 { left: 25%; }
+.tl-l3 { left: 50%; }
+.tl-l4 { left: 75%; }
+
+/* duration bar with a dot at the true start month (bar bottom) */
+.timeline-item::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  border-radius: 2px;
+  content: "";
+  background: var(--accent-bright);
+}
+
+.timeline-item::after {
+  position: absolute;
+  bottom: -4px;
+  left: -3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  content: "";
+  background: var(--accent-bright);
+}
+
+.timeline-item.tl-school::before,
+.timeline-item.tl-school::after {
+  background: var(--line-strong);
+}
+
+/* work points for one company: clicking its name on the gantt floats a card
+   beside the bar; lanes 3-4 open leftwards to stay inside the page */
+.tl-detail summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.tl-detail summary::-webkit-details-marker {
+  display: none;
+}
+
+.tl-detail summary h3 {
+  display: inline;
+}
+
+.tl-detail summary:hover h3,
+.tl-detail[open] summary h3 {
+  color: var(--accent-deep);
+}
+
+.tl-points {
+  position: absolute;
+  top: -6px;
+  left: calc(100% - 12px);
+  z-index: 6;
+  width: 330px;
+  max-width: 74vw;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: 0 8px 24px rgba(25, 25, 25, 0.08);
+}
+
+.tl-l3 .tl-points,
+.tl-l4 .tl-points {
+  left: auto;
+  right: calc(100% - 12px);
+}
+
+.tl-points .entry-points li {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* project entries collapse their bullets behind the head by default */
+.project-head {
+  cursor: pointer;
+  list-style: none;
+}
+
+.project-head::-webkit-details-marker {
+  display: none;
+}
+
+.project .project-head {
+  margin-bottom: 0;
+}
+
+.project .project-head .project-org {
+  margin-bottom: 0;
+}
+
+.project details[open] .project-head {
+  margin-bottom: 10px;
 }
 
 .timeline time {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0;
 }
 
 .timeline h3 {
   margin-bottom: 2px;
-  font-size: 16.5px;
-  line-height: 1.4;
+  font-size: 15px;
+  line-height: 1.35;
 }
 
 .timeline-role {
   display: block;
   color: var(--muted);
-  font-size: 13.5px;
-  line-height: 1.55;
+  font-size: 12.5px;
+  line-height: 1.45;
 }
 
 .publication,
@@ -1532,7 +1883,6 @@ mark {
   }
 
   .entry-head,
-  .timeline-row,
   .honor-grid,
   .value-rank,
   .route-grid,
@@ -1540,18 +1890,64 @@ mark {
     display: block;
   }
 
-  .timeline-item {
-    padding: 0 0 14px;
+  .timeline {
+    height: auto;
+    margin-left: 26px;
   }
 
-  .timeline-item + .timeline-item {
-    padding: 14px 0 0;
-    border-left: 0;
-    border-top: 1px solid var(--line);
+  .timeline::before {
+    top: 6px;
+    bottom: 8px;
+    left: -21px;
+  }
+
+  .tl-year,
+  .tl-now {
+    display: none;
+  }
+
+  .tl-points,
+  .tl-l3 .tl-points,
+  .tl-l4 .tl-points {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: auto;
+    max-width: none;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+
+  .timeline-lanes {
+    position: static;
+  }
+
+  .timeline-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0 0 22px 16px;
   }
 
   .timeline-item:last-child {
     padding-bottom: 0;
+  }
+
+  .timeline-item::before {
+    top: 5px;
+    bottom: auto;
+    left: -25px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  .timeline-item::after {
+    display: none;
   }
 
   .value-rank article,

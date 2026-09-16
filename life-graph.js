@@ -1022,4 +1022,13 @@
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
   }
+
+  // cover band stats come from the real graph data
+  const setNum = (sel, value) => {
+    const el = document.querySelector(sel);
+    if (el) el.textContent = value;
+  };
+  setNum("[data-cover-nodes]", nodes.length);
+  setNum("[data-cover-edges]", edges.length);
+  setNum("[data-cover-types]", new Set(nodes.map((n) => n.type)).size);
 })();

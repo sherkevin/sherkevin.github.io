@@ -8,24 +8,23 @@
       content="邓凯文的个人主页：人工智能、大模型应用算法、多模态、RAG、Tool Use、推荐与智能体系统。"
     />
     <title>邓凯文 | Kevin Deng</title>
-    <link rel="stylesheet" href="./styles.css?v=20260916f" />
+    <link rel="stylesheet" href="./styles.css?v=20260916p" />
   </head>
   <body>
     <div class="page-card">
       <aside class="sidebar">
         <div class="avatar">邓</div>
         <h1>邓凯文</h1>
-        <p class="cn-name">Kevin Deng</p>
+        <div class="name-line">
+          <p class="cn-name">Kevin Deng</p>
+          <span class="motto">君子豹变，其文蔚也</span>
+        </div>
         <p class="role">清华大学 · 电子信息（人工智能）硕士</p>
         <p class="focus">
           关注大模型应用算法、多模态可靠性、RAG / Tool Use、推荐系统与智能体工作流。
         </p>
         <nav aria-label="页面导航">
-          <a href="#about">关于我</a>
           <a href="#thoughts">所思</a>
-          <a href="#notes">笔记</a>
-          <a href="#life-graph">人生图谱</a>
-          <a href="#timeline">时间线</a>
           <a href="#honors">荣誉</a>
           <a href="#research">研究</a>
           <a href="#experience">经历</a>
@@ -40,41 +39,34 @@
       </aside>
 
       <main class="content">
-        <section id="about" class="section">
-          <h2>关于我</h2>
-          <ul class="plain-list">
-            <li><strong>可靠性：</strong>多模态模型需要视觉证据，RAG 回答需要可追溯引用，Agent 工作流需要可控边界。</li>
-            <li><strong>建模对象：</strong>推荐系统的多模态增量、领域知识的检索证据、工具调用的 schema 与错误恢复。</li>
-            <li><strong>经历线索：</strong>竞赛算法训练、清华 AI 学习路径、字节 Agent Search、MiniMax 多模态推荐、SMEE 搜索与 RAG、达摩院 Agent 算法，以及甲己无形（Mydow）与万物智灵（One Ling）两段创业。</li>
-          </ul>
-          <p>
-            研究和工程工作围绕同一组问题展开：系统输出是否可验证，模型行为是否可约束，
-            失败是否可发现，反馈是否能进入下一轮迭代。推荐系统中的用户行为可视为需求、语境与长期偏好的压缩；
-            RAG 和 Agent 系统中的对应问题则是证据可靠性、工具可控性与错误恢复。
-          </p>
-        </section>
+        <div class="portals">
+          <a class="portal-card portal-notes" href="./notes.html">
+            <svg class="portal-art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="18" y="26" width="62" height="78" rx="6" />
+              <rect x="30" y="16" width="62" height="78" rx="6" />
+              <path d="M42 34h38M42 46h38M42 58h26" />
+            </svg>
+            <p class="portal-kicker">Reading Log</p>
+            <h3 class="portal-title">笔记</h3>
+            <p class="portal-desc">论文阅读报告与学习记录：问题设定、方法设计、关键结果与适用边界，逐篇成卡。</p>
+            <span class="portal-cta">进入笔记</span>
+          </a>
+          <a class="portal-card portal-graph" href="./life-graph.html">
+            <svg class="portal-art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="34" cy="34" r="9" />
+              <circle cx="84" cy="28" r="6" />
+              <circle cx="60" cy="70" r="11" />
+              <circle cx="24" cy="88" r="6" />
+              <circle cx="94" cy="86" r="7" />
+              <path d="M41 39l12 22M40 32l38-3M66 80l22 4M52 78l-22 8M70 64l10-30" />
+            </svg>
+            <p class="portal-kicker">Life Graph</p>
+            <h3 class="portal-title">人生图谱</h3>
+            <p class="portal-desc">长期方向的公开版本：价值排序、资产池、路径结构、风险边界与维护机制，一张可拖拽的节点图。</p>
+            <span class="portal-cta">进入图谱</span>
+          </a>
+        </div>
 
-        <section id="notes" class="section">
-          <h2>笔记</h2>
-          <p>
-            论文阅读报告与学习记录单独成页：逐篇记录问题设定、方法设计、关键结果与适用边界，
-            覆盖智能体、训练与对齐、多模态、安全评测、推荐与工程实践。
-          </p>
-          <p>
-            <a class="text-button" href="./notes.html">查看笔记</a>
-          </p>
-        </section>
-
-        <section id="life-graph" class="section">
-          <h2>人生图谱</h2>
-          <p>
-            长期方向以一张公开图谱管理：AI 技术底座、解释权、可迁移能力、可验证系统、
-            教育表达和身体可持续。公开版本只保留稳定结构；具体决策账本和私人复盘不公开展示。
-          </p>
-          <p>
-            <a class="text-button" href="./life-graph.html">查看人生图谱</a>
-          </p>
-        </section>
 
         <section id="thoughts" class="section">
           <h2>所思</h2>
@@ -282,75 +274,157 @@
           </details>
         </section>
 
-        <section id="timeline" class="section">
-          <h2>时间线</h2>
+        <section id="experience" class="section">
+          <h2>经历</h2>
+          <!-- Proportional vertical Gantt, newest first: --m0/--m1 are months
+               since 2017.09, one month is --tl-s px, and the axis runs from
+               --tl-max at the top down to 0, so recent periods sit at the top
+               and equal height always means equal time. Lane 1 carries the
+               school spans, lane 2 the consecutive work track, lanes 3-4 the
+               two startups that run alongside it. -->
           <div class="timeline">
-            <!-- Rows run newest-first. Work and startup entries that overlap share
-                 one row: each concurrent entry becomes a lane to the right, all
-                 starting at the same height, left-aligned, capped at three lanes.
-                 School entries stay single-lane background rows, since a degree
-                 spans years and would otherwise merge with every job inside it. -->
-            <div class="timeline-row lanes-3">
-              <div class="timeline-item">
-                <time>2026.06 - 至今</time>
-                <h3>阿里巴巴达摩院</h3>
-                <span class="timeline-role">Agent 算法实习</span>
+            <div class="timeline-lanes">
+              <span class="tl-now" style="--m0:108" data-label="现在"></span>
+              <span class="tl-year" style="--m0:4">2018</span>
+              <span class="tl-year" style="--m0:16">2019</span>
+              <span class="tl-year" style="--m0:28">2020</span>
+              <span class="tl-year" style="--m0:40">2021</span>
+              <span class="tl-year" style="--m0:52">2022</span>
+              <span class="tl-year" style="--m0:64">2023</span>
+              <span class="tl-year" style="--m0:76">2024</span>
+              <span class="tl-year" style="--m0:88">2025</span>
+              <span class="tl-year" style="--m0:100">2026</span>
+              <span class="tl-year" style="--m0:112">2027</span>
+              <div class="timeline-item tl-l2" style="--m0:105;--m1:108">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2026.06 - 至今</time>
+                    <h3>阿里巴巴达摩院</h3>
+                  <span class="timeline-role">Agent 算法实习</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>CoT Planner：基于 Qwen 系列构建计划生成模型，强模型蒸馏 SFT 冷启动、judge 偏好对驱动 DPO 迭代两轮</li>
+                    <li>推理时采样 8 条候选计划链再由 judge 选优执行，对应「召回出候选、精排定顺序」的两段式范式</li>
+                    <li>AI4S Benchmark：面向药物/材料长程任务构建任务集与 checkpoint 过程验证器，以领域数据库为 GT</li>
+                    <li>checkpoint 级信号支撑 autonomy@0 等过程评测，区分「结果对」与「过程链对」</li>
+                    <li>Agent OS：参与 NobelClaw 调度治理框架，负责 Subgraph 递归展开与失败回退等模块</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-              <div class="timeline-item">
-                <time>2025.12 - 至今</time>
-                <h3>万物智灵（One Ling）</h3>
-                <span class="timeline-role">AI 教育创业项目</span>
+              <div class="timeline-item tl-l4" style="--m0:99;--m1:108">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.12 - 至今</time>
+                    <h3>万物智灵（One Ling）</h3>
+                  <span class="timeline-role">AI 教育创业项目</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>面向高中信息技术、人工智能校本课与科创社团，整理 Python 入门、RAG 问答助手、AI 可信度判断与多模态检索课程</li>
+                    <li>AI Evidence Quest：校园资料问答助手课程项目，覆盖资料检索、引用核验、低证据拒答与 AI 可信度判断</li>
+                    <li>AI Image Detective：图像特征向量与相似检索课程项目，用权重调节解释颜色、形状、纹理如何影响检索排序</li>
+                    <li>AI 素养：把 RAG 拆成「问题提出—证据检索—答案生成—来源核验」，讨论生成式 AI 的能力边界与可信度判断</li>
+                    <li>评价设计：作业量规覆盖问题定义、代码规范、逻辑完整性、异常处理、展示表达与拓展尝试</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-              <div class="timeline-item">
-                <time>2025.11 - 至今</time>
-                <h3>甲己无形（Mydow）</h3>
-                <span class="timeline-role">创业项目</span>
+              <div class="timeline-item tl-l3" style="--m0:98;--m1:108">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.11 - 至今</time>
+                    <h3>甲己无形（Mydow）</h3>
+                  <span class="timeline-role">创业项目</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>LLM 用户画像与破冰匹配推荐产品，入围奇绩创坛并获天使轮融资</li>
+                    <li>把画像证据、匹配权限、对外披露三件事分开；推荐与发消息是两个受控阶段</li>
+                    <li>破冰只用双方允许披露的信息，Safety/Critic 独立检查，发送需确认</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2025.10 - 2026.05</time>
-                <h3>SMEE 突破小组</h3>
-                <span class="timeline-role">大模型搜索应用算法实习</span>
+              <div class="timeline-item tl-l2" style="--m0:97;--m1:104">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.10 - 2026.05</time>
+                    <h3>SMEE 突破小组</h3>
+                  <span class="timeline-role">大模型搜索应用算法实习</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>负责领域 LLM + RAG 数据构造、chunk schema 和检索评测支持</li>
+                    <li>参与 Parser / Retrieval / Diagnosis / SOP / Verification 多智能体诊断流程设计</li>
+                    <li>覆盖专家文档切分与标准证据组织</li>
+                    <li>制定低证据拒答规则与高风险 SOP 人工升级条件</li>
+                    <li>负责诊断答案引用检查与反馈样本沉淀</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2025.06 - 2025.09</time>
-                <h3>MiniMax</h3>
-                <span class="timeline-role">大模型推荐算法实习</span>
+              <div class="timeline-item tl-l2" style="--m0:93;--m1:96">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.06 - 2025.09</time>
+                    <h3>MiniMax</h3>
+                  <span class="timeline-role">大模型推荐算法实习</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>面向星野、Talkie 等情感陪伴产品做 NPC 推荐；NPC 既是内容，也是可持续对话的对象</li>
+                    <li>增长预测动态重训；VLM 图像语义 + 文本相似度双路召回</li>
+                    <li>音色 embedding 样本构造；TIGER 生成式召回范式验证；多模态召回融合评测</li>
+                    <li>评测围绕固定候选预算、曝光偏差、长尾覆盖、重复曝光与负反馈展开</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2025.01 - 2025.06</time>
-                <h3>字节跳动</h3>
-                <span class="timeline-role">Agent Search 研发实习</span>
+              <div class="timeline-item tl-l2" style="--m0:88;--m1:93">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.01 - 2025.06</time>
+                    <h3>字节跳动</h3>
+                  <span class="timeline-role">Agent Search 研发实习</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>参与 MCP Factory 流水线建设，将企业内部 API 转化为标准化 Tool Call</li>
+                    <li>沉淀 taxonomy、参数 schema、错误码、调用示例和知识库 Refine 数据</li>
+                    <li>工作重点包括工具可发现性、schema 约束、调用失败恢复、权限边界和文档结构化</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
+              <div class="timeline-item tl-l1 tl-school" style="--m0:84;--m1:117">
                 <time>2024.09 - 2027.06</time>
                 <h3>清华大学</h3>
-                <span class="timeline-role">电子信息（人工智能）硕士</span>
+                  <span class="timeline-role">电子信息（人工智能）硕士</span>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2024.02 - 2024.07</time>
-                <h3>平安科技</h3>
-                <span class="timeline-role">数据挖掘</span>
+              <div class="timeline-item tl-l2" style="--m0:77;--m1:82">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2024.02 - 2024.07</time>
+                    <h3>平安科技</h3>
+                  <span class="timeline-role">数据挖掘</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>参与用户画像模型优化，挖掘实时行为特征并与离线特征融合</li>
+                    <li>使用协同过滤、LR、聚类等方法评估特征相关度</li>
+                    <li>将过滤规则嵌入还款率预测模型，支撑灰度 A/B 中的策略优化</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
+              <div class="timeline-item tl-l1 tl-school" style="--m0:36;--m1:82">
                 <time>2020.09 - 2024.07</time>
                 <h3>厦门大学</h3>
-                <span class="timeline-role">计算机科学与技术 学士</span>
+                  <span class="timeline-role">计算机科学与技术 学士</span>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
+              <div class="timeline-item tl-l1 tl-school" style="--m0:0;--m1:33">
                 <time>2017.09 - 2020.06</time>
                 <h3>河南睢县高级中学</h3>
               </div>
@@ -551,182 +625,155 @@
           </article>
         </section>
 
-        <section id="experience" class="section">
-          <h2>经历</h2>
-          <article class="entry">
-            <details class="event-detail">
-              <summary class="entry-head">
-                <h3>阿里巴巴达摩院 · Agent 算法实习</h3>
-                <span>2026.06 - 至今</span>
-              </summary>
-              <ul class="entry-points">
-                <li>CoT Planner：基于 Qwen 系列构建计划生成模型，强模型蒸馏 SFT 冷启动、judge 偏好对驱动 DPO 迭代两轮</li>
-                <li>推理时采样 8 条候选计划链再由 judge 选优执行，对应「召回出候选、精排定顺序」的两段式范式</li>
-                <li>AI4S Benchmark：面向药物/材料长程任务构建任务集与 checkpoint 过程验证器，以领域数据库为 GT</li>
-                <li>checkpoint 级信号支撑 autonomy@0 等过程评测，区分「结果对」与「过程链对」</li>
-                <li>Agent OS：参与 NobelClaw 调度治理框架，负责 Subgraph 递归展开与失败回退等模块</li>
-              </ul>
-            </details>
-          </article>
-          <article class="entry">
-            <details class="event-detail">
-              <summary class="entry-head">
-                <h3>SMEE 突破小组 · 大模型搜索应用算法实习</h3>
-                <span>2025.10 - 2026.05</span>
-              </summary>
-              <ul class="entry-points">
-                <li>负责领域 LLM + RAG 数据构造、chunk schema 和检索评测支持</li>
-                <li>参与 Parser / Retrieval / Diagnosis / SOP / Verification 多智能体诊断流程设计</li>
-                <li>覆盖专家文档切分与标准证据组织</li>
-                <li>制定低证据拒答规则与高风险 SOP 人工升级条件</li>
-                <li>负责诊断答案引用检查与反馈样本沉淀</li>
-              </ul>
-            </details>
-          </article>
-          <article class="entry">
-            <details class="event-detail">
-              <summary class="entry-head">
-                <h3>MiniMax · 大模型推荐算法实习</h3>
-                <span>2025.06 - 2025.09</span>
-              </summary>
-              <ul class="entry-points">
-                <li>面向星野、Talkie 等情感陪伴产品做 NPC 推荐；NPC 既是内容，也是可持续对话的对象</li>
-                <li>用户在对话中留下情绪、经历、陪伴偏好与角色偏好的混合信号，而非普通点击</li>
-                <li>增长预测动态重训；VLM 图像语义 + 文本相似度双路召回</li>
-                <li>音色 embedding 样本构造；TIGER 生成式召回范式验证；多模态召回融合评测</li>
-                <li>评测围绕固定候选预算、曝光偏差、长尾覆盖、重复曝光与负反馈展开</li>
-                <li>区分真实兴趣增量与候选池扩张带来的表面提升</li>
-              </ul>
-            </details>
-          </article>
-          <article class="entry">
-            <details class="event-detail">
-              <summary class="entry-head">
-                <h3>字节跳动 · Agent Search 研发实习</h3>
-                <span>2025.01 - 2025.06</span>
-              </summary>
-              <ul class="entry-points">
-                <li>参与 MCP Factory 流水线建设，将企业内部 API 转化为标准化 Tool Call</li>
-                <li>沉淀 taxonomy、参数 schema、错误码、调用示例和知识库 Refine 数据</li>
-                <li>工作重点包括工具可发现性、schema 约束、调用失败恢复、权限边界和文档结构化</li>
-                <li>服务 Agentic Workflow 的稳定执行</li>
-              </ul>
-            </details>
-          </article>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>平安科技 · 数据挖掘</h3>
-              <span>2024.02 - 2024.07</span>
-            </div>
-            <ul class="entry-points">
-              <li>参与用户画像模型优化，挖掘实时行为特征并与离线特征融合</li>
-              <li>使用协同过滤、LR、聚类等方法评估特征相关度</li>
-              <li>将过滤规则嵌入还款率预测模型，支撑灰度 A/B 中的策略优化</li>
-            </ul>
-          </article>
-        </section>
 
         <section id="projects" class="section">
           <h2>项目</h2>
           <div class="project">
-            <h3>AI4S Benchmark</h3>
-            <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>AI4S Benchmark</h3>
+                <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
+              </summary>
+              <ul class="entry-points">
               <li>面向药物/材料长程任务构建任务集与 checkpoint 过程验证器，以领域数据库为 GT</li>
               <li>「先选答案再反向出题」：从冻结科学数据库反向构造原子问题，再拼接为长问题</li>
               <li>basic / some / enough 同题三层分类，生成式与判别式同题二分类</li>
               <li>checkpoint 级信号支撑 autonomy@0 等过程评测，区分「结果对」与「过程链对」</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>CoT Planner</h3>
-            <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>CoT Planner</h3>
+                <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
+              </summary>
+              <ul class="entry-points">
               <li>基于 Qwen 系列构建计划生成模型：强模型蒸馏 SFT 冷启动、judge 偏好对驱动 DPO，迭代两轮</li>
               <li>推理时采样 8 条候选计划链再由 judge 选优执行，对应「召回出候选、精排定顺序」的两段式范式</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Lingshu AgentOS</h3>
-            <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Lingshu AgentOS</h3>
+                <p class="project-org">达摩院（阿里巴巴） · Agent 算法实习 · 2026.06 - 至今</p>
+              </summary>
+              <ul class="entry-points">
               <li>把操作系统的进程、权限、回滚方法搬到 Agent 上</li>
               <li>参与 NobelClaw 调度治理框架，负责 Subgraph 递归展开与失败回退等模块</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>CausalMAD</h3>
-            <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>CausalMAD</h3>
+                <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>以伺服系统物理因果 DAG 划分专业 Agent，用 CausalGNN 生成 attention bias</li>
               <li>结合 per-agent LoRA 与可学习融合门控完成因果诊断</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>工业故障 RAG</h3>
-            <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>工业故障 RAG</h3>
+                <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>多粒度 chunking；BM25/dense 混合召回经类型自适应加权 RRF 融合</li>
               <li>叠加图谱扩散与来源感知 cross-encoder 精排，由专家拖拽反馈闭环迭代</li>
               <li>以复杂度路由与缺口自检驱动多轮补搜；按专家标注评测 Recall@5、引用支持与根因覆盖</li>
               <li>证据追溯与低证据拒答</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Qwen3-VL 多模态文档处理</h3>
-            <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Qwen3-VL 多模态文档处理</h3>
+                <p class="project-org">SMEE 突破小组 · 大模型搜索应用算法实习 · 2025.10 - 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>沉淀工程排查日志与树状故障图，构建结构化文档、拓扑扩充和因果分析流水线</li>
               <li>用 Qwen3-VL-8B 图文 QA + 精排处理多模态文档</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>TIGER 生成式召回</h3>
-            <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>TIGER 生成式召回</h3>
+                <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
+              </summary>
+              <ul class="entry-points">
               <li>用 RQ-Kmeans 把 NPC 文本与形象量化为分层 Semantic ID，约 25M encoder-decoder 自回归生成候选</li>
               <li>宽度 128 beam + trie 约束解码保证 ID 合法</li>
               <li>固定候选预算消融验证相对双塔检索的增量与长尾覆盖</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>细粒度多模态对齐</h3>
-            <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>细粒度多模态对齐</h3>
+                <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
+              </summary>
+              <ul class="entry-points">
               <li>以 LoRA 微调 GME 视觉塔（ViT），配短语级软分配区域对齐把描述词对到图像局部</li>
               <li>构造属性交换负例（词表相同、搭配互换）与两级 curriculum hard negative 强化属性绑定</li>
               <li>支撑团队灰度 A/B 留存 +2.4pp</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>NPC 人设语义搜索</h3>
-            <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>NPC 人设语义搜索</h3>
+                <p class="project-org">MiniMax · 大模型推荐算法实习 · 2025.06 - 2025.09</p>
+              </summary>
+              <ul class="entry-points">
               <li>个人负责 dense 语义召回一路，以精排 cross-encoder 为 teacher 用 InfoNCE + KL 蒸馏约 100M 双塔</li>
               <li>模型在环重挖 hard negative 并全库建 HNSW 索引</li>
               <li>replay 评测 Recall@500 / NDCG@20，按 badcase 分桶归因</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>分层 Tool Routing</h3>
-            <p class="project-org">字节跳动 · Agent Search 研发实习 · 2025.01 - 2025.06</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>分层 Tool Routing</h3>
+                <p class="project-org">字节跳动 · Agent Search 研发实习 · 2025.01 - 2025.06</p>
+              </summary>
+              <ul class="entry-points">
               <li>按能力域、操作类型和权限等级为 5,000+ API 建立分层索引</li>
               <li>以「分层召回 + 动态重排」两段式渐进筛到 top-8 工具，tool calling Recall@5 达 92%</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Cache-aware Tool Context</h3>
-            <p class="project-org">字节跳动 · Agent Search 研发实习 · 2025.01 - 2025.06</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Cache-aware Tool Context</h3>
+                <p class="project-org">字节跳动 · Agent Search 研发实习 · 2025.01 - 2025.06</p>
+              </summary>
+              <ul class="entry-points">
               <li>对召回后的 top-k schema 做确定性排序与版本化，形成稳定 prefix</li>
               <li>基于 vLLM 的分层 worker 调度与 prefix cache 复用多轮公共前缀</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>AI 教育课程与在线教材</h3>
-            <p class="project-org">万物智灵（One Ling） · AI 教育创业 · 2025.12 - 至今</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>AI 教育课程与在线教材</h3>
+                <p class="project-org">万物智灵（One Ling） · AI 教育创业 · 2025.12 - 至今</p>
+              </summary>
+              <ul class="entry-points">
               <li>面向高中信息技术、人工智能校本课与科创社团，整理 Python 入门、RAG 问答助手、AI 可信度判断与多模态检索课程</li>
               <li>AI Evidence Quest：校园资料问答助手课程项目，覆盖资料检索、引用核验、低证据拒答与 AI 可信度判断。<a href="https://sherkevin.github.io/ai-evidence-quest/">Demo</a> · <a href="https://github.com/sherkevin/ai-evidence-quest">GitHub</a></li>
               <li>AI Image Detective：图像特征向量与相似检索课程项目，用权重调节解释颜色、形状、纹理如何影响检索排序。<a href="https://sherkevin.github.io/ai-image-detective/">Demo</a> · <a href="https://github.com/sherkevin/ai-image-detective">GitHub</a></li>
@@ -734,70 +781,103 @@
               <li>评价设计：作业量规覆盖问题定义、代码规范、逻辑完整性、异常处理、展示表达与拓展尝试</li>
               <li>课程材料按可阅读、可运行、可展示组织，在线教材持续补充章节讲解、实验页面与教师资源</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>甲己无形（Mydow）</h3>
-            <p class="project-org">创业项目 · 2025.11 - 至今</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>甲己无形（Mydow）</h3>
+                <p class="project-org">创业项目 · 2025.11 - 至今</p>
+              </summary>
+              <ul class="entry-points">
               <li>LLM 用户画像与破冰匹配推荐产品，入围奇绩创坛并获天使轮融资</li>
               <li>把画像证据、匹配权限、对外披露三件事分开；推荐与发消息是两个受控阶段</li>
               <li>破冰只用双方允许披露的信息，Safety/Critic 独立检查，发送需确认</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Weaver</h3>
-            <p class="project-org">个人项目 · 2025.12</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Weaver</h3>
+                <p class="project-org">个人项目 · 2025.12</p>
+              </summary>
+              <ul class="entry-points">
               <li>YAML 声明式多 Agent 编排：definition、run attempt、artifact 与 effect receipt 分开建模</li>
               <li>恢复三分法：有可靠 receipt 认定完成；明确没执行才重试；证明不了成败进 IN_DOUBT，禁止盲目重发</li>
               <li>当前为 Historical-only 原型（Python + LangGraph）</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>LLM Reliability Lab</h3>
-            <p class="project-org">个人项目 · 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>LLM Reliability Lab</h3>
+                <p class="project-org">个人项目 · 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>围绕「证据、动作、风险」把工业 RAG、MCP-style Tool Use 和 Agent trajectory 拆成可诊断的指标与 badcase</li>
               <li>包含可运行脚本、样例数据、QLoRA 评测门槛、badcase taxonomy 与 reliability playbook</li>
               <li><a href="https://github.com/sherkevin/llm-reliability-lab">GitHub</a></li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>SmartIcon</h3>
-            <p class="project-org">本科项目 · 厦门大学</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>SmartIcon</h3>
+                <p class="project-org">本科项目 · 厦门大学</p>
+              </summary>
+              <ul class="entry-points">
               <li>科研论文图标生成：论文数据爬取、ComfyUI 工作流、风格迁移与 Prompt 微调</li>
               <li>引入 OpenCLIP 多模态检索增强不同期刊风格图标生成</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>CSAsk</h3>
-            <p class="project-org">本科项目 · 厦门大学</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>CSAsk</h3>
+                <p class="project-org">本科项目 · 厦门大学</p>
+              </summary>
+              <ul class="entry-points">
               <li>构建计算机领域术语知识图谱，结合 LLaMA 基座与 RAG 增强</li>
               <li>实现计算机论文术语解释、翻译和领域知识问答</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>基于光流建模的小目标识别</h3>
-            <p class="project-org">本科科研 · 厦门大学</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>基于光流建模的小目标识别</h3>
+                <p class="project-org">本科科研 · 厦门大学</p>
+              </summary>
+              <ul class="entry-points">
               <li>以光流建模改进小目标的视觉表示</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>深度学习自适应缓存调度</h3>
-            <p class="project-org">本科科研 · 厦门大学</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>深度学习自适应缓存调度</h3>
+                <p class="project-org">本科科研 · 厦门大学</p>
+              </summary>
+              <ul class="entry-points">
               <li>以缓存价值估计做资源调度，平衡表示质量与计算成本</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>KV cache 改进</h3>
-            <p class="project-org">本科科研 · 厦门大学</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>KV cache 改进</h3>
+                <p class="project-org">本科科研 · 厦门大学</p>
+              </summary>
+              <ul class="entry-points">
               <li>面向推理效率的 KV cache 结构改进</li>
             </ul>
+            </details>
           </div>
         </section>
 
@@ -812,6 +892,6 @@
         </section>
       </main>
     </div>
-    <script src="./script.js?v=20260916d"></script>
+    <script src="./script.js?v=20260916g"></script>
   </body>
 </html>

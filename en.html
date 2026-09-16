@@ -8,24 +8,23 @@
       content="Kevin Deng's personal homepage: AI, LLM applications, multimodal reliability, RAG, Tool Use, recommendation, and agent systems."
     />
     <title>Kevin Deng | 邓凯文</title>
-    <link rel="stylesheet" href="./styles.css?v=20260916f" />
+    <link rel="stylesheet" href="./styles.css?v=20260916p" />
   </head>
   <body>
     <div class="page-card">
       <aside class="sidebar">
         <div class="avatar">邓</div>
         <h1>Kevin Deng</h1>
-        <p class="cn-name">邓凯文</p>
+        <div class="name-line">
+          <p class="cn-name">邓凯文</p>
+          <span class="motto">君子豹变，其文蔚也</span>
+        </div>
         <p class="role">M.S. student in Electronic Information (AI), Tsinghua University</p>
         <p class="focus">
           LLM applications, multimodal reliability, RAG / Agentic Tool Use, recommendation, and agent workflows.
         </p>
         <nav aria-label="Section navigation">
-          <a href="#about">About Me</a>
           <a href="#thoughts">Thoughts</a>
-          <a href="#notes">Notes</a>
-          <a href="#life-graph">Life Graph</a>
-          <a href="#timeline">Timeline</a>
           <a href="#honors">Honors</a>
           <a href="#research">Research</a>
           <a href="#experience">Experience</a>
@@ -40,38 +39,34 @@
       </aside>
 
       <main class="content">
-        <section id="about" class="section">
-          <h2>About Me</h2>
-          <ul class="plain-list">
-            <li><strong>Reliability:</strong> multimodal models require visual evidence; RAG answers require traceable citations; agent workflows require controllable boundaries.</li>
-            <li><strong>Objects of modeling:</strong> multimodal gains in recommendation, evidence retrieval for domain knowledge, and schema/error recovery for tool invocation.</li>
-            <li><strong>Experience threads:</strong> algorithmic training through competitions, AI study at Xiamen University and Tsinghua, multimodal recommendation at MiniMax, Agent Search at ByteDance, search and RAG at SMEE, agent algorithms at Alibaba DAMO Academy, plus two startup efforts: Mydow (Jiaji Wuxing) and One Ling (Wanwu Zhiling) for AI education.</li>
-          </ul>
-        </section>
+        <div class="portals">
+          <a class="portal-card portal-notes" href="./notes.html">
+            <svg class="portal-art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="18" y="26" width="62" height="78" rx="6" />
+              <rect x="30" y="16" width="62" height="78" rx="6" />
+              <path d="M42 34h38M42 46h38M42 58h26" />
+            </svg>
+            <p class="portal-kicker">Reading Log</p>
+            <h3 class="portal-title">Notes</h3>
+            <p class="portal-desc">Paper reading reports and study records: problem setting, method design, key results, and applicable boundaries, one card per paper.</p>
+            <span class="portal-cta">Open notes</span>
+          </a>
+          <a class="portal-card portal-graph" href="./life-graph.html">
+            <svg class="portal-art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="34" cy="34" r="9" />
+              <circle cx="84" cy="28" r="6" />
+              <circle cx="60" cy="70" r="11" />
+              <circle cx="24" cy="88" r="6" />
+              <circle cx="94" cy="86" r="7" />
+              <path d="M41 39l12 22M40 32l38-3M66 80l22 4M52 78l-22 8M70 64l10-30" />
+            </svg>
+            <p class="portal-kicker">Life Graph</p>
+            <h3 class="portal-title">Life Graph</h3>
+            <p class="portal-desc">The public version of long-horizon directions: value ranking, asset pool, route structure, risk boundaries, and maintenance loops in one draggable node graph.</p>
+            <span class="portal-cta">Open graph</span>
+          </a>
+        </div>
 
-        <section id="notes" class="section">
-          <h2>Notes</h2>
-          <p>
-            Paper reading reports and study records are kept on a separate page: each entry records a paper or
-            technical report's problem setting, method design, key results, and applicable boundaries, covering
-            agents, training and alignment, multimodal models, safety evaluation, recommendation, and engineering practice.
-          </p>
-          <p>
-            <a class="text-button" href="./notes.html">Open Notes</a>
-          </p>
-        </section>
-
-        <section id="life-graph" class="section">
-          <h2>Life Graph</h2>
-          <p>
-            A public map of long-term direction: AI systems, interpretability of decisions,
-            transferable technical assets, verifiable outputs, educational expression, and sustainable intensity.
-            Private decision logs and interview details are kept outside the public homepage.
-          </p>
-          <p>
-            <a class="text-button" href="./life-graph.html">Open Life Graph</a>
-          </p>
-        </section>
 
         <section id="thoughts" class="section">
           <h2>Thoughts</h2>
@@ -297,73 +292,157 @@
           </details>
         </section>
 
-        <section id="timeline" class="section">
-          <h2>Timeline</h2>
+        <section id="experience" class="section">
+          <h2>Experience</h2>
+          <!-- Proportional vertical Gantt, newest first: --m0/--m1 are months
+               since 2017.09, one month is --tl-s px, and the axis runs from
+               --tl-max at the top down to 0, so recent periods sit at the top
+               and equal height always means equal time. Lane 1 carries the
+               school spans, lane 2 the consecutive work track, lanes 3-4 the
+               two startups that run alongside it. -->
           <div class="timeline">
-            <!-- Newest-first rows. Overlapping work and startup entries share a row
-                 as side-by-side lanes at equal height, capped at three. School
-                 entries stay single-lane background rows. -->
-            <div class="timeline-row lanes-3">
-              <div class="timeline-item">
-                <time>2026.06 - Present</time>
-                <h3>Alibaba DAMO Academy</h3>
-                <span class="timeline-role">Agent Algorithm Intern</span>
+            <div class="timeline-lanes">
+              <span class="tl-now" style="--m0:108" data-label="Now"></span>
+              <span class="tl-year" style="--m0:4">2018</span>
+              <span class="tl-year" style="--m0:16">2019</span>
+              <span class="tl-year" style="--m0:28">2020</span>
+              <span class="tl-year" style="--m0:40">2021</span>
+              <span class="tl-year" style="--m0:52">2022</span>
+              <span class="tl-year" style="--m0:64">2023</span>
+              <span class="tl-year" style="--m0:76">2024</span>
+              <span class="tl-year" style="--m0:88">2025</span>
+              <span class="tl-year" style="--m0:100">2026</span>
+              <span class="tl-year" style="--m0:112">2027</span>
+              <div class="timeline-item tl-l2" style="--m0:105;--m1:108">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2026.06 - Present</time>
+                    <h3>Alibaba DAMO Academy</h3>
+                  <span class="timeline-role">Agent Algorithm Intern</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>CoT Planner: plan-generation model on the Qwen family, SFT cold start distilled from a strong model and two DPO rounds driven by judge preference pairs</li>
+                    <li>At inference, sample 8 candidate plan chains and let the judge pick one to execute, mirroring the recall-then-rerank two-stage paradigm</li>
+                    <li>AI4S Benchmark: task sets and checkpoint process verifiers for long-horizon drug and material tasks, with domain databases as ground truth</li>
+                    <li>Checkpoint-level signals support process metrics such as autonomy@0, separating a correct result from a correct process chain</li>
+                    <li>Agent OS: NobelClaw scheduling governance, owning subgraph recursive expansion and failure rollback modules</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-              <div class="timeline-item">
-                <time>2025.12 - Present</time>
-                <h3>One Ling (Wanwu Zhiling)</h3>
-                <span class="timeline-role">AI education startup</span>
+              <div class="timeline-item tl-l4" style="--m0:99;--m1:108">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.12 - Present</time>
+                    <h3>One Ling (Wanwu Zhiling)</h3>
+                  <span class="timeline-role">AI education startup</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>Course material for high-school IT classes, school-based AI electives, and science-innovation clubs: Python fundamentals, a RAG QA assistant, AI trustworthiness judgment, and multimodal retrieval</li>
+                    <li>AI Evidence Quest: campus document QA course project covering retrieval, citation checking, refusal under low evidence, and AI trustworthiness judgment</li>
+                    <li>AI Image Detective: image embedding and similarity-retrieval course project, where weight controls explain how color, shape, and texture affect ranking</li>
+                    <li>AI literacy: RAG decomposed into question, evidence retrieval, answer generation, and source verification</li>
+                    <li>Assessment design: assignment rubrics covering problem definition, code style, logical completeness, exception handling, presentation, and extension attempts</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-              <div class="timeline-item">
-                <time>2025.11 - Present</time>
-                <h3>Mydow (Jiaji Wuxing)</h3>
-                <span class="timeline-role">Startup project</span>
+              <div class="timeline-item tl-l3" style="--m0:98;--m1:108">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.11 - Present</time>
+                    <h3>Mydow (Jiaji Wuxing)</h3>
+                  <span class="timeline-role">Startup project</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>LLM user-profile and icebreaker matching product; shortlisted by Qimiao Chuangtan with angel funding</li>
+                    <li>Separates profile evidence, matching permission, and external disclosure; recommendation and messaging are two gated stages</li>
+                    <li>Icebreakers use only mutually disclosed attributes, with independent Safety/Critic checks and send confirmation</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2025.10 - 2026.05</time>
-                <h3>SMEE Breakthrough Group</h3>
-                <span class="timeline-role">LLM Search Application Algorithm Intern</span>
+              <div class="timeline-item tl-l2" style="--m0:97;--m1:104">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.10 - 2026.05</time>
+                    <h3>SMEE Breakthrough Group</h3>
+                  <span class="timeline-role">LLM Search Application Algorithm Intern</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>Owned domain LLM + RAG data construction, chunk schema, and retrieval evaluation support</li>
+                    <li>Co-designed the Parser / Retrieval / Diagnosis / SOP / Verification multi-agent diagnosis flow</li>
+                    <li>Covered expert document splitting and standard evidence organization</li>
+                    <li>Defined low-evidence refusal rules and human escalation conditions for high-risk SOPs</li>
+                    <li>Owned citation checking of diagnosis answers and feedback sample accumulation</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2025.06 - 2025.09</time>
-                <h3>MiniMax</h3>
-                <span class="timeline-role">LLM Recommendation Algorithm Intern</span>
+              <div class="timeline-item tl-l2" style="--m0:93;--m1:96">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.06 - 2025.09</time>
+                    <h3>MiniMax</h3>
+                  <span class="timeline-role">LLM Recommendation Algorithm Intern</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>NPC recommendation for companion products such as Xingye and Talkie; an NPC is both content and a continuing conversation partner</li>
+                    <li>Dynamic retraining for growth prediction; dual recall over VLM image semantics and text similarity</li>
+                    <li>Voice embedding sample construction; TIGER generative recall validation; multimodal recall fusion evaluation</li>
+                    <li>Evaluation around fixed candidate budgets, exposure bias, long-tail coverage, repeat exposure, and negative feedback</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2025.01 - 2025.06</time>
-                <h3>ByteDance</h3>
-                <span class="timeline-role">Agent Search R&amp;D Intern</span>
+              <div class="timeline-item tl-l2" style="--m0:88;--m1:93">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2025.01 - 2025.06</time>
+                    <h3>ByteDance</h3>
+                  <span class="timeline-role">Agent Search R&amp;D Intern</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>Built the MCP Factory pipeline, turning internal APIs into standardized Tool Calls</li>
+                    <li>Accumulated taxonomy, parameter schemas, error codes, call examples, and knowledge-base Refine data</li>
+                    <li>Focused on tool discoverability, schema constraints, call failure recovery, permission boundaries, and document structuring</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
+              <div class="timeline-item tl-l1 tl-school" style="--m0:84;--m1:117">
                 <time>2024.09 - 2027.06</time>
                 <h3>Tsinghua University</h3>
-                <span class="timeline-role">M.S. in Electronic Information (AI)</span>
+                  <span class="timeline-role">M.S. in Electronic Information (AI)</span>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
-                <time>2024.02 - 2024.07</time>
-                <h3>Ping An Technology</h3>
-                <span class="timeline-role">Data Mining</span>
+              <div class="timeline-item tl-l2" style="--m0:77;--m1:82">
+                <details class="tl-detail">
+                  <summary>
+                    <time>2024.02 - 2024.07</time>
+                    <h3>Ping An Technology</h3>
+                  <span class="timeline-role">Data Mining</span>
+                  </summary>
+                  <div class="tl-points">
+                    <ul class="entry-points">
+                    <li>Optimized user-profile models, mining real-time behavior features and fusing them with offline features</li>
+                    <li>Assessed feature relevance with collaborative filtering, LR, and clustering</li>
+                    <li>Embedded filtering rules into repayment-rate prediction models, supporting strategy tuning in gray-release A/B tests</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
+              <div class="timeline-item tl-l1 tl-school" style="--m0:36;--m1:82">
                 <time>2020.09 - 2024.07</time>
                 <h3>Xiamen University</h3>
-                <span class="timeline-role">B.S. in Computer Science</span>
+                  <span class="timeline-role">B.S. in Computer Science</span>
               </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-item">
+              <div class="timeline-item tl-l1 tl-school" style="--m0:0;--m1:33">
                 <time>2017.09 - 2020.06</time>
                 <h3>Henan Suixian Senior High School</h3>
               </div>
@@ -426,171 +505,155 @@
           </article>
         </section>
 
-        <section id="experience" class="section">
-          <h2>Experience</h2>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>Alibaba DAMO Academy · Agent Algorithm Intern</h3>
-              <span>2026.06 - Present</span>
-            </div>
-            <ul class="entry-points">
-              <li>CoT Planner: plan-generation model on the Qwen family, cold-started by strong-model distillation SFT and refined by two rounds of judge-preference DPO</li>
-              <li>At inference, sample 8 candidate plan chains and let the judge pick the best, mirroring the recall-then-rerank two-stage paradigm</li>
-              <li>AI4S Benchmark: task sets and checkpoint process verifiers for long-horizon drug/material tasks, with domain databases as ground truth</li>
-              <li>Checkpoint-level signals support process metrics such as autonomy@0, separating "right result" from "right process chain"</li>
-              <li>Agent OS: NobelClaw scheduling governance framework, owning Subgraph recursive expansion and failure rollback modules</li>
-            </ul>
-          </article>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>SMEE Breakthrough Group · LLM Search Application Algorithm Intern</h3>
-              <span>2025.10 - 2026.05</span>
-            </div>
-            <ul class="entry-points">
-              <li>Domain LLM + RAG data construction, chunk schema, and retrieval evaluation</li>
-              <li>Parser / Retrieval / Diagnosis / SOP / Verification multi-agent diagnosis flow design</li>
-              <li>Expert document splitting and standard evidence organization</li>
-              <li>Low-evidence refusal rules and high-risk SOP human escalation conditions</li>
-              <li>Citation checks on diagnosis answers and feedback sample accumulation</li>
-            </ul>
-          </article>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>MiniMax · LLM Recommendation Algorithm Intern</h3>
-              <span>2025.06 - 2025.09</span>
-            </div>
-            <ul class="entry-points">
-              <li>NPC recommendation for companion products such as Xingye and Talkie</li>
-              <li>Dynamic retraining for growth prediction; VLM image + text dual-path recall</li>
-              <li>Voice embedding sample construction; TIGER-style generative retrieval validation</li>
-              <li>Multimodal recall fusion evaluation under fixed candidate budgets, exposure bias, long-tail coverage, repeat exposure, and negative feedback</li>
-            </ul>
-          </article>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>ByteDance · Agent Search R&amp;D Intern</h3>
-              <span>2025.01 - 2025.06</span>
-            </div>
-            <ul class="entry-points">
-              <li>MCP Factory pipeline: converting internal APIs into standardized Tool Calls</li>
-              <li>Accumulated taxonomy, parameter schema, error codes, call examples, and knowledge-base refinement data</li>
-              <li>Tool discoverability, schema constraints, failure recovery, permission boundaries, and document structuring</li>
-            </ul>
-          </article>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>Ping An Technology · Data Mining</h3>
-              <span>2024.02 - 2024.07</span>
-            </div>
-            <ul class="entry-points">
-              <li>User profiling optimization; real-time behavioral feature mining fused with offline features</li>
-              <li>Collaborative filtering / LR / clustering for feature relevance assessment</li>
-              <li>Filtering rules embedded into repayment-rate prediction to support gray-release A/B strategy tuning</li>
-            </ul>
-          </article>
-        </section>
 
         <section id="projects" class="section">
           <h2>Projects</h2>
           <div class="project">
-            <h3>AI4S Benchmark</h3>
-            <p class="project-org">Alibaba DAMO Academy · Agent Algorithm Intern · 2026.06 - Present</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>AI4S Benchmark</h3>
+                <p class="project-org">Alibaba DAMO Academy · Agent Algorithm Intern · 2026.06 - Present</p>
+              </summary>
+              <ul class="entry-points">
               <li>Task sets and checkpoint process verifiers for long-horizon drug/material tasks, with domain databases as ground truth</li>
               <li>Reverse question generation: pick known-correct answers from frozen scientific databases, build atomic questions, then compose long tasks</li>
               <li>basic / some / enough three-tier difficulty on the same question; generative vs discriminative two-way split</li>
               <li>Checkpoint-level signals support process metrics such as autonomy@0, separating right result from right process chain</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>CoT Planner</h3>
-            <p class="project-org">Alibaba DAMO Academy · Agent Algorithm Intern · 2026.06 - Present</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>CoT Planner</h3>
+                <p class="project-org">Alibaba DAMO Academy · Agent Algorithm Intern · 2026.06 - Present</p>
+              </summary>
+              <ul class="entry-points">
               <li>Plan-generation model on the Qwen family: strong-model distillation SFT cold start, judge-preference DPO over two rounds</li>
               <li>At inference, sample 8 candidate plan chains and let the judge pick the best, mirroring recall-then-rerank</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Lingshu AgentOS</h3>
-            <p class="project-org">Alibaba DAMO Academy · Agent Algorithm Intern · 2026.06 - Present</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Lingshu AgentOS</h3>
+                <p class="project-org">Alibaba DAMO Academy · Agent Algorithm Intern · 2026.06 - Present</p>
+              </summary>
+              <ul class="entry-points">
               <li>Port OS concepts of process, permission, and rollback onto agents</li>
               <li>NobelClaw scheduling governance: Subgraph recursive expansion and failure rollback modules</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>CausalMAD</h3>
-            <p class="project-org">SMEE Breakthrough Group · LLM Search Application Algorithm Intern · 2025.10 - 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>CausalMAD</h3>
+                <p class="project-org">SMEE Breakthrough Group · LLM Search Application Algorithm Intern · 2025.10 - 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>Partition specialist agents by the servo system's physical causal DAG; CausalGNN generates attention bias</li>
               <li>Per-agent LoRA with learnable fusion gating for causal diagnosis</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Industrial Fault RAG</h3>
-            <p class="project-org">SMEE Breakthrough Group · LLM Search Application Algorithm Intern · 2025.10 - 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Industrial Fault RAG</h3>
+                <p class="project-org">SMEE Breakthrough Group · LLM Search Application Algorithm Intern · 2025.10 - 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>Multi-granularity chunking; BM25/dense hybrid recall fused by type-adaptive weighted RRF</li>
               <li>Graph diffusion plus source-aware cross-encoder reranking, iterated by expert drag feedback</li>
               <li>Complexity routing and gap self-check drive multi-round supplementary search; expert-annotated Recall@5, citation support, and root-cause coverage</li>
               <li>Evidence tracing and low-evidence refusal</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Qwen3-VL Multimodal Document Processing</h3>
-            <p class="project-org">SMEE Breakthrough Group · LLM Search Application Algorithm Intern · 2025.10 - 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Qwen3-VL Multimodal Document Processing</h3>
+                <p class="project-org">SMEE Breakthrough Group · LLM Search Application Algorithm Intern · 2025.10 - 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>Accumulated engineering logs and tree-structured fault graphs; structured document, topology expansion, and causal analysis pipelines</li>
               <li>Qwen3-VL-8B image-text QA plus reranking for multimodal documents</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>TIGER Generative Recall</h3>
-            <p class="project-org">MiniMax · LLM Recommendation Algorithm Intern · 2025.06 - 2025.09</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>TIGER Generative Recall</h3>
+                <p class="project-org">MiniMax · LLM Recommendation Algorithm Intern · 2025.06 - 2025.09</p>
+              </summary>
+              <ul class="entry-points">
               <li>RQ-Kmeans quantizes NPC text and appearance into hierarchical Semantic IDs; ~25M encoder-decoder autoregressive candidate generation</li>
               <li>Width-128 beam search with trie-constrained decoding to guarantee ID validity</li>
               <li>Fixed candidate-budget ablations verify gains over two-tower retrieval and long-tail coverage</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Fine-Grained Multimodal Alignment</h3>
-            <p class="project-org">MiniMax · LLM Recommendation Algorithm Intern · 2025.06 - 2025.09</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Fine-Grained Multimodal Alignment</h3>
+                <p class="project-org">MiniMax · LLM Recommendation Algorithm Intern · 2025.06 - 2025.09</p>
+              </summary>
+              <ul class="entry-points">
               <li>LoRA fine-tuning of the GME vision tower (ViT) with phrase-level soft-assignment region alignment</li>
               <li>Attribute-swap negatives and two-stage curriculum hard negatives for attribute binding</li>
               <li>Supported a team gray-release A/B with +2.4pp retention</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>NPC Persona Semantic Search</h3>
-            <p class="project-org">MiniMax · LLM Recommendation Algorithm Intern · 2025.06 - 2025.09</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>NPC Persona Semantic Search</h3>
+                <p class="project-org">MiniMax · LLM Recommendation Algorithm Intern · 2025.06 - 2025.09</p>
+              </summary>
+              <ul class="entry-points">
               <li>Owned the dense semantic recall path; distilled a ~100M two-tower from the cross-encoder reranker teacher via InfoNCE + KL</li>
               <li>In-loop hard-negative re-mining and full-corpus HNSW index</li>
               <li>Replay evaluation on Recall@500 / NDCG@20 with badcase bucketing</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Hierarchical Tool Routing</h3>
-            <p class="project-org">ByteDance · Agent Search R&amp;D Intern · 2025.01 - 2025.06</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Hierarchical Tool Routing</h3>
+                <p class="project-org">ByteDance · Agent Search R&amp;D Intern · 2025.01 - 2025.06</p>
+              </summary>
+              <ul class="entry-points">
               <li>Hierarchical index over 5,000+ APIs by capability domain, operation type, and permission level</li>
               <li>Two-stage progressive filtering to top-8 tools; tool calling Recall@5 at 92%</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Cache-aware Tool Context</h3>
-            <p class="project-org">ByteDance · Agent Search R&amp;D Intern · 2025.01 - 2025.06</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Cache-aware Tool Context</h3>
+                <p class="project-org">ByteDance · Agent Search R&amp;D Intern · 2025.01 - 2025.06</p>
+              </summary>
+              <ul class="entry-points">
               <li>Deterministic ordering and versioning of recalled top-k schemas into a stable prefix</li>
               <li>vLLM hierarchical worker scheduling with prefix cache reuse across turns</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>AI Education Curriculum and Online Textbook</h3>
-            <p class="project-org">One Ling (Wanwu Zhiling) · AI education startup · 2025.12 - Present</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>AI Education Curriculum and Online Textbook</h3>
+                <p class="project-org">One Ling (Wanwu Zhiling) · AI education startup · 2025.12 - Present</p>
+              </summary>
+              <ul class="entry-points">
               <li>Course material for high-school IT classes, school-based AI electives, and science-innovation clubs: Python fundamentals, a RAG question-answering assistant, AI trustworthiness judgment, and multimodal retrieval</li>
               <li>AI Evidence Quest: campus document QA course project covering retrieval, citation checking, refusal under low evidence, and AI trustworthiness judgment. <a href="https://sherkevin.github.io/ai-evidence-quest/">Demo</a> · <a href="https://github.com/sherkevin/ai-evidence-quest">GitHub</a></li>
               <li>AI Image Detective: image embedding and similarity-retrieval course project, where weight controls explain how color, shape, and texture affect ranking. <a href="https://sherkevin.github.io/ai-image-detective/">Demo</a> · <a href="https://github.com/sherkevin/ai-image-detective">GitHub</a></li>
@@ -598,70 +661,103 @@
               <li>Assessment design: assignment rubrics covering problem definition, code style, logical completeness, exception handling, presentation, and extension attempts</li>
               <li>Material is organized to be readable, runnable, and demonstrable by students; the online textbook keeps adding chapter explanations, lab pages, and teacher resources</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Mydow</h3>
-            <p class="project-org">Startup · 2025.11 - Present</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Mydow</h3>
+                <p class="project-org">Startup · 2025.11 - Present</p>
+              </summary>
+              <ul class="entry-points">
               <li>LLM user-profile and icebreaker matching product; shortlisted by Qimiao Chuangtan with angel funding</li>
               <li>Separates profile evidence, matching permission, and external disclosure; recommendation and messaging are two gated stages</li>
               <li>Icebreakers use only mutually disclosed attributes, with independent Safety/Critic checks and send confirmation</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Weaver</h3>
-            <p class="project-org">Personal project · 2025.12</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Weaver</h3>
+                <p class="project-org">Personal project · 2025.12</p>
+              </summary>
+              <ul class="entry-points">
               <li>YAML-declared multi-agent orchestration: definition, run attempt, artifact, and effect receipt modeled separately</li>
               <li>Recovery trichotomy: reliable receipt means done; retry only on proven non-execution; unprovable outcomes enter IN_DOUBT with no blind resend</li>
               <li>Currently a Historical-only prototype (Python + LangGraph)</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>LLM Reliability Lab</h3>
-            <p class="project-org">Personal project · 2026.05</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>LLM Reliability Lab</h3>
+                <p class="project-org">Personal project · 2026.05</p>
+              </summary>
+              <ul class="entry-points">
               <li>Decomposes industrial RAG, MCP-style Tool Use, and agent trajectories into diagnosable metrics and badcases around evidence, actions, and risk</li>
               <li>Runnable scripts, sample data, QLoRA evaluation gates, badcase taxonomy, and reliability playbook</li>
               <li><a href="https://github.com/sherkevin/llm-reliability-lab">GitHub</a></li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>SmartIcon</h3>
-            <p class="project-org">Undergraduate project · Xiamen University</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>SmartIcon</h3>
+                <p class="project-org">Undergraduate project · Xiamen University</p>
+              </summary>
+              <ul class="entry-points">
               <li>Paper-icon generation: paper data crawling, ComfyUI workflows, style transfer, and prompt tuning</li>
               <li>OpenCLIP multimodal retrieval for journal-style icon generation</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>CSAsk</h3>
-            <p class="project-org">Undergraduate project · Xiamen University</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>CSAsk</h3>
+                <p class="project-org">Undergraduate project · Xiamen University</p>
+              </summary>
+              <ul class="entry-points">
               <li>Computer-science terminology knowledge graph with a LLaMA backbone and RAG augmentation</li>
               <li>Terminology explanation, translation, and domain QA for CS papers</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Small-Object Recognition via Optical Flow</h3>
-            <p class="project-org">Undergraduate research · Xiamen University</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Small-Object Recognition via Optical Flow</h3>
+                <p class="project-org">Undergraduate research · Xiamen University</p>
+              </summary>
+              <ul class="entry-points">
               <li>Optical-flow modeling to improve visual representation of small objects</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>Adaptive Cache Scheduling for Deep Learning</h3>
-            <p class="project-org">Undergraduate research · Xiamen University</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>Adaptive Cache Scheduling for Deep Learning</h3>
+                <p class="project-org">Undergraduate research · Xiamen University</p>
+              </summary>
+              <ul class="entry-points">
               <li>Cache-value estimation for resource scheduling, balancing representation quality and compute cost</li>
             </ul>
+            </details>
           </div>
           <div class="project">
-            <h3>KV Cache Improvements</h3>
-            <p class="project-org">Undergraduate research · Xiamen University</p>
-            <ul class="entry-points">
+            <details class="event-detail">
+              <summary class="project-head">
+                <h3>KV Cache Improvements</h3>
+                <p class="project-org">Undergraduate research · Xiamen University</p>
+              </summary>
+              <ul class="entry-points">
               <li>KV cache structural improvements for inference efficiency</li>
             </ul>
+            </details>
           </div>
         </section>
 
@@ -676,6 +772,6 @@
         </section>
       </main>
     </div>
-    <script src="./script.js?v=20260916d"></script>
+    <script src="./script.js?v=20260916g"></script>
   </body>
 </html>

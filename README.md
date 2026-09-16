@@ -4,15 +4,13 @@ Personal academic homepage for Kevin Deng.
 
 This site is intentionally static and dependency-free. It is designed for GitHub Pages and focuses on LLM application algorithms, multimodal reliability, RAG, Tool Use, and LLM4Rec.
 
-## Notes
+## Companion pages: notes and life graph
 
-`notes.html` collects paper reading reports and study records: problem setting, method design, key results, and applicable boundaries per paper. The corpus lives as plain data at the top of `notes.js`; add a note by appending one object there. The page renders a uniform two-column card grid (fixed-height previews) with topic filters and full-text search; clicking a card opens a `<dialog>` with the full record. All client-side and dependency-free. Notes are Chinese-only; the English homepage links to this page the same way it links to the life graph.
+Notes and the life graph are not part of the personal-profile flow, so the homepage no longer lists them as regular sections. Instead the top of the page carries two tinted portal cards (dark clay for notes, dark green for the graph) that link out; each companion page opens with a matching cover band whose stats (note count, topics, graph nodes, edges, node types) are filled from the live data in `notes.js` and `life-graph.js`.
 
-Abstract thinking and derivations live in the homepage `所思` / `Thoughts` section (formerly `技术观` / `Worldview`), not in the notes page.
+## Experience timeline layout
 
-## Timeline layout
-
-The timeline lists periods newest-first, one row per period. Work and startup entries whose intervals overlap share a single row: each concurrent entry becomes a lane to the right of the first one, all lanes starting at the same height and left-aligned, capped at three lanes per row (`.timeline-row.lanes-2` / `.lanes-3`). School entries stay single-lane rows because a degree spans years and would otherwise merge with every job inside it. On narrow screens lanes stack vertically inside their row.
+The `经历` / `Experience` section opens with a proportional vertical Gantt chart and keeps the expandable detail entries beneath it. Each entry carries `--m0` and `--m1` (months since 2017.09) and one month is `--tl-s` px, and the axis runs newest-first from `--tl-max` at the top down to 0, so recent periods sit at the top; vertical position and bar length are still real time (equal height means equal time), and entries that overlap in time sit side by side in lanes 1-4. A dashed line marks the present. Lane 1 carries the school spans, lane 2 the consecutive work track, lanes 3-4 the startups that run alongside it; year ticks on the left make the scale readable. On narrow screens the chart collapses to a chronological single-column list with dots on the rail.
 
 ## Public life graph
 
