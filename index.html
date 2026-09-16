@@ -8,7 +8,7 @@
       content="邓凯文的个人主页：人工智能、大模型应用算法、多模态、RAG、Tool Use、推荐与智能体系统。"
     />
     <title>邓凯文 | Kevin Deng</title>
-    <link rel="stylesheet" href="./styles.css?v=20260916p" />
+    <link rel="stylesheet" href="./styles.css?v=20260916q" />
   </head>
   <body>
     <div class="page-card">
@@ -24,12 +24,12 @@
           关注大模型应用算法、多模态可靠性、RAG / Tool Use、推荐系统与智能体工作流。
         </p>
         <nav aria-label="页面导航">
-          <a href="#thoughts">所思</a>
-          <a href="#honors">荣誉</a>
-          <a href="#research">研究</a>
-          <a href="#experience">经历</a>
-          <a href="#projects">项目</a>
           <a href="#principles">方法论</a>
+          <a href="#thoughts">所思</a>
+          <a href="#experience">经历</a>
+          <a href="#research">研究</a>
+          <a href="#projects">项目</a>
+          <a href="#honors">荣誉</a>
         </nav>
         <div class="contact">
           <a href="./en.html">English Version</a>
@@ -48,7 +48,6 @@
             </svg>
             <p class="portal-kicker">Reading Log</p>
             <h3 class="portal-title">笔记</h3>
-            <p class="portal-desc">论文阅读报告与学习记录：问题设定、方法设计、关键结果与适用边界，逐篇成卡。</p>
             <span class="portal-cta">进入笔记</span>
           </a>
           <a class="portal-card portal-graph" href="./life-graph.html">
@@ -62,12 +61,20 @@
             </svg>
             <p class="portal-kicker">Life Graph</p>
             <h3 class="portal-title">人生图谱</h3>
-            <p class="portal-desc">长期方向的公开版本：价值排序、资产池、路径结构、风险边界与维护机制，一张可拖拽的节点图。</p>
             <span class="portal-cta">进入图谱</span>
           </a>
         </div>
 
 
+        <section id="principles" class="section">
+          <h2>方法论</h2>
+          <ul class="plain-list">
+            <li>先定义 failure mode，再选择模型或系统方案。</li>
+            <li>先设计公平评测，再讨论方法是否有效。</li>
+            <li>复杂方法必须有放弃条件，不能只因 fancy 而上线。</li>
+            <li>大模型应用的核心不只是生成结果，而是证据、约束、反馈和可控性。</li>
+          </ul>
+        </section>
         <section id="thoughts" class="section">
           <h2>所思</h2>
           <div class="principles">
@@ -273,7 +280,6 @@
             </div>
           </details>
         </section>
-
         <section id="experience" class="section">
           <h2>经历</h2>
           <!-- Proportional vertical Gantt, newest first: --m0/--m1 are months
@@ -449,20 +455,6 @@
             </div>
           </div>
         </section>
-
-        <section id="honors" class="section">
-          <h2>荣誉</h2>
-          <ul class="dated-list">
-            <li>厦门大学本科生优秀毕业论文；厦门大学信息学院优秀毕业生<span>2024</span></li>
-            <li>华为开发者大赛算法组杭厦赛区二等奖；厦门大学万德奖学金<span>2023</span></li>
-            <li>奇妙奖学金<span>2022</span></li>
-            <li>蓝桥杯省赛一等奖；全国决赛二等奖；全国大学生计算机系统能力大赛 OS 内核二等奖；美国大学生数学建模竞赛 Honorable Mention<span>2022</span></li>
-            <li>本科一等学业优秀奖学金；芙蓉科创竞赛奖学金<span>2021</span></li>
-            <li>ICPC 全国邀请赛（陕西）银牌；全国大学生数学竞赛福建赛区一等奖；中国高校团体程序设计天梯赛省团队一等奖<span>2021</span></li>
-            <li>物理竞赛省级二等奖<span>2019</span></li>
-          </ul>
-        </section>
-
         <section id="research" class="section">
           <h2>研究</h2>
           <article class="publication">
@@ -642,8 +634,6 @@
             </details>
           </article>
         </section>
-
-
         <section id="projects" class="section">
           <h2>项目</h2>
           <div class="project">
@@ -900,14 +890,16 @@
             </details>
           </div>
         </section>
-
-        <section id="principles" class="section">
-          <h2>方法论</h2>
-          <ul class="plain-list">
-            <li>先定义 failure mode，再选择模型或系统方案。</li>
-            <li>先设计公平评测，再讨论方法是否有效。</li>
-            <li>复杂方法必须有放弃条件，不能只因 fancy 而上线。</li>
-            <li>大模型应用的核心不只是生成结果，而是证据、约束、反馈和可控性。</li>
+        <section id="honors" class="section">
+          <h2>荣誉</h2>
+          <ul class="dated-list">
+            <li>厦门大学本科生优秀毕业论文；厦门大学信息学院优秀毕业生<span>2024</span></li>
+            <li>华为开发者大赛算法组杭厦赛区二等奖；厦门大学万德奖学金<span>2023</span></li>
+            <li>奇妙奖学金<span>2022</span></li>
+            <li>蓝桥杯省赛一等奖；全国决赛二等奖；全国大学生计算机系统能力大赛 OS 内核二等奖；美国大学生数学建模竞赛 Honorable Mention<span>2022</span></li>
+            <li>本科一等学业优秀奖学金；芙蓉科创竞赛奖学金<span>2021</span></li>
+            <li>ICPC 全国邀请赛（陕西）银牌；全国大学生数学竞赛福建赛区一等奖；中国高校团体程序设计天梯赛省团队一等奖<span>2021</span></li>
+            <li>物理竞赛省级二等奖<span>2019</span></li>
           </ul>
         </section>
       </main>

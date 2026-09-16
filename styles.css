@@ -238,7 +238,7 @@ nav a.is-current {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 208px;
+  min-height: 148px;
   padding: 24px 24px 22px;
   border: 1px solid transparent;
   border-radius: var(--radius);
@@ -286,14 +286,6 @@ nav a.is-current {
   margin-bottom: 8px;
   color: inherit;
   font-size: 26px;
-}
-
-.portal-desc {
-  max-width: 34ch;
-  margin-bottom: 16px;
-  color: rgba(243, 239, 231, 0.78);
-  font-size: 13.5px;
-  line-height: 1.62;
 }
 
 .portal-cta {
