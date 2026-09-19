@@ -178,6 +178,39 @@ h1 {
   line-height: 1.68;
 }
 
+/* focus line: mono kicker label, then serif-italic directions; each
+   direction is one unbreakable unit so phrases never split across lines */
+.focus-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.focus-items {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 4px 30px;
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.focus-items > span {
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .focus-items {
+    grid-template-columns: max-content;
+  }
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
